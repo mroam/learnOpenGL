@@ -9,7 +9,7 @@ Java or C++? Swift?
 
 Helpful Links
 ------------
-http://www.opengl-tutorial.org/beginners-tutorials/tutorial-1-opening-a-window/ "modern opengl"
+http://www.opengl-tutorial.org/beginners-tutorials/tutorial-1-opening-a-window/ "modern opengl" (version 3.3 and up, which mac 10.9 runs, according to the “[capabilities](http://developer.apple.com/opengl/capabilities/index.html)” page of [apple’s openGL info](http://developer.apple.com/library/mac/documentation/GraphicsImaging/Conceptual/OpenGL-MacProgGuide/opengl_intro/opengl_intro.html).
 
 http://web.eecs.umich.edu/~sugih/courses/eecs487/glut-howto/
 
