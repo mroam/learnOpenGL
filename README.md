@@ -4,8 +4,8 @@
 Questions
 --------
 Should we use Eclipse or Xcode?
-## Java or C++? Swift?
-### _hi_there_
+Java or C++? Swift?
+
 
 
 Helpful Links
