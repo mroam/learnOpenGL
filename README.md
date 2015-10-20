@@ -31,4 +31,4 @@ Potential Projects
 
 To Do
 ---------
-* put the harrygla xcode project into my new harrgla folder
+* check whether the harrygla xcode project folder is happy with github
