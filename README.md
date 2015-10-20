@@ -27,3 +27,8 @@ Potential Projects
 -----------------
 * Lunar lander in 3D 
 * Skydive simulator
+
+
+To Do
+---------
+* put the harrygla xcode project into my new harrgla folder
