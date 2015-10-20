@@ -20,5 +20,6 @@ http://www.opengl.org
 
 Potential Projects
 -----------------
-Lunar lander in 3D
+Lunar lander in 3D 
 Skydive simulator
+      (uh-oh; what physics system? our own? There must be ones that play nice with opengl...)
