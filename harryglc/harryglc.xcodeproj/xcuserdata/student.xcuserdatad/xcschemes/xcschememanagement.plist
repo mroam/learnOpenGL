@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>harrygla.xcscheme</key>
+		<key>harryglc.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3FFE0D671BD68F9100783C7F</key>
+		<key>3F51B4081BDFCEBD00D302AE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
