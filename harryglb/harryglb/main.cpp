@@ -2,8 +2,7 @@
 //  main.cpp
 //  harryglb
 //
-//  Created by student on 10/27/15.
-//  Copyright © 2015 harrymike. All rights reserved.
+//  Created by harry & mike on 10/27/15, building upon code by Rajagopalan & Jamin.
 //
 
 /*
@@ -122,10 +121,14 @@ reshape(int w, int h)
 void
 wiggle(  ) {
     for (int i = 0; i < NENDS; ++i) {
-        ends[i][0] = (int) (ends[i][0] * 0.5 );
-        ends[i][1] = (int) (ends[i][1] * 0.3 );
+//        ends[i][0] = (int) (ends[i][0] * 0.5 );
+//        ends[i][1] = (int) (ends[i][1] * 0.3 );
+        
+          ends[i][0] = (int) ((width / 2.0) - ends[i][0]);
+          //ends[i][1] = (int) (ends[i][1] * -1 );
+
     }
-    
+    glutPostRedisplay();
 }
 
 
