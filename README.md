@@ -43,4 +43,5 @@ To Do
 
 Did
 ----------
-* [x] the harrygla xcode project folder is happy with github
+* (√) The harrygla xcode project folder is happy with github
+* (√) Installed xquartz 2.7.8 ([xquartz latest releases](http://xquartz.macosforge.org/trac/wiki/Releases) as of nov 2015, “works with el capitan (osX 10.11)” supposedly.
