@@ -6,7 +6,7 @@ Questions
 * Should we use Eclipse or Xcode? Don’t we have to set up separate Eclipse copies for Java and C++?
 * Java or C++? Swift?
 * What physics system? Our own? There must be ones that play nice with opengl...
-* Will [glew](http://glew.sourceforge.net), [glfw](http://www.glfw.org/), glm hurt my mac? I already distrust homebrew, macports, etc for [potentially changing versions of utilities that system uses](http://discussions.apple.com/thread/4337315?start=0&tstart=0).
+* Will [glew](http://glew.sourceforge.net), [glfw](http://www.glfw.org/), glm hurt my mac? I already distrust [homebrew](http://brew.sh)[install](http://stackoverflow.com/questions/20381128/how-to-install-homebrew-on-mac-osx), [macports](http://www.macports.org/), etc for [potentially changing versions of utilities that system uses](http://discussions.apple.com/thread/4337315?start=0&tstart=0).
 * If GLUT is deprecated on mac osX 10.9+, what should/could we use instead? [FreeGlut](http://freeglut.sourceforge.net)? [Glew](http://glew.sourceforge.net) and [glfw](http://www.glfw.org/)? Somebody on stackoverflow says that what apple wants us to do is use cocoa.  ["installing-freeglut-on-os-x-mavericks"](http://stackoverflow.com/questions/19648087/installing-freeglut-on-os-x-mavericks) points out that despite deprecations, Glut still works fine and “glutInitDisplayMode(GLUT_3_2_CORE_PROFILE);” will get openGL 4.1+ context on mac osX 10.9 and 10.10. But many tutorials rely upon [Glew](http://glew.sourceforge.net) or freeglut.
 * Can we make cross-platform standalone apps that include glew or glut or x11 and whatever else we need so that users don't have to download things we depend upon?? (“linking” and/or/versus “installing”??)
 
