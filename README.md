@@ -3,7 +3,7 @@
 
 Questions
 --------
-* Maybe we should look into "[WebGL](http://www.khronos.org/webgl/)" for portability? (Limitations?)
+* Maybe we should look into “[WebGL](http://www.khronos.org/webgl/)” for portability? (Limitations?) (“plugin-free 3D to the web, implemented right into the browser. Major browser vendors Apple (Safari), Google (Chrome), Mozilla (Firefox), and Opera (Opera) are members of the WebGL Working Group.”)
 
 * Should we use Eclipse or Xcode? Don’t we have to set up separate Eclipse copies for Java and C++?
 
