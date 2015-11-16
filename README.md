@@ -3,6 +3,8 @@
 
 Questions
 --------
+* Maybe we should look into "[WebGL](http://www.khronos.org/webgl/)" for portability? (Limitations?)
+
 * Should we use Eclipse or Xcode? Don’t we have to set up separate Eclipse copies for Java and C++?
 
 * Java or C++? Swift?
