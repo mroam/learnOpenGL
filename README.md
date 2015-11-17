@@ -5,7 +5,7 @@ Harry and Mike are trying to learn openGL by installing it, reading tutorials, r
 
 Potential Projects
 -----------------
-* Lunar lander in 3D 
+* Lunar lander in 3D
 * Skydive simulator
 
 
@@ -43,7 +43,7 @@ Tutorials
 
 * Highly recommended [open.gl tutorial for openGL 4](http://open.gl) with minimal use of other libraries. (requires SFML, [glfw](http://www.glfw.org/) or SDL for creating the context and handling input; [Glew](http://glew.sourceforge.net) to use newer OpenGL functions; SOIL for textures; [glm](http://glm.g-truc.net/) for vectors and matrices.
 
-* http://github.com/opengl-tutorials/ogl (originally at http://www.opengl-tutorial.org/) shows “modern” opengl (version 3.3 and up, which mac 10.9 runs, according to the “[Capabilities](http://developer.apple.com/opengl/capabilities/index.html)” page of [Apple’s OpenGL Info](http://developer.apple.com/library/mac/documentation/GraphicsImaging/Conceptual/OpenGL-MacProgGuide/opengl_intro/opengl_intro.html). Note: as of 2015 oct 28, their first 12 tutorials on github “work on mac” (and seem to need glew, [glfw](http://www.glfw.org/), and [glm](http://glm.g-truc.net/) libraries/frameworks)
+* http://github.com/opengl-tutorials/ogl (originally at http://www.opengl-tutorial.org/) shows “modern” opengl (version 3.3 and up, which mac 10.9 runs, according to the “[Capabilities](http://developer.apple.com/opengl/capabilities/index.html)” page of [Apple’s OpenGL Info](http://developer.apple.com/library/mac/documentation/GraphicsImaging/Conceptual/OpenGL-MacProgGuide/opengl_intro/opengl_intro.html). Note: as of 2015 oct 28, their first 12 tutorials on github “work on mac” (and seem to need [Glew](http://glew.sourceforge.net), [glfw](http://www.glfw.org/), and [glm](http://glm.g-truc.net/) libraries/frameworks)
 
 * [Durian opengl tutorial](http://duriansoftware.com/joe/An-intro-to-modern-OpenGL.-Table-of-Contents.html) with good explanations of pipeline and line-by-line explanation of code (oops, I typed “line-by-lie”) but seems to be using old opengl 2 rather than the 3 or 4 that we’re able to do now.
  
