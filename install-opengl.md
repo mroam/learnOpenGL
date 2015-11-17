@@ -11,7 +11,7 @@ Installing openGL
 
 * There are automated software installer/updaters that could supposedly reconcile dependencies among glew, x11, freeglut, etc. Such updaters include [homebrew](http://brew.sh)[install](http://stackoverflow.com/questions/20381128/how-to-install-homebrew-on-mac-osx), and [macports](http://www.macports.org/), etc but I’m hesitant: they can [change versions of utilities that system uses](http://discussions.apple.com/thread/4337315?start=0&tstart=0).
 
-* Somebody on stackoverflow says that what apple wants us to do is use cocoa.  ["installing-freeglut-on-os-x-mavericks"](http://stackoverflow.com/questions/19648087/installing-freeglut-on-os-x-mavericks) points out that despite deprecations, Glut still works fine and “glutInitDisplayMode(GLUT\_3\_2\_CORE_PROFILE);” will get openGL 4.1+ context on mac osX 10.9 and 10.10. 
+* Re GLUT deprecated on mac osX 10.9+. Somebody on stackoverflow says that what apple wants us to do instead of  is use cocoa.  ["installing-freeglut-on-os-x-mavericks"](http://stackoverflow.com/questions/19648087/installing-freeglut-on-os-x-mavericks) points out that despite deprecations, Glut still works fine and “glutInitDisplayMode(GLUT\_3\_2\_CORE_PROFILE);” will get openGL 4.1+ context on mac osX 10.9 and 10.10. 
 
 
 Using openGL from Xcode
@@ -29,10 +29,9 @@ openGL references
 
 Did
 ----------
-* (√) Installed xquartz 2.7.8 ([xquartz latest releases](http://xquartz.macosforge.org/trac/wiki/Releases) as of nov 2015, “works with el capitan (osX 10.11)” supposedly.
+* (√) Installed xquartz 2.7.8 (from [xquartz latest releases](http://xquartz.macosforge.org/trac/wiki/Releases) as of nov 2015, “works with el capitan (osX 10.11)” supposedly. Provides use with recent “freeglut” supposedly.
 
-
-What is GLM?
-----------
-* GLM “OpenGL Mathematics: GLM ...The deprecated/removed features of OpenGL include all the matrix management and manipulation functions that are relied upon by the vast majority of older OpenGL programs. It is possible to recreate your own matrix and math libraries from scratch – and there are a range of books which provide good exemplars for this. However, in this class we will use a third part math library that has been developed for use with OpenGL – GLM. One of the notable features of GLM is that the core functions and types have been based closely on GLSL – so familiarity with GLM should help with GLSL and vice versa. You can download the GLM files from http://glm.g-truc.net/ . GLM is a header only library – so you only need to add the GLM folder to your include path – there are no lib files and there is no dll to worry about..." Daniel Livingstone, "[OpenGL With GLM](http://www.scribd.com/doc/71980668/OpenGL-With-GLM#scribd)"
-* 
+To do
+---------
+* [ ]Test xquartz 2.7.8
+* [ ]Test 

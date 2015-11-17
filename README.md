@@ -1,9 +1,11 @@
 # learnOpenGL
 ========
 
+See [our install-opengl file](http://github.com/mroam/learnOpenGL/blob/master/install-opengl.md) about installing openGL.
+
 Questions
 --------
-* Maybe we should look into “[WebGL](http://www.khronos.org/webgl/)” for portability? (Limitations?) (“plugin-free 3D to the web, implemented right into the browser. Major browser vendors Apple (Safari), Google (Chrome), Mozilla (Firefox), and Opera (Opera) are members of the WebGL Working Group.”)
+* Can we make cross-platform standalone apps that include glew or glut or x11/xQuartz and whatever else we need so that users don't have to download things we depend upon?? (“linking” and/or/versus “installing”??) Maybe we should look into “[WebGL](http://www.khronos.org/webgl/)” for portability? (It is a “plugin-free 3D to the web, implemented right into the browser. Major browser vendors Apple (Safari), Google (Chrome), Mozilla (Firefox), and Opera (Opera) are members of the WebGL Working Group.”) (What are its limitations? And how much does it overlap with openGL for mobile devices?) 
 
 * Should we use Eclipse or Xcode? Don’t we have to set up separate Eclipse copies for Java and C++?
 
@@ -11,14 +13,15 @@ Questions
 
 * What physics system? Our own? There must be ones that play nice with opengl...
 
-* Will [glew](http://glew.sourceforge.net), [glfw](http://www.glfw.org/), [glm](http://glm.g-truc.net/), [FreeGlut](http://freeglut.sourceforge.net) hurt my mac? (I already distrust [homebrew](http://brew.sh)[install](http://stackoverflow.com/questions/20381128/how-to-install-homebrew-on-mac-osx), [macports](http://www.macports.org/), etc for [potentially changing versions of utilities that system uses](http://discussions.apple.com/thread/4337315?start=0&tstart=0).)
 
-* If GLUT is deprecated on mac osX 10.9+, what should/could we use instead? [FreeGlut](http://freeglut.sourceforge.net)? [Glew](http://glew.sourceforge.net) and/or [glfw](http://www.glfw.org/)? Somebody on stackoverflow says that what apple wants us to do is use cocoa.  ["installing-freeglut-on-os-x-mavericks"](http://stackoverflow.com/questions/19648087/installing-freeglut-on-os-x-mavericks) points out that despite deprecations, Glut still works fine and “glutInitDisplayMode(GLUT_3_2_CORE_PROFILE);” will get openGL 4.1+ context on mac osX 10.9 and 10.10. But many tutorials rely upon [Glew](http://glew.sourceforge.net) or [FreeGlut](http://freeglut.sourceforge.net).
+References and Tutorials 
+--------
+* [our dictionary](http://github.com/mroam/learnOpenGL/blob/master/dictionary.md) re “What is..” glew, glut, webgl, glm, glfw, etc...
 
-* Can we make cross-platform standalone apps that include glew or glut or x11/xQuartz and whatever else we need so that users don't have to download things we depend upon?? (“linking” and/or/versus “installing”??)
+* http://www.opengl.org
 
-Helpful Links
-------------
+* http://en.wikipedia.org/wiki/OpenGL
+
 * http://openglbook.com for *openGL 4* (see preface for hardware and software requirements (book uses [Glew](http://glew.sourceforge.net) and [FreeGlut](http://freeglut.sourceforge.net) (“get version 2.6.0 or higher in order to be able to create an OpenGL 4.0 context”), and explanation that old “glBegin, glEnd, glVertex3f, and glColor3f ... are not present in the OpenGL 4.0 Core Profile. Forget ... ’immediate mode’ OpenGL ... since it is never coming back.”)
 
 * Highly recommended [open.gl tutorial for openGL 4](http://open.gl) with minimal use of other libraries.
@@ -29,14 +32,8 @@ Helpful Links
  
 * See github's “[MarkDown Basics](http://help.github.com/articles/markdown-basics/)”.
 
-* [Glut Howto](http://web.eecs.umich.edu/~sugih/courses/eecs487/glut-howto/) <- provided us with a [sample.c](http://web.eecs.umich.edu/%7Esugih/courses/eecs487/glut-howto/sample.c) that worked on mac osX 10.10 in xcode 7! (Uses GLUT code deprecated since osX 10.9.) The tutorial showed us how to “Add” the OpenGL.framework and GLUT.framework to our project: by going to the project’s “Build Phases” tab, open the "Link Binary With Libraries" list, and click the ‘+’ sign at the bottom left corner of the list and choosing “OpenGL.framework” and “GLUT.framework” from the list.
+* [Glut Howto](http://web.eecs.umich.edu/~sugih/courses/eecs487/glut-howto/) <- provided us with a [sample.c](http://web.eecs.umich.edu/%7Esugih/courses/eecs487/glut-howto/sample.c) that worked on mac osX 10.10 in xcode 7! (Uses GLUT code deprecated since osX 10.9.) 
 
-* http://en.wikipedia.org/wiki/OpenGL
-
-* http://www.opengl.org
-
-* Stack overflow: how to [Use Xcode 7 with git](http://stackoverflow.com/questions/5383609/using-git-with-an-existing-xcode-project/32498035) and [Add xcode project to github](http://stackoverflow.com/questions/12698482/add-xcode-project-to-github-repo) 
- 
 
 
 Potential Projects
@@ -49,9 +46,6 @@ To Do
 ---------
 * Find out whether there are tutorials that don’t use glew, glfw, glm, [FreeGlut](http://freeglut.sourceforge.net)
 
-* OR look into installing glew, glfw, glm, [FreeGlut](http://freeglut.sourceforge.net) for openlgl-tutorials (someone at a [gamedev thread](http://www.gamedev.net/topic/561579-is-glew-necessary-to-use-shaders-solved-not-necessary/) says “Just as a little aside, GLEW is now incredibly easy on the Mac. Download, run Make, put in /usr/local/lib and /usr/local/include respectively.” and follow-up note reminds users of GLEW to call glewInit( ) early in startup (“If you try to use any function before glewInit(), the program fails.”) ([stackoverflow “building glew for mac”](http://stackoverflow.com/questions/12229714/building-glew-for-mac-osx) includes suggestion, “go... to http://glew.sourceforge.net and downloading the ZIP file right onto your Mac. Then go into the Finder and type in glew.h to see the file, control click it, get info, and copy the path to the file. Then go into your respective program file (e.g., commons.h) that contains the #include <GL/glew.h> dependency, and change it to: #include <path/to/file/that/you/just/copied/glew.h>   Then, try to compile your program again, and this time you should not get any GLEW errors.” Better yet(?), see [stackoverflow thread "how-to-link-glew-in-xcode"](http://stackoverflow.com/questions/17600917/how-to-link-glew-in-xcode) which shows how to make xcode recognize glew headers, and see ["im-having-trouble-linking-the-glew-library-to-my-xcode-project"](http://stackoverflow.com/questions/3072293/im-having-trouble-linking-the-glew-library-to-my-xcode-project) for more info.
-
-* Look into installing freeglut (seems to [require installing x11 first](http://sourceforge.net/p/freeglut/bugs/215/) ) Hey, somebody says that xQuartz ([replacement of X11 for mac](http://support.apple.com/en-us/HT201341)) comes with freeglut, so just install xQuartz [latest releases](http://xquartz.macosforge.org/trac/wiki/Releases) and you’ll get a pretty up-to-date freeglut. (We’re trying this.) See follow-up warnings and tweaks about [freeglut on mac](http://stackoverflow.com/questions/9149133/is-it-possible-to-build-freeglut-on-mac-os-x).
 
 Did
 ----------
