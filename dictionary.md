@@ -1,3 +1,8 @@
+What is “CMake”?
+--------
+* “CMake is an extensible, open-source system that manages the build process in an operating system and in a compiler-independent manner. Unlike many cross-platform systems, CMake is designed to be used in conjunction with the native build environment.” Is part of Glitter openGL starter and can make xcode project for us. (also windows visual studio, and linux.) Source: http://cmake.org/overview/
+
+
 What is “FreeGlut”?
 --------
 * [FreeGlut](http://freeglut.sourceforge.net)
@@ -34,7 +39,7 @@ What is “homebrew”?
 
 What is “Macports”?
 --------
-* Automated software installer/updater that can supposedly download latest versions of open source programs and reconcile their dependencies (glew, x11, freeglut, etc.) Mike is hesitant: this can [change versions of utilities that system uses](http://discussions.apple.com/thread/4337315?start=0&tstart=0).
+* Automated software installer/updater that can supposedly download latest versions of open source programs and reconcile their dependencies (glew, x11, freeglut, etc.) Mike is hesitant about installing it: it fiddles with privileges and can [change versions of utilities that system uses](http://discussions.apple.com/thread/4337315?start=0&tstart=0).
 * [macports](http://www.macports.org/)
 
 
