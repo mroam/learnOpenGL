@@ -19,6 +19,8 @@ Questions
 
 * What physics systems play nice with opengl? Do we want to build our own?
 
+* Since openGL just draws pictures (”render“) and does not keep track of where our 3d objects are ( ), how best should we keep track of what objects we’re using and where they are and how they are moving?
+
 
 References 
 --------
