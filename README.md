@@ -19,7 +19,7 @@ Questions
 
 * What physics systems play nice with opengl? Do we want to build our own?
 
-* Since openGL just draws pictures (”render“) and does not keep track of where our 3d objects are ( ), how best should we keep track of what objects we’re using and where they are and how they are moving?
+* Since openGL just draws pictures (”render“) and does not keep track of where our 3d objects are ( ), how best should we keep track of what objects we’re using and where they are and how they are moving? (”OpenGL is a rendering library. What OpenGL does not do is retain information about an "object". All OpenGL sees is a ball of triangles and a bag of state with which to render them. It does not remember that you drew a line in one location and a sphere in another.“ —http://www.opengl.org/wiki/Getting_Started )
 
 
 References 
@@ -64,5 +64,4 @@ Did
 ----------
 * (√) The harrygla xcode project folder is happy with github
 * (√) Installed xquartz 2.7.8 ([xquartz latest releases](http://xquartz.macosforge.org/trac/wiki/Releases) as of nov 2015, “works with el capitan (osX 10.11)” supposedly.
-
 
