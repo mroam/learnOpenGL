@@ -30,7 +30,7 @@ What is “GLM”?
 
 What is “GLUT”?
 ----------
-* outdated? —http://www.gamedev.net/topic/656534-glfwglutglu-whats-the-best/
+* An outdated library? ”GLUT mostly provides a quick and dirty way of getting a window open, creating a GL context for it, and handling some basic input and other events.  Much tutorial material you'll find will use it, so it's good to know it.  Again, it's all code that you can write yourself (using a library just means that you don't have to, so you can focus on learning OpenGL rather than OS code).“ —http://www.gamedev.net/topic/656534-glfwglutglu-whats-the-best/
 
 
 What is “homebrew”?
