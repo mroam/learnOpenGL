@@ -29,6 +29,11 @@ What is “GLM”?
 * GLM “OpenGL Mathematics: GLM ...The deprecated/removed features of OpenGL include all the matrix management and manipulation functions that are relied upon by the vast majority of older OpenGL programs. It is possible to recreate your own matrix and math libraries from scratch – and there are a range of books which provide good exemplars for this. However, in this class we will use a third part math library that has been developed for use with OpenGL – GLM. One of the notable features of GLM is that the core functions and types have been based closely on GLSL – so familiarity with GLM should help with GLSL and vice versa. You can download the GLM files from http://glm.g-truc.net/ . GLM is a header only library – so you only need to add the GLM folder to your include path – there are no lib files and there is no dll to worry about..." Source: Daniel Livingstone, "[OpenGL With GLM](http://www.scribd.com/doc/71980668/OpenGL-With-GLM#scribd)"
 
 
+What is ”GLU“?
+--------
+* ”GLU is a software library bolted on top of OpenGL to provide some additional functionality or to simplify some parts of OpenGL.  Much of what's in it related to functionality that's been deprecated in GL3.x+ core contexts, so you can probably be better off forgetting it even existed.“ —mhagain http://www.gamedev.net/topic/656534-glfwglutglu-whats-the-best/
+
+ 
 What is “GLUT”?
 ----------
 * An outdated library? ”GLUT mostly provides a quick and dirty way of getting a window open, creating a GL context for it, and handling some basic input and other events.  Much tutorial material you'll find will use it, so it's good to know it.  Again, it's all code that you can write yourself (using a library just means that you don't have to, so you can focus on learning OpenGL rather than OS code).“ —mhagain http://www.gamedev.net/topic/656534-glfwglutglu-whats-the-best/
