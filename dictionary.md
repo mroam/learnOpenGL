@@ -12,6 +12,8 @@ What is “glew”?
 --------
 * ”GLEW provides a way of accessing GL functionality higher than 1.1 on certain systems.  You can write this yourself, but GLEW certainly makes it easier (and less error-prone).  You almost certainly need this (but there are other libraries available with the same functionality too).“ —mhagain http://www.gamedev.net/topic/656534-glfwglutglu-whats-the-best/
 
+* ”GLEW (GL extension wrangler library) - will give you access to all the OpenGL functions you need…“ (for openGL 3+) —blubberbert http://www.gamedev.net/topic/656534-glfwglutglu-whats-the-best/
+
 * [glew](http://glew.sourceforge.net)
 
 
