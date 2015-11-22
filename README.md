@@ -6,20 +6,9 @@ Harry and Mike are trying to learn openGL (3D drawing system, cross-platform) by
 Potential Projects
 -----------------
 * Lunar lander in 3D
+
 * Skydive simulator
 
-
-Questions
---------
-* Can we make cross-platform standalone demo apps that include everything they need? (glew, glut, x11/xQuartz, or whatever else so that users don’t have to download things we depend upon?? (Isn’t this about “linking” and/or/versus “installing”??) Maybe we should look into “[WebGL](http://www.khronos.org/webgl/)” for portability? (It is a “plugin-free 3D to the web, implemented right into the browser. Major browser vendors Apple (Safari), Google (Chrome), Mozilla (Firefox), and Opera (Opera) are members of the WebGL Working Group.”) (What are its limitations? And how much does it overlap with openGL for mobile devices?) 
-
-* Should we use Eclipse or Xcode? If we use Eclipse, don’t we have to set up separate Eclipse copies for Java and C++?
-
-* Java? C++? Swift? Python?
-
-* What physics systems play nice with opengl? Do we want to build our own?
-
-* Since openGL just draws pictures (”render“) and does not keep track of where our 3d objects are ( ), how best should we keep track of what objects we’re using and where they are and how they are moving? (”OpenGL is a rendering library. What OpenGL does not do is retain information about an "object". All OpenGL sees is a ball of triangles and a bag of state with which to render them. It does not remember that you drew a line in one location and a sphere in another.“ —http://www.opengl.org/wiki/Getting_Started )
 
 
 References 
@@ -60,8 +49,22 @@ To Do
 * Or keep looking for tutorials that don’t use [Glew](http://glew.sourceforge.net), [glfw](http://www.glfw.org/), [glm](http://glm.g-truc.net/), [FreeGlut](http://freeglut.sourceforge.net), etc
 
 
-Did
+
+Questions
+--------
+* Can we make cross-platform standalone demo apps that include everything they need? (glew, glut, x11/xQuartz, or whatever else so that users don’t have to download things we depend upon?? (Isn’t this about “linking” and/or/versus “installing”??) Maybe we should look into “[WebGL](http://www.khronos.org/webgl/)” for portability? (It is a “plugin-free 3D to the web, implemented right into the browser. Major browser vendors Apple (Safari), Google (Chrome), Mozilla (Firefox), and Opera (Opera) are members of the WebGL Working Group.”) (What are its limitations? And how much does it overlap with openGL for mobile devices?) 
+
+* Should we use Eclipse or Xcode? If we use Eclipse, don’t we have to set up separate Eclipse copies for Java and C++?
+
+* Java? C++? Swift? Python?
+
+* What physics systems play nice with opengl? Do we want to build our own?
+
+* Since openGL just draws pictures (”render“) and does not keep track of where our 3d objects are ( ), how best should we keep track of what objects we’re using and where they are and how they are moving? (”OpenGL is a rendering library. What OpenGL does not do is retain information about an "object". All OpenGL sees is a ball of triangles and a bag of state with which to render them. It does not remember that you drew a line in one location and a sphere in another.“ —http://www.opengl.org/wiki/Getting_Started )
+
+
+Done
 ----------
 * (√) The harrygla xcode project folder is happy with github
-* (√) Installed xquartz 2.7.8 ([xquartz latest releases](http://xquartz.macosforge.org/trac/wiki/Releases) as of nov 2015, “works with el capitan (osX 10.11)” supposedly.
 
+* (√) Installed xquartz 2.7.8 ([xquartz latest releases](http://xquartz.macosforge.org/trac/wiki/Releases) as of nov 2015, “works with el capitan (osX 10.11)” supposedly.
