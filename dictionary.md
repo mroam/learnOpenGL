@@ -10,7 +10,7 @@ What is “FreeGlut”?
 
 What is “glew”?
 --------
-* ”…“ —http://www.gamedev.net/topic/656534-glfwglutglu-whats-the-best/
+* ”GLEW provides a way of accessing GL functionality higher than 1.1 on certain systems.  You can write this yourself, but GLEW certainly makes it easier (and less error-prone).  You almost certainly need this (but there are other libraries available with the same functionality too).“ —mhagain http://www.gamedev.net/topic/656534-glfwglutglu-whats-the-best/
 
 * [glew](http://glew.sourceforge.net)
 
@@ -18,6 +18,7 @@ What is “glew”?
 What is “glfw”?
 --------
 * ”a library that creates the context for you (i.e. opens a window for you to draw in, handles input for you, etc.)… (compared to SDL) … SDL offers a little more extra functionality like networking/sound/image loading, GLFW is just context creation and input handling, youll have to load textures yourself or use another library for that (like SOIL)“ —http://www.gamedev.net/topic/656534-glfwglutglu-whats-the-best/
+
 * [glfw](http://www.glfw.org/)
 
 
@@ -30,7 +31,7 @@ What is “GLM”?
 
 What is “GLUT”?
 ----------
-* An outdated library? ”GLUT mostly provides a quick and dirty way of getting a window open, creating a GL context for it, and handling some basic input and other events.  Much tutorial material you'll find will use it, so it's good to know it.  Again, it's all code that you can write yourself (using a library just means that you don't have to, so you can focus on learning OpenGL rather than OS code).“ —http://www.gamedev.net/topic/656534-glfwglutglu-whats-the-best/
+* An outdated library? ”GLUT mostly provides a quick and dirty way of getting a window open, creating a GL context for it, and handling some basic input and other events.  Much tutorial material you'll find will use it, so it's good to know it.  Again, it's all code that you can write yourself (using a library just means that you don't have to, so you can focus on learning OpenGL rather than OS code).“ —mhagain http://www.gamedev.net/topic/656534-glfwglutglu-whats-the-best/
 
 
 What is “homebrew”?
