@@ -1,6 +1,6 @@
 # learnOpenGL
 ========
-Harry and Mike are trying to learn openGL by installing it, reading tutorials, running code, and revising code.
+Harry and Mike are trying to learn openGL (3D drawing system, cross-platform) by installing it, reading tutorials, running code, and revising code.
 
 
 Potential Projects
