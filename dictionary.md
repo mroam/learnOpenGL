@@ -15,6 +15,8 @@ What is “glew”?
 
 What is “glfw”?
 --------
+* ”a library that creates the context for you (i.e. opens a window for you to draw in, handles input for you, etc.)… (compared to SDL) … SDL offers a little more extra functionality like networking/sound/image loading, GLFW is just context creation and input handling, youll have to load textures yourself or use another library for that (like SOIL)“ --
+
 * [glfw](http://www.glfw.org/)
 
 
@@ -33,17 +35,24 @@ What is “GLUT”?
 What is “homebrew”?
 --------
 * Automated software installer/updater for mac that can supposedly download latest versions of open source programs and reconcile their dependencies (glew, x11, freeglut, etc.) Mike is hesitant about installing it: it fiddles with privileges and can [change versions of utilities that system uses](http://discussions.apple.com/thread/4337315?start=0&tstart=0).
+
 * [homebrew](http://brew.sh)
+
 * [install on mac](http://stackoverflow.com/questions/20381128/how-to-install-homebrew-on-mac-osx)
 
 
 What is “Macports”?
 --------
 * Automated software installer/updater that can supposedly download latest versions of open source programs and reconcile their dependencies (glew, x11, freeglut, etc.) Mike is hesitant about installing it: it fiddles with privileges and can [change versions of utilities that system uses](http://discussions.apple.com/thread/4337315?start=0&tstart=0).
+
 * [macports](http://www.macports.org/)
+
+
+What is ”SDL“?
+--------
+* Like GLFW, ”a library that creates the context for you (i.e. opens a window for you to draw in, handles input for you, etc.)...SDL offers a little more extra functionality (than GLFW) like networking/sound/image loading, GLFW is just context creation and input handling, youll have to load textures yourself or use another library for that (like SOIL)“ --
 
 
 What is “webGL”?
 ----------
 * It is a “plugin-free 3D to the web, implemented right into the browser. Major browser vendors Apple (Safari), Google (Chrome), Mozilla (Firefox), and Opera (Opera) are members of the WebGL Working Group.”) (What are its limitations? And how much does it overlap with openGL for mobile devices?) 
-
