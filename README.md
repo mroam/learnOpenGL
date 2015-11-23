@@ -25,6 +25,8 @@ References
 
 * See github’s “[MarkDown Basics](http://help.github.com/articles/markdown-basics/)”.
 
+* [McNopper’s sample programs](https://github.com/McNopper), including shading language.
+
 
 Tutorials
 --------
