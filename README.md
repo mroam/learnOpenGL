@@ -30,6 +30,8 @@ Tutorials
 --------
 * “[Glitter](http://github.com/Polytonic/Glitter)” is github repo which includes the necessary libraries and instructions for getting started with the [learnopengl.com](http://learnopengl.com) and [open.gl]](http://open.gl) tutorials! (Claims to require only one “dependency”: [cmake](http://www.cmake.org/download/).)
 
+* [modern OpenGL with shaders (youtube 3 hour video)](http://youtu.be/6-9XFm7XAT8) from SIGGRAPH!
+
 * http://openglbook.com for *openGL 4* (see preface for hardware and software requirements: book uses [Glew](http://glew.sourceforge.net) and [FreeGlut](http://freeglut.sourceforge.net) (note: “get freeglut version 2.6.0 or higher in order to be able to create an OpenGL 4.0 context”), and explanation that old “glBegin, glEnd, glVertex3f, and glColor3f ... are not present in the OpenGL 4.0 Core Profile. Forget ... ‘immediate mode’ OpenGL ... since it is never coming back.”)
 
 * Highly recommended [open.gl tutorial for openGL 4](http://open.gl) with minimal use of other libraries. (requires SFML, [glfw](http://www.glfw.org/) or SDL for creating the context and handling input; [Glew](http://glew.sourceforge.net) to use newer OpenGL functions; [SOIL](http://www.lonesock.net/soil.html) (or [SOIL2](http://bitbucket.org/SpartanJ/soil2)?) for textures; [glm](http://glm.g-truc.net/) for vectors and matrices.
@@ -56,7 +58,7 @@ To Do
 Questions
 --------
 * Can we make cross-platform standalone apps that include everything they need? (glew, glut, x11/xQuartz, or whatever else so that users don’t have to download things we depend upon?? (Isn’t this about “linking” and/or/versus “installing”??) 
-* For portability, maybe we should look into “[WebGL](http://www.khronos.org/webgl/)”? (“plugin-free 3D for the web, implemented right in the browser. Major browser vendors Apple (Safari), Google (Chrome), Mozilla (Firefox), and Opera (Opera) are members of the WebGL Working Group.”) (What are webGL limitations? And how much does it overlap with “openGL ES” for mobile devices?) 
+* For portability, maybe we should look into “[WebGL](http://www.khronos.org/webgl/)”? (“plugin-free 3D for the web, implemented right in the browser. Major browser vendors Apple (Safari), Google (Chrome), Mozilla (Firefox), and Opera (Opera) are members of the WebGL Working Group.”) (What are limitations of webGL, and its foundation “openGL ES” for mobile devices?) 
 
 * Should we use Eclipse or mac-only Xcode? If we use Eclipse, don’t we have to set up separate Eclipse copies for Java and C++?
 
