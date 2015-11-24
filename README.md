@@ -68,7 +68,7 @@ Questions
 
 * What physics systems play nice with opengl? Do we want to build our own? (Note: the “[learnopengl.com](http://learnopengl.com)” website’s author answers a question about picking an onscreen object by saying “(see) [http://www.opengl-tutorial.org...](http://www.opengl-tutorial.org/miscellaneous/clicking-on-objects/picking-with-a-physics-library/) the open source physics library [BulletPhysics](http://bulletphysics.org/) (an amazing library) is used for collision detection in the project.”
 
-* Since openGL just draws pictures (“render”) and does not keep track of where our 3d objects are †, how best should we keep track of what objects we’re using and where they are and how they are moving? († “OpenGL is a rendering library. What OpenGL does not do is retain information about an “object.” All OpenGL sees is a ball of triangles and a bag of state with which to render them. It does not remember that you drew a line in one location and a sphere in another.” —http://www.opengl.org/wiki/Getting_Started )
+* Since openGL just draws pictures (“render”) and does not keep track of where our 3d objects are, how best should we keep track of what objects we’re using and where they are and how they are moving? Perhaps through a physics engine? (see note above.) (“OpenGL is a rendering library. What OpenGL does not do is retain information about an “object.” All OpenGL sees is a ball of triangles and a bag of state with which to render them. It does not remember that you drew a line in one location and a sphere in another.” —http://www.opengl.org/wiki/Getting_Started )
 
 
 Done
