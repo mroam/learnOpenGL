@@ -57,11 +57,11 @@ What is “Macports”?
 * [macports](http://www.macports.org/)
 
 
-What is ”SDL“?
+What is “SDL”?
 --------
 * Like GLFW, ”a library that creates the context for you (i.e. opens a window for you to draw in, handles input for you, etc.)...SDL offers a little more extra functionality (than GLFW) like networking/sound/image loading, GLFW is just context creation and input handling, youll have to load textures yourself or use another library for that (like SOIL)“ —http://www.gamedev.net/topic/656534-glfwglutglu-whats-the-best/
 
 
 What is “webGL”?
 ----------
-* It is a “plugin-free 3D to the web, implemented right into the browser. Major browser vendors Apple (Safari), Google (Chrome), Mozilla (Firefox), and Opera (Opera) are members of the WebGL Working Group.” (What are its limitations? And how much does it overlap with openGL for mobile devices?) 
+* It is a (“plugin-free 3D for the web, implemented right in the browser. Major browser vendors Apple (Safari), Google (Chrome), Mozilla (Firefox), and Opera (Opera) are members of the WebGL Working Group.”) (What are limitations of webGL, and its foundation “openGL ES” for mobile devices?)
