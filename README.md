@@ -1,6 +1,6 @@
 # learnOpenGL
 ========
-Harry and Mike are trying to learn openGL by installing it, reading tutorials, running code, and revising code. (”OpenGL“ is a code library for controlling multi-platform computer graphics chips to draw pictures of 3d objects.)
+Harry and Mike are trying to learn openGL by installing it, reading tutorials, running code, and revising code. (“OpenGL” is a code library for controlling multi-platform computer graphics chips to draw pictures of 3d objects.)
 
 
 Potential Projects
