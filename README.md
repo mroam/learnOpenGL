@@ -75,6 +75,6 @@ Done
 ----------
 * (√) The harrygla xcode project folder is happy with github
 
-* (√) Installed xquartz 2.7.8 ([xquartz latest releases](http://xquartz.macosforge.org/trac/wiki/Releases) as of nov 2015, “works with el capitan (osX 10.11)” supposedly.
+* (√) Installed xquartz 2.7.8 on our main machine. ([xquartz latest releases](http://xquartz.macosforge.org/trac/wiki/Releases) as of nov 2015, “works with el capitan (osX 10.11)” supposedly.)
 
 * (√) Installed “[cmake](http://www.cmake.org/download/)” on our main machine so that the “[Glitter](http://github.com/Polytonic/Glitter)” tutorial can build xcode projects for us.
