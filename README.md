@@ -30,7 +30,7 @@ References
 
 Tutorials
 --------
-* “[Glitter](http://github.com/Polytonic/Glitter)” is github repo which includes the necessary libraries and instructions for getting started with the [learnopengl.com](http://learnopengl.com) and [open.gl]](http://open.gl) tutorials! (Claims to require only one “dependency”: [cmake](http://www.cmake.org/download/).)
+* “[Glitter](http://github.com/Polytonic/Glitter)” is github repo which includes the necessary libraries and instructions for getting started with the [learnopengl.com](http://learnopengl.com) and [open.gl](http://open.gl) tutorials! (Claims to require only one “dependency”: [cmake](http://www.cmake.org/download/).)
 
 * [modern OpenGL with shaders (youtube 3 hour video)](http://youtu.be/6-9XFm7XAT8) from SIGGRAPH!
 
