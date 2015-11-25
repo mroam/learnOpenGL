@@ -1,13 +1,13 @@
 # learnOpenGL
 ========
-Harry and Mike are trying to learn openGL by installing it, reading tutorials, running code, and revising code. (“OpenGL” is a code library for controlling multi-platform computer graphics chips to draw pictures of 3d objects.) Here is what we’ve found so far with links to installers, tutorials, etc.
+Harry and Mike are trying to learn openGL by installing it, reading tutorials, running code, and revising code. (“OpenGL” does 3D grapphics: it is a cross-platform multi-language code library API for controlling computer graphics chips to draw pictures of 3d objects.) Here is what we’ve found so far including links to installers, tutorials, versions, references, etc...
 
 
 Potential Projects
 -----------------
-* Lunar lander in 3D
+* Lunar lander in 3D, as interactive game. (Could it display in red-blue 3d glasses, or virtual reality goggles?)
 
-* Skydive simulator
+* [Skydive](www.uspa.org) simulator, interactive game. (Virtual reality?)
 
 
 
