@@ -23,7 +23,7 @@ References
 
 * [openGL api](http://docs.gl)
 
-* [learnopengl.com](http://learnopengl.com) has nice [pdf version of their tutorial website](http://learnopengl.com/#!Offline-book), using glfw on windows visual studio. (Please donate to them if you find them helpful.)
+* [learnopengl.com](http://learnopengl.com) has nice [pdf version of their tutorial website](http://learnopengl.com/#!Offline-book), using glfw, glew, and cmake, on windows visual studio. (Please donate to them if you find them helpful.)
 
 * See github’s “[MarkDown Basics](http://help.github.com/articles/markdown-basics/)”.
 
