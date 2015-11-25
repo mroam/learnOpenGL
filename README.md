@@ -42,9 +42,7 @@ Tutorials
 
 * [learnopengl.com](http://learnopengl.com) for opengl 3.3+ has nice [pdf version of their tutorial website](http://learnopengl.com/#!Offline-book), using glfw, glew, and cmake on windows visual studio. (Please donate to them if you find them helpful.) They explain that openGL 3.3 and up through 4.5 are all “modern” in terms of using shaders and avoiding old deprecated “immediate” mode.
 
-* http://github.com/opengl-tutorials/ogl (originally at http://www.opengl-tutorial.org/) shows “modern” opengl (version 3.3 and up, which mac 10.9 runs, according to the “[Capabilities](http://developer.apple.com/opengl/capabilities/index.html)” page of [Apple’s OpenGL Info](http://developer.apple.com/library/mac/documentation/GraphicsImaging/Conceptual/OpenGL-MacProgGuide/opengl_intro/opengl_intro.html). Note: as of 2015 oct 28, the first 12 tutorials of http://github.com/opengl-tutorials/ogl “work on mac” (and seem to need [Glew](http://glew.sourceforge.net), [glfw](http://www.glfw.org/), and [glm](http://glm.g-truc.net/) libraries/frameworks)
-
-* [learnopengl.com](http://learnopengl.com)
+* http://github.com/opengl-tutorials/ogl (originally at http://www.opengl-tutorial.org/) shows “modern” opengl (version 3.3 and up, which mac 10.9 runs, according to the “[Capabilities](http://developer.apple.com/opengl/capabilities/index.html)” page of [Apple’s OpenGL Info](http://developer.apple.com/library/mac/documentation/GraphicsImaging/Conceptual/OpenGL-MacProgGuide/opengl_intro/opengl_intro.html). Note: as of 2015 oct 28, the first 12 tutorials of http://github.com/opengl-tutorials/ogl “work on mac” (and seem to need [Glew](http://glew.sourceforge.net), [glfw](http://www.glfw.org/), and [glm](http://glm.g-truc.net/) libraries/frameworks).
 
 * [Durian opengl tutorial](http://duriansoftware.com/joe/An-intro-to-modern-OpenGL.-Table-of-Contents.html) with good explanations of pipeline and line-by-line explanation of code (oops, I typed “line-by-lie”) but seems to be using old opengl 2 rather than the 3 or 4 that we’re able to do now.
  
@@ -63,10 +61,10 @@ To Do
 
 Questions
 --------
-* Can we make cross-platform standalone apps that include everything they need? (glew, glut, x11/xQuartz, or whatever else so that users don’t have to download things we depend upon?? (Isn’t this about “linking” and/or/versus “installing”??) 
+* Can we make cross-platform standalone apps that include everything they need? (glew, glut, x11/xQuartz, or whatever else so that users don’t have to download things we depend upon?? (Isn’t this about “static linking” and/or/versus “installing”??) 
 * For portability, maybe we should look into “[WebGL](http://www.khronos.org/webgl/)”? (“plugin-free 3D for the web, implemented right in the browser. Major browser vendors Apple (Safari), Google (Chrome), Mozilla (Firefox), and Opera (Opera) are members of the WebGL Working Group.”) (What are limitations of webGL, and its foundation “openGL ES” for mobile devices?) 
 
-* Should we use Eclipse or mac-only Xcode? If we use Eclipse, don’t we have to set up separate Eclipse copies for Java and C++?
+* Should we use Eclipse or (mac-only) Xcode? If we use Eclipse, don’t we have to set up separate Eclipse copies for Java and C++?
 
 * Java? C++? (mac only?) Swift? Python?
 
