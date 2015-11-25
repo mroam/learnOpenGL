@@ -48,7 +48,7 @@ Tutorials
  
 * [Glut Howto](http://web.eecs.umich.edu/~sugih/courses/eecs487/glut-howto/) <- provided us with a [sample.c](http://web.eecs.umich.edu/%7Esugih/courses/eecs487/glut-howto/sample.c) that worked on mac osX 10.10 in xcode 7! (Uses GLUT code deprecated since osX 10.9.) 
 
-* (more are listed and described at 
+* (more are listed and described at http://www.opengl.org/wiki/Getting_Started#Tutorials_and_How_To_Guides )
 
 
 To Do
