@@ -23,7 +23,7 @@ References
 
 * [openGL api](http://docs.gl)
 
-* learnopengl.com has nice [pdf version of their website](http://learnopengl.com/#!Offline-book)
+* learnopengl.com has nice [pdf version of their website](http://learnopengl.com/#!Offline-book), using glfw.
 
 * See github’s “[MarkDown Basics](http://help.github.com/articles/markdown-basics/)”.
 
