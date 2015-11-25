@@ -20,7 +20,8 @@ Using openGL from Xcode
 --------
 * [Glut Howto](http://web.eecs.umich.edu/~sugih/courses/eecs487/glut-howto/) <- provided us with a [sample.c](http://web.eecs.umich.edu/%7Esugih/courses/eecs487/glut-howto/sample.c) that worked on mac osX 10.10 in xcode 7! (Uses GLUT code deprecated since osX 10.9.) The tutorial showed us how to “Add” the “OpenGL.framework” and “GLUT.framework” to our project by going to the project’s “Build Phases” tab, open the “Link Binary With Libraries” list, and click the ‘+’ sign at the bottom left corner of the list and choosing “OpenGL.framework” and “GLUT.framework” from the list.
 
-* Stack overflow: how to [Use Xcode 7 with git](http://stackoverflow.com/questions/5383609/using-git-with-an-existing-xcode-project/32498035) and [Add xcode project to github](http://stackoverflow.com/questions/12698482/add-xcode-project-to-github-repo) 
+* Stack overflow: how to [Use Xcode 7 with git](http://stackoverflow.com/questions/5383609/using-git-with-an-existing-xcode-project/32498035) and [Add xcode project to github](http://stackoverflow.com/questions/12698482/add-xcode-project-to-github-repo)
+
 
 openGL references
 --------
@@ -29,9 +30,17 @@ openGL references
 * http://www.opengl.org
 
 
+GLFW 
+--------
+* Page 29 of the offline [learnopengl.com](www.learnopengl.com) tutorial has a reminder for mac, “Note that on Mac OS X you also need to add glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE); to your initialization code for it to work.
+
+
 Did
 ----------
-* (√) Installed xquartz 2.7.8 (from [xquartz latest releases](http://xquartz.macosforge.org/trac/wiki/Releases) as of nov 2015, “works with el capitan (osX 10.11)” supposedly. Provides use with recent “freeglut” supposedly.
+* (√) Installed xquartz 2.7.8 (from [xquartz latest releases](http://xquartz.macosforge.org/trac/wiki/Releases) as of nov 2015, “works with el capitan (osX 10.11)” supposedly. Provides us with recent “freeglut” supposedly.
+
+* (√) Installed cmake on our main mac.
+
 
 To do
 ---------
