@@ -62,7 +62,7 @@ To Do
 Questions
 --------
 * Can we make cross-platform standalone apps that include everything they need? (glew, glut, x11/xQuartz, or whatever else so that users don’t have to download things we depend upon?? (Isn’t this about “static linking” and/or/versus “installing”??) 
-* For portability, maybe we should look into “[WebGL](http://www.khronos.org/webgl/)”? (“plugin-free 3D for the web, implemented right in the browser. Major browser vendors Apple (Safari), Google (Chrome), Mozilla (Firefox), and Opera (Opera) are members of the WebGL Working Group.”) (What are limitations of webGL, and its foundation “openGL ES” for mobile devices?) 
+* For portability, maybe we should look into “[WebGL](http://www.khronos.org/webgl/)”? (“plugin-free 3D for the web, implemented right in the browser. Major browser vendors Apple (Safari), Google (Chrome), Mozilla (Firefox), and Opera (Opera) are members of the WebGL Working Group.”—http://www.khronos.org/webgl/) (What are limitations of webGL, and its foundation “openGL ES” for mobile devices?) 
 
 * Should we use Eclipse or (mac-only) Xcode? If we use Eclipse, don’t we have to set up separate Eclipse copies for Java and C++?
 
