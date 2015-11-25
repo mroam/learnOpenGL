@@ -23,6 +23,8 @@ References
 
 * [openGL api](http://docs.gl)
 
+* learnopengl.com has nice [pdf version of their website](http://learnopengl.com/#!Offline-book)
+
 * See github’s “[MarkDown Basics](http://help.github.com/articles/markdown-basics/)”.
 
 * [McNopper’s sample programs](http://github.com/McNopper), including shading language.
