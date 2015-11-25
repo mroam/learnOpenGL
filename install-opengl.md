@@ -3,7 +3,7 @@
 
 Installing openGL
 --------
-* On Mac, openGL and GLUT (deprecated) are installed already (see “[Capabilities](http://developer.apple.com/opengl/capabilities/index.html)” page of [Apple’s OpenGL Info](http://developer.apple.com/library/mac/documentation/GraphicsImaging/Conceptual/OpenGL-MacProgGuide/opengl_intro/opengl_intro.html)
+* On Mac, openGL and GLUT (deprecated) are installed already (see “[Capabilities](http://developer.apple.com/opengl/capabilities/index.html)” page of [Apple’s OpenGL Info](http://developer.apple.com/library/mac/documentation/GraphicsImaging/Conceptual/OpenGL-MacProgGuide/opengl_intro/opengl_intro.html))
 
 * “[Glitter](https://github.com/Polytonic/Glitter)” is github repo which includes the necessary libraries and instructions for getting started with the learnopengl.com and open.gl tutorials! (Claims to require only one “dependency”: [cmake](http://www.cmake.org/download/) and it takes care of including 
 
