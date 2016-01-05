@@ -32,7 +32,7 @@ References
 
 Tutorials
 --------
-* “[Glitter](http://github.com/Polytonic/Glitter)” is github repo which includes the necessary libraries and instructions for getting started with the [learnopengl.com](http://learnopengl.com) and [open.gl](http://open.gl) tutorials! (Claims to require only one “dependency”: [cmake](http://www.cmake.org/download/).)
+* “[Glitter](http://github.com/Polytonic/Glitter)” is github repo which includes the necessary libraries and instructions for getting started with the [learnopengl.com](http://learnopengl.com) and [open.gl](http://open.gl) tutorials! (Requires only one “dependency”: [cmake](http://www.cmake.org/download/).) ... This is our work in progress but doesn't it need shaders?
 
 * [modern OpenGL with shaders (youtube 3 hour video)](http://youtu.be/6-9XFm7XAT8) from SIGGRAPH!
 
@@ -53,7 +53,7 @@ Tutorials
 
 To Do
 --------
-* Download “Glitter” tutorial and its dependency “cmake”. See tutorials, above.
+* Figure out how to add shaders and objects to our Glitter work in progress. Its readme says how work along in online tutorials.
 
 * Is there in hope of finding tutorials that don’t use [Glew](http://glew.sourceforge.net), or [glfw](http://www.glfw.org/), [glm](http://glm.g-truc.net/), or [FreeGlut](http://freeglut.sourceforge.net), etc.?
 
@@ -61,7 +61,8 @@ To Do
 
 Questions
 --------
-* Can we make cross-platform standalone apps that include everything they need? (glew, glut, x11/xQuartz, or whatever else so that users don’t have to download things we depend upon?? (Isn’t this about “static linking” and/or/versus “installing”??) 
+* Can we make cross-platform standalone apps that include everything they need? (glew, glut, x11/xQuartz, or whatever else so that users don’t have to download things we depend upon?? (Isn’t this about “static linking” and/or/versus “installing”??)
+
 * For portability, maybe we should look into “[WebGL](http://www.khronos.org/webgl/)”? (“plugin-free 3D for the web, implemented right in the browser. Major browser vendors Apple (Safari), Google (Chrome), Mozilla (Firefox), and Opera (Opera) are members of the WebGL Working Group.”—http://www.khronos.org/webgl/) (What are limitations of webGL, and its foundation “openGL ES” for mobile devices?) 
 
 * Should we use Eclipse or (mac-only) Xcode? If we use Eclipse, don’t we have to set up separate Eclipse copies for Java and C++?
@@ -75,8 +76,11 @@ Questions
 
 Done
 ----------
-* (√) The harrygla xcode project folder is happy with github
-
-* (√) Installed xquartz 2.7.8 on our main machine. ([xquartz latest releases](http://xquartz.macosforge.org/trac/wiki/Releases) as of nov 2015, “works with el capitan (osX 10.11)” supposedly.)
+* (√) copied “[Glitter](http://github.com/Polytonic/Glitter)” tutorial and used cmake to make Glitter have an xcode project which compiled and ran (after a few changes, see its readme).
 
 * (√) Installed “[cmake](http://www.cmake.org/download/)” on our main machine so that the “[Glitter](http://github.com/Polytonic/Glitter)” tutorial can build xcode projects for us.
+* 
+* (√) Installed xquartz 2.7.8 on our main machine. ([xquartz latest releases](http://xquartz.macosforge.org/trac/wiki/Releases) as of nov 2015, “works with el capitan (osX 10.11)” supposedly.)
+
+* (√) The harrygla xcode project folder is happy with github
+
