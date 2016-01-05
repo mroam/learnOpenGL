@@ -53,7 +53,7 @@ Tutorials
 
 To Do
 --------
-* Figure out how to add shaders and objects to our Glitter work in progress. Its readme says how work along in online tutorials.
+* Check out http://open.gl/drawing about adding shaders and objects to our Glitter work in progress. (We’ve accomplished the “create context” step in our Glitter so far.)
 
 * Is there in hope of finding tutorials that don’t use [Glew](http://glew.sourceforge.net), or [glfw](http://www.glfw.org/), [glm](http://glm.g-truc.net/), or [FreeGlut](http://freeglut.sourceforge.net), etc.?
 
@@ -79,8 +79,8 @@ Done
 * (√) copied “[Glitter](http://github.com/Polytonic/Glitter)” tutorial and used cmake to make Glitter have an xcode project which compiled and ran (after a few changes, see its readme).
 
 * (√) Installed “[cmake](http://www.cmake.org/download/)” on our main machine so that the “[Glitter](http://github.com/Polytonic/Glitter)” tutorial can build xcode projects for us.
-* 
+ 
 * (√) Installed xquartz 2.7.8 on our main machine. ([xquartz latest releases](http://xquartz.macosforge.org/trac/wiki/Releases) as of nov 2015, “works with el capitan (osX 10.11)” supposedly.)
 
-* (√) The harrygla xcode project folder is happy with github
+* (√) The harrygla xcode project folder is happy with github.
 
