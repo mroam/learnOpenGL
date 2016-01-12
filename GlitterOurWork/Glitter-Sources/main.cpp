@@ -12,8 +12,8 @@
 #include <iostream>  // enables cout
 
 int main(int argc, char * argv[]) {
-    std::cout << "Glitter is starting!\n";
-    fprintf(stderr, "Glitter is starting...\n");
+    std::cout << "Glitter is ";
+    fprintf(stdout, "starting...\n");
     // Load GLFW and Create a Window
     glfwInit();
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);  // project was hardwired with "4" and "0" but imac z-ppp1-j (early 2009)
