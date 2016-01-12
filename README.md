@@ -53,9 +53,9 @@ Tutorials
 
 To Do
 --------
-* Check out http://open.gl/drawing about adding shaders and objects to our Glitter work in progress. (We’ve accomplished the “create context” step in our Glitter so far.)
+* Check out http://open.gl/drawing about adding shaders and objects to our Glitter work in progress. (We’ve accomplished the previous step, “create context,” in our Glitter so far.)
 
-* Is there in hope of finding tutorials that don’t use [Glew](http://glew.sourceforge.net), or [glfw](http://www.glfw.org/), [glm](http://glm.g-truc.net/), or [FreeGlut](http://freeglut.sourceforge.net), etc.?
+* Is there any hope (or need?) of finding tutorials that don’t use [Glew](http://glew.sourceforge.net), or [glfw](http://www.glfw.org/), or [glm](http://glm.g-truc.net/), or [FreeGlut](http://freeglut.sourceforge.net), etc.?
 
 
 
