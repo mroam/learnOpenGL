@@ -5,7 +5,7 @@ Harry and Mike are trying to learn openGL by installing it, reading tutorials, r
 
 Potential Projects
 -----------------
-* Lunar lander in 3D, as interactive game. (Could it display in red-blue 3d glasses, or virtual reality goggles?)
+* [Lunar lander](http://www.nasa.gov/multimedia/imagegallery/image_gallery_2104.html) in 3D, as interactive game. (Could it display in red-blue 3d glasses, or virtual reality goggles?)
 
 * [Skydive](http://www.uspa.org) simulator, interactive game. (Virtual reality?)
 
