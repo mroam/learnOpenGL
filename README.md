@@ -7,7 +7,7 @@ Potential Projects
 -----------------
 * Lunar lander in 3D, as interactive game. (Could it display in red-blue 3d glasses, or virtual reality goggles?)
 
-* [Skydive](www.uspa.org) simulator, interactive game. (Virtual reality?)
+* [Skydive](http://www.uspa.org) simulator, interactive game. (Virtual reality?)
 
 
 
