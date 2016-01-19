@@ -29,6 +29,7 @@ References
 
 * [McNopper’s sample programs](http://github.com/McNopper), including shading language.
 
+* [Loading file into string](http://stackoverflow.com/questions/2602013/read-whole-ascii-file-into-c-stdstring)
 
 Tutorials
 --------
