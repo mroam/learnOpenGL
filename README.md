@@ -54,7 +54,7 @@ Tutorials
 
 To Do
 --------
-* Check out http://open.gl/drawing about adding shaders and objects to our Glitter work in progress. (We’ve accomplished the previous step, “create context,” in our Glitter so far.)
+* We have used http://open.gl/drawing to add shaders and objects to our Glitter work in progress, and it compiles but nothing appears on our grey screen. Their code sample uses glew, but ours uses glfw (since we started with http://learnopengl.com ) so maybe we should compare to the latter's listing?
 
 * Is there any hope (or need?) of finding tutorials that don’t use [Glew](http://glew.sourceforge.net), or [glfw](http://www.glfw.org/), or [glm](http://glm.g-truc.net/), or [FreeGlut](http://freeglut.sourceforge.net), etc.?
 
