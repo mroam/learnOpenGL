@@ -31,6 +31,8 @@
  
  -----
  // this is simple vertext shader
+ // if we wanted to include this here (rather than remote file) we could say
+ // const GLchar* vertextSource = "   blah blah blah \n"
  version 330 core
  layout (location = 0) in vec3 position;
  
@@ -59,12 +61,30 @@ int main(int argc, char * argv[]) {
         fprintf(stderr, "Failed to Create OpenGL Context");
         return EXIT_FAILURE;
     }
+    
+    
+    
 
     // Create Context and Load OpenGL Functions
     glfwMakeContextCurrent(mWindow);
     gladLoadGL();
     fprintf(stderr, "OpenGL %s\n", glGetString(GL_VERSION));
     
+    
+    // Create a Vertex Buffer Object and copy the vertex data to it
+    /*     our vertices, duh... */
+    GLfloat vertices[] = {
+        -0.5f, -0.5f, 0.0f,
+        0.5f, -0.5f, 0.0f,
+        0.0f, 0.5f, 0.0f
+    };
+    
+    GLuint VBO;
+    glGenBuffers(1, &VBO);   // Beware: this crashee when we had it before "glfwMakeContextCurrent( )"
+    
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+
     
     
     //// Now we'll try to load some shaders from external files
@@ -73,7 +93,7 @@ int main(int argc, char * argv[]) {
     std::stringstream ourVertexShaderBuffer;
     ourVertexShaderBuffer << vertfn.rdbuf( );
     // conversion from string to GLchar *   is from
-    //        http://stackoverflow.com/questions/34836454/neither-vertex-shader-nor-fragment-shader-are-compiling-after-loading-from-a-fil
+    //  http://stackoverflow.com/questions/34836454/neither-vertex-shader-nor-fragment-shader-are-compiling-after-loading-from-a-fil
     // char * vertShaderSource = ourVertexShaderBuffer.c_str( );//const_cast<const GLchar*>(ourVertexShaderBuffer.str( ));
     std::string vertShaderSourceStr = ourVertexShaderBuffer.str( );
     const char * vertShaderSourceChars = vertShaderSourceStr.c_str( );  // "const" was important!!
@@ -82,14 +102,50 @@ int main(int argc, char * argv[]) {
     
     glShaderSource(ourVertexShader, 1, &vertShaderSourceChars, NULL);
     glCompileShader(ourVertexShader);
-    // we stopped here, presently copying from "Vertex Shader" sections of
-    // tutorial http://learnopengl.com/book/offline%20learnopengl.pdf
-    // and   https://open.gl/drawing
+   
     
     
+    std::ifstream fragfn("fragshader_mh1.vert");
+    std::stringstream ourFragmentShaderBuffer;
+    ourFragmentShaderBuffer << fragfn.rdbuf( );
     
+    std::string fragShaderSourceStr = ourFragmentShaderBuffer.str( );
+    const char * fragShaderSourceChars = fragShaderSourceStr.c_str( );  // "const" was important!!
     
+    GLuint ourFragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
+    
+    glShaderSource(ourFragmentShader, 1, &fragShaderSourceChars, NULL);
+    glCompileShader(ourFragmentShader);
 
+    
+    GLint ourShaderCompilationStatus;
+    glGetShaderiv(ourVertexShader, GL_COMPILE_STATUS, &ourShaderCompilationStatus);
+    std::cout << "Vertex shader compilation status: " << ourShaderCompilationStatus << "\n";
+    glGetShaderiv(ourFragmentShader, GL_COMPILE_STATUS, &ourShaderCompilationStatus);
+    std::cout << "Fragment shader compilation status: " << ourShaderCompilationStatus << "\n";
+
+    // Link the vertex and fragment shader into a shader program
+    GLuint shaderProgram = glCreateProgram();
+    glAttachShader(shaderProgram, ourVertexShader);
+    glAttachShader(shaderProgram, ourFragmentShader);
+    glBindFragDataLocation(shaderProgram, 0, "outColor");
+    glLinkProgram(shaderProgram);
+    glUseProgram(shaderProgram);
+    
+    // Specify the layout of the vertex data
+    GLint posAttrib = glGetAttribLocation(shaderProgram, "position");
+    glVertexAttribPointer(posAttrib, /* number of inputs: */ 2, GL_FLOAT, /* normalize: */ GL_FALSE, /* stride: */0, /* offset: */ 0);
+    
+    glEnableVertexAttribArray(posAttrib);
+    
+    
+    // Create Vertex Array Object
+    GLuint vao;
+    glGenVertexArrays(1, &vao);
+    glBindVertexArray(vao);
+    
+    
+    
     // Rendering Loop
     while (glfwWindowShouldClose(mWindow) == false) {
         if (glfwGetKey(mWindow, GLFW_KEY_ESCAPE) == GLFW_PRESS)
@@ -99,8 +155,20 @@ int main(int argc, char * argv[]) {
         glClearColor(0.25f, 0.25f, 0.25f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
         
-        // ?? glDrawPixels
-
+        //  glDrawPixels
+        // Draw a triangle using our 3 vertices
+        
+        /*  ... This compiles but nothing shows on the screen:
+         Perhaps the shader versions are bad??
+         Perhaps the vertices are out of bounds??
+         Perhaps the shaders aren't talking to each other? (they're from different tutorials)
+         Howzabout we find a sample program that doesn't use GLEW, instead using GLFW like us.
+         ( http://open.gl/drawing has listing that uses GLEW so not exactly the same as us.
+         Perhaps tutorial http://learnopengl.com/book/offline%20learnopengl.pdf has non-glew
+         listing to compare to?
+         */
+        glDrawArrays(GL_TRIANGLES, 0, 3);
+        
         // Flip Buffers and Draw
         glfwSwapBuffers(mWindow);
         glfwPollEvents();
