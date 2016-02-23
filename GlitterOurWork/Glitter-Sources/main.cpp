@@ -15,12 +15,7 @@
 
 /* 
  // from http://learnopengl.com/book/offline%20learnopengl.pdf  page 37-38
- 
- GLfloat vertices[] = {
- -0.5f, -0.5f, 0.0f,
- 0.5f, -0.5f, 0.0f,
- 0.0f, 0.5f, 0.0f
-};
+ // (see also http://open.gl/drawing for a slightly different version.)
  
  GLuint VBO;
  glGenBuffers(1, &VBO);
@@ -62,29 +57,27 @@ int main(int argc, char * argv[]) {
         return EXIT_FAILURE;
     }
     
-    
-    
 
     // Create Context and Load OpenGL Functions
-    glfwMakeContextCurrent(mWindow);
+    glfwMakeContextCurrent(mWindow);  // <== has to be before "glGenBuffers( )
     gladLoadGL();
     fprintf(stderr, "OpenGL %s\n", glGetString(GL_VERSION));
     
     
     // Create a Vertex Buffer Object and copy the vertex data to it
     /*     our vertices, duh... */
-    GLfloat vertices[] = {
+    // from http://learnopengl.com/book/offline%20learnopengl.pdf  page 37-38
+
+    GLfloat vertices[] = {  /* note: the z's are 0.0, */
         -0.5f, -0.5f, 0.0f,
         0.5f, -0.5f, 0.0f,
         0.0f, 0.5f, 0.0f
     };
     
-    GLuint VBO;
-    glGenBuffers(1, &VBO);   // Beware: this crashee when we had it before "glfwMakeContextCurrent( )"
     
-    glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-
+    GLuint VBO;
+    glGenBuffers(1, &VBO);   
+     // Beware: crashes when glGenBuffers( ) is before "glfwMakeContextCurrent( )"
     
     
     //// Now we'll try to load some shaders from external files
@@ -99,11 +92,17 @@ int main(int argc, char * argv[]) {
     const char * vertShaderSourceChars = vertShaderSourceStr.c_str( );  // "const" was important!!
     
     GLuint ourVertexShader = glCreateShader(GL_VERTEX_SHADER);
-    
     glShaderSource(ourVertexShader, 1, &vertShaderSourceChars, NULL);
     glCompileShader(ourVertexShader);
    
-    
+    GLint ourShaderCompilationStatus;
+    GLchar infoLog[512];
+    glGetShaderiv(ourVertexShader, GL_COMPILE_STATUS, &ourShaderCompilationStatus);
+    std::cout << "Vertex shader compilation status: " << (ourShaderCompilationStatus == GL_TRUE) << "\n";
+    if (ourShaderCompilationStatus != GL_TRUE) {
+        glGetShaderInfoLog(ourVertexShader, 512, NULL, infoLog);
+        std::cout << "ERROR--Vertex Shader Compilation Failed.\n" << infoLog << std::endl;
+    }
     
     std::ifstream fragfn("fragshader_mh1.vert");
     std::stringstream ourFragmentShaderBuffer;
@@ -113,36 +112,72 @@ int main(int argc, char * argv[]) {
     const char * fragShaderSourceChars = fragShaderSourceStr.c_str( );  // "const" was important!!
     
     GLuint ourFragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
-    
     glShaderSource(ourFragmentShader, 1, &fragShaderSourceChars, NULL);
     glCompileShader(ourFragmentShader);
-
     
-    GLint ourShaderCompilationStatus;
-    glGetShaderiv(ourVertexShader, GL_COMPILE_STATUS, &ourShaderCompilationStatus);
-    std::cout << "Vertex shader compilation status: " << ourShaderCompilationStatus << "\n";
     glGetShaderiv(ourFragmentShader, GL_COMPILE_STATUS, &ourShaderCompilationStatus);
     std::cout << "Fragment shader compilation status: " << ourShaderCompilationStatus << "\n";
+    if (ourShaderCompilationStatus != GL_TRUE) {
+        glGetShaderInfoLog(ourFragmentShader, 512, NULL, infoLog);
+        std::cout << "ERROR--Fragment Shader Compilation Failed.\n" << infoLog << std::endl;
+    }
 
+    
     // Link the vertex and fragment shader into a shader program
-    GLuint shaderProgram = glCreateProgram();
-    glAttachShader(shaderProgram, ourVertexShader);
-    glAttachShader(shaderProgram, ourFragmentShader);
-    glBindFragDataLocation(shaderProgram, 0, "outColor");
-    glLinkProgram(shaderProgram);
-    glUseProgram(shaderProgram);
+    GLuint ourShaderProgram = glCreateProgram( );
+    glAttachShader(ourShaderProgram, ourVertexShader);  // learnopengl.com's order vert then frag
+    glAttachShader(ourShaderProgram, ourFragmentShader);
+    glBindFragDataLocation(ourShaderProgram, 0, "outColor");
+    glLinkProgram(ourShaderProgram);
+    
+    // check for errors:
+    GLint ourShadersLinkStatus;
+    glGetProgramiv(ourShaderProgram, GL_LINK_STATUS, &ourShadersLinkStatus);
+    if (!ourShadersLinkStatus) {
+        glGetProgramInfoLog(ourShaderProgram, 512, NULL, infoLog);
+        std::cout << "DANG!--Linking of Shaders failed.\n" << infoLog << std::endl;
+    }
+    
+    
+    
+    glUseProgram(ourShaderProgram);
+    // now that the shader objects are linked, we can delete them (says learnopengl.com)
+    // don't forget...
+    glDeleteShader(ourVertexShader);
+    glDeleteShader(ourFragmentShader);
+    
+
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
     
     // Specify the layout of the vertex data
-    GLint posAttrib = glGetAttribLocation(shaderProgram, "position");
-    glVertexAttribPointer(posAttrib, /* number of inputs: */ 2, GL_FLOAT, /* normalize: */ GL_FALSE, /* stride: */0, /* offset: */ 0);
-    
-    glEnableVertexAttribArray(posAttrib);
+    // note: instead of hard-wiring the first 0 for both method calls, could use:
+    //     // GLint posAttrib = glGetAttribLocation(ourShaderProgram, "position");
+    glVertexAttribPointer(
+                          /* which vertex attribute: */ 0,
+                          /* number of inputs: */ 3,
+                          /* type of data: */ GL_FLOAT,
+                          /* normalize: */ GL_FALSE,
+                          /* stride: */ 3 * sizeof(GLfloat),
+                          /* offset: */ (GLvoid*)0
+                          );
+    /* here's the opengl.com version of specifying layout of vertex data, which is different */
+    // GLint posAttrib = glGetAttribLocation(ourShaderProgram, "position");
+    // glVertexAttribPointer(posAttrib, /* number of inputs: */ 2, GL_FLOAT, /* normalize: */ GL_FALSE, /* stride: */0, /* offset: */ 0);
     
     
     // Create Vertex Array Object
-    GLuint vao;
-    glGenVertexArrays(1, &vao);
-    glBindVertexArray(vao);
+    GLuint ourVao;
+    glGenVertexArrays(1, &ourVao);
+    
+    
+    glEnableVertexAttribArray( /* vertex attribute location: */ 0);
+    // BEWARE: there is a method ending with ArrayAttrib instead of AttribArray!
+    // glEnableVertexArrayAttrib(/*vaobj:*/ ourVao, /* vertex attribute location: */ 0);
+    /* vertex attributes are disabled by default, so this looks important. See http://learnopengl.com/#!Getting-started/Hello-Triangle */
+    /* hey glEnableVertexArrayAttrib( ) has two versions, one expecting just (GLuint index) while the other is expecting (GLuint vaobj, GLuint index) */
+    
+    
     
     
     
@@ -167,8 +202,11 @@ int main(int argc, char * argv[]) {
          Perhaps tutorial http://learnopengl.com/book/offline%20learnopengl.pdf has non-glew
          listing to compare to?
          */
-        glDrawArrays(GL_TRIANGLES, 0, 3);
-        
+        /* to do some drawing, we use Bind(ourVao) and then (un)Bind it with Bind(0) */
+        glBindVertexArray(ourVao);
+        glDrawArrays(GL_TRIANGLES, /* starting at which vertex: */ 0, /* howManyVertices: */ 3);
+        glBindVertexArray(/* unbinding so as not to mess it up */0);
+       
         // Flip Buffers and Draw
         glfwSwapBuffers(mWindow);
         glfwPollEvents();

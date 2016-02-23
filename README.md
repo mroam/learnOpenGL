@@ -54,11 +54,12 @@ Tutorials
 
 To Do
 --------
-* We have used http://open.gl/drawing to add shaders and objects to our Glitter work in progress, and it compiles but nothing appears on our grey screen. Their code sample uses glew, but ours uses glfw (since we started with http://learnopengl.com ) so maybe we should compare to the latter's listing?
+* We have used http://learnopengl.com to add shaders and objects to our Glitter work in progress, and it compiles but nothing appears on our grey screen. ("Vertex shader compilation status: 1 (ok); Fragment shader compilation status: 1 (ok); 
+DANG!--Linking of Shaders failed. ERROR: Compiled vertex shader was corrupt. ERROR: Compiled fragment shader was corrupt.")
 
-* Is there any hope (or need?) of finding tutorials that don’t use [Glew](http://glew.sourceforge.net), or [glfw](http://www.glfw.org/), or [glm](http://glm.g-truc.net/), or [FreeGlut](http://freeglut.sourceforge.net), etc.?
+* Is there any hope (or need?) of finding tutorials that don’t use or [glfw](http://www.glfw.org/ and http://learnopengl.com), [Glew](http://glew.sourceforge.net), or [glm](http://glm.g-truc.net/), or [FreeGlut](http://freeglut.sourceforge.net), etc.?
 
-* figure out the file size bug [Here's a link to something!](http://superuser.com/questions/382120/mac-os-x-not-reporting-directory-sizes-correctly)
+* Figure out the file size bug [Here's a link to something!](http://superuser.com/questions/382120/mac-os-x-not-reporting-directory-sizes-correctly)
 
 Questions
 --------
@@ -77,6 +78,8 @@ Questions
 
 Done
 ----------
+* (√) make our xcode glitter project's main.cpp match the glfw demo from http://learnopengl.com
+
 * (√) copied “[Glitter](http://github.com/Polytonic/Glitter)” tutorial and used cmake to make Glitter have an xcode project which compiled and ran (after a few changes, see its readme).
 
 * (√) Installed “[cmake](http://www.cmake.org/download/)” on our main machine so that the “[Glitter](http://github.com/Polytonic/Glitter)” tutorial can build xcode projects for us.
