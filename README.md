@@ -31,6 +31,9 @@ References
 
 * [Loading file into string](http://stackoverflow.com/questions/2602013/read-whole-ascii-file-into-c-stdstring)
 
+* Hey, check out Processing 3 Java Examples of openGL: Demos/LowLevelGLVboInterleaved and /LowLevelGLVboSeparate
+
+
 Tutorials
 --------
 * “[Glitter](http://github.com/Polytonic/Glitter)” is github repo which includes the necessary libraries and instructions for getting started with the [learnopengl.com](http://learnopengl.com) and [open.gl](http://open.gl) tutorials! (Requires only one “dependency”: [cmake](http://www.cmake.org/download/).) ... This is our work in progress but doesn't it need shaders?
@@ -55,6 +58,8 @@ Tutorials
 To Do
 --------
 * Continue trying to use the mere source from learnopengl.com, which uses glew and glfw, and won't compile on mac xcode. (see glitter2) We have used http://learnopengl.com to add shaders and objects to our Glitter work in progress, and it compiles but nothing appears on our grey screen. ("Vertex shader compilation status: 1 (ok); Fragment shader compilation status: 1 (ok); DANG!--Linking of Shaders failed. ERROR: Compiled vertex shader was corrupt. ERROR: Compiled fragment shader was corrupt.")
+ 
+* Figure out how to use glew on mac OR how to work around glew on mac and use whatever apple alternative there is.
 
 * Is there any hope (or need?) of finding tutorials that don’t use or [glfw](http://www.glfw.org/ and http://learnopengl.com), [Glew](http://glew.sourceforge.net), or [glm](http://glm.g-truc.net/), or [FreeGlut](http://freeglut.sourceforge.net), etc.?
 
