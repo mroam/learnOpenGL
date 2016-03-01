@@ -59,7 +59,9 @@ To Do
 --------
 * Continue trying to use the mere source from learnopengl.com, which uses glew and glfw, and won't compile on mac xcode. (see glitter2) We have used http://learnopengl.com to add shaders and objects to our Glitter work in progress, and it compiles but nothing appears on our grey screen. ("Vertex shader compilation status: 1 (ok); Fragment shader compilation status: 1 (ok); DANG!--Linking of Shaders failed. ERROR: Compiled vertex shader was corrupt. ERROR: Compiled fragment shader was corrupt.")
  
-* Figure out how to use glew on mac OR how to work around glew on mac and use whatever apple alternative there is.
+* Figure out how to use glew on mac OR how to work around glew on mac and use whatever apple alternative there is. Can I use cmake to install glew into an xcode project??
+
+* Read [OpenGL on mac](http://developer.apple.com/library/mac/documentation/GraphicsImaging/Conceptual/OpenGL-MacProgGuide/opengl_pg_concepts/opengl_pg_concepts.html#//apple_ref/doc/uid/TP40001987-CH208-SW1)
 
 * Is there any hope (or need?) of finding tutorials that don’t use or [glfw](http://www.glfw.org/ and http://learnopengl.com), [Glew](http://glew.sourceforge.net), or [glm](http://glm.g-truc.net/), or [FreeGlut](http://freeglut.sourceforge.net), etc.?
 
