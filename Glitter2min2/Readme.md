@@ -10,4 +10,8 @@ Mike & Harry Note:
 * After compiling in xcode, we had to tell xcode to run "Glitter>My Mac" in the choice at the top left of the window, to the right of buttons ">" and "[]"
 * We had to hard-wire opengl version major/minor 3.3 instead of default 4.0. Our old favorite development imac only has opengl 3.3
 
+To do:
+[ ] Figure out whether moving to new machine allows opengl 4.0
+[ ] Figure out whether changing the internal shaders makes a difference.
+[ ] Figure out how to use the separate-file shaders. (Probably could copy from the "Glitter/OurWork" version of main.cpp)
 
