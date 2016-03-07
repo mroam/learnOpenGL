@@ -1,0 +1,16 @@
+/Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/BulletCollision/CMakeFiles/BulletCollision.dir
+/Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir
+/Users/student/Documents/Glitter/Build/CMakeFiles/Glitter.dir
+/Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw/CMakeFiles/uninstall.dir
+/Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/LinearMath/CMakeFiles/LinearMath.dir
+/Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/Bullet3Geometry/CMakeFiles/Bullet3Geometry.dir
+/Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir
+/Users/student/Documents/Glitter/Build/Glitter/Vendor/assimp/code/CMakeFiles/assimp.dir
+/Users/student/Documents/Glitter/Build/CMakeFiles/ALL_BUILD.dir
+/Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/Bullet3Common/CMakeFiles/Bullet3Common.dir
+/Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/Bullet3OpenCL/CMakeFiles/Bullet3OpenCL_clew.dir
+/Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/BulletDynamics/CMakeFiles/BulletDynamics.dir
+/Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/Bullet3Collision/CMakeFiles/Bullet3Collision.dir
+/Users/student/Documents/Glitter/Build/CMakeFiles/ZERO_CHECK.dir
+/Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/BulletSoftBody/CMakeFiles/BulletSoftBody.dir
+/Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw/src/CMakeFiles/glfw.dir

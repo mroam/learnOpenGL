@@ -1,0 +1,51 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "121862C7E4BA97722477DD6168282EC9EA2BFDCE",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "F91D28A7E95E8F0399C74826E40B332B63E48E1C" : 0,
+    "AE3F0F79FA18959EE39DE06BF81D40ADA159F259" : 0,
+    "CD02AD23789515AF5D416F876100FE38242DE7E4" : 0,
+    "41AFDA14635B01F1C66ED69E5A3912E140B373A3" : 0,
+    "121862C7E4BA97722477DD6168282EC9EA2BFDCE" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "D77DDAB4-9B7E-4AD1-8A02-CBF2DEB86477",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "F91D28A7E95E8F0399C74826E40B332B63E48E1C" : "Glitter\/Glitter\/Vendor\/glfw\/",
+    "AE3F0F79FA18959EE39DE06BF81D40ADA159F259" : "Glitter\/Glitter\/Vendor\/assimp\/",
+    "CD02AD23789515AF5D416F876100FE38242DE7E4" : "Glitter\/Glitter\/Vendor\/bullet\/",
+    "41AFDA14635B01F1C66ED69E5A3912E140B373A3" : "Glitter\/Glitter\/Vendor\/glad\/",
+    "121862C7E4BA97722477DD6168282EC9EA2BFDCE" : "Glitter\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Glitter",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Build\/Glitter.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mroam\/Glitter.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "121862C7E4BA97722477DD6168282EC9EA2BFDCE"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Dav1dde\/glad.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "41AFDA14635B01F1C66ED69E5A3912E140B373A3"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/assimp\/assimp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AE3F0F79FA18959EE39DE06BF81D40ADA159F259"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/bulletphysics\/bullet3.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "CD02AD23789515AF5D416F876100FE38242DE7E4"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/glfw\/glfw.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F91D28A7E95E8F0399C74826E40B332B63E48E1C"
+    }
+  ]
+}

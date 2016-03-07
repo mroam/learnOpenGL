@@ -1,0 +1,1044 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		05DCF1EABD934D959092699A /* uninstall */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = AB6E628B31364099B9ABDBC7 /* Build configuration list for PBXAggregateTarget "uninstall" */;
+			buildPhases = (
+				2EB0748589A34E4AB1FB8AB2 /* CMake Rules */,
+			);
+			dependencies = (
+				B532CEC293E74E638C8DE781 /* PBXTargetDependency */,
+			);
+			name = uninstall;
+			productName = uninstall;
+		};
+		1DE1341828C44B0F92F3C62B /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = C299C9F56274482296F2929B /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				F51AED2F896945EE8CFF2B1C /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				EF6477E537C84D14AA2D741C /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+		5411C5FB52B1450E93EF0860 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B9CB702875DC413A93E8B690 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				366BC3A7A4B649A2908CF25D /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		F2D3BD42848749B992DB00F5 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 3A02B94DC7ED48A0BC042242 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				75E8299A6BB648CAACA6002C /* CMake Rules */,
+			);
+			dependencies = (
+				EFF86B46207F4EFFBDC5ABF0 /* PBXTargetDependency */,
+				E113067B321F4B70962BDEC9 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		08CDE72EDB6C4E828698DA94 /* /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw/src/glfw_config.h */ = {isa = PBXBuildFile; fileRef = 40D5680C77F34772AF317DAA /* /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw/src/glfw_config.h */; settings = {COMPILER_FLAGS = ""; }; };
+		25D4B3BCEB744A52A950BDCE /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/input.c */ = {isa = PBXBuildFile; fileRef = 8FE2FADEB0EC4153AA62A603 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/input.c */; settings = {COMPILER_FLAGS = ""; }; };
+		47B6090552624289BD7B1566 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/nsgl_context.h */ = {isa = PBXBuildFile; fileRef = F84F6930B1C74FFCA7414FC8 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/nsgl_context.h */; settings = {COMPILER_FLAGS = ""; }; };
+		4F83EFC857E049879D3F3978 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/window.c */ = {isa = PBXBuildFile; fileRef = 6DBE9127318043FD8C0079E5 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/window.c */; settings = {COMPILER_FLAGS = ""; }; };
+		5D3B6AD741404D3A9A84C833 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/monitor.c */ = {isa = PBXBuildFile; fileRef = CEED2CE2C30D47528C6499B4 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/monitor.c */; settings = {COMPILER_FLAGS = ""; }; };
+		6B0C9F400FED40B6B964F10D /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/cocoa_init.m */ = {isa = PBXBuildFile; fileRef = DC8EDB600E814498A7ED41A5 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/cocoa_init.m */; settings = {COMPILER_FLAGS = ""; }; };
+		80FD8AF54B2D491EAB033E02 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/cocoa_monitor.m */ = {isa = PBXBuildFile; fileRef = C96183520BD2495C96A48F34 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/cocoa_monitor.m */; settings = {COMPILER_FLAGS = ""; }; };
+		81EE9DEF794944379B7AAD72 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/include/GLFW/glfw3.h */ = {isa = PBXBuildFile; fileRef = 09E73D6B35C8481D8E5D05F2 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/include/GLFW/glfw3.h */; settings = {COMPILER_FLAGS = ""; }; };
+		92BB29E14AF14C839EF7AF5D /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/nsgl_context.m */ = {isa = PBXBuildFile; fileRef = 95D4E083F93042ABB0E3B3FD /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/nsgl_context.m */; settings = {COMPILER_FLAGS = ""; }; };
+		A0AB4BE4EBF74F9BA2D2FF46 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/include/GLFW/glfw3native.h */ = {isa = PBXBuildFile; fileRef = C6FAD2BBDEF44A529B8429C1 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/include/GLFW/glfw3native.h */; settings = {COMPILER_FLAGS = ""; }; };
+		A41D468B25FF4D9B8E8B8175 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/iokit_joystick.m */ = {isa = PBXBuildFile; fileRef = 5AEACF7348C74782B06AE10C /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/iokit_joystick.m */; settings = {COMPILER_FLAGS = ""; }; };
+		A5489E9075E7432D97C567ED /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/internal.h */ = {isa = PBXBuildFile; fileRef = 00A2E984BCA64B7CBBACDCAA /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/internal.h */; settings = {COMPILER_FLAGS = ""; }; };
+		A8B1A03BA7744880AEEDE27E /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = A05B95FC39A848A38971D109 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/CMakeLists.txt */; settings = {COMPILER_FLAGS = ""; }; };
+		AB447E9CD110450591184D19 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/mach_time.c */ = {isa = PBXBuildFile; fileRef = 0BBC809F315044E49FEC1BD7 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/mach_time.c */; settings = {COMPILER_FLAGS = ""; }; };
+		B0F8C48B33D2445A8EA67D8F /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/context.c */ = {isa = PBXBuildFile; fileRef = CBF0A103C2904C8AA93266D7 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/context.c */; settings = {COMPILER_FLAGS = ""; }; };
+		B869EF4FC6124D61B8A202A7 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/posix_tls.c */ = {isa = PBXBuildFile; fileRef = 787062D406D74D12900C56C1 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/posix_tls.c */; settings = {COMPILER_FLAGS = ""; }; };
+		CD1E33A3B82342D29236E574 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/init.c */ = {isa = PBXBuildFile; fileRef = 09A687ED4E11468A8FE3B4F6 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/init.c */; settings = {COMPILER_FLAGS = ""; }; };
+		CD837A8BF03A4E999B9FF322 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/cocoa_platform.h */ = {isa = PBXBuildFile; fileRef = E007F45BE28C4E05BF22B55B /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/cocoa_platform.h */; settings = {COMPILER_FLAGS = ""; }; };
+		D161CFF7CF8146748E1BB7F4 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/iokit_joystick.h */ = {isa = PBXBuildFile; fileRef = 4BE26F32B01B4C55B9F924BE /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/iokit_joystick.h */; settings = {COMPILER_FLAGS = ""; }; };
+		D279F2ADB4E04A67B155771C /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/posix_tls.h */ = {isa = PBXBuildFile; fileRef = A73CC68AC83E4D78B21F6CA2 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/posix_tls.h */; settings = {COMPILER_FLAGS = ""; }; };
+		DD0845088685404684B6131F /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/cocoa_window.m */ = {isa = PBXBuildFile; fileRef = 39230C1A457C4638A247CE02 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/cocoa_window.m */; settings = {COMPILER_FLAGS = ""; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		4CED77E9CCAB4C64AC342CD4 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		581EE6AA3ADC4943A5173E36 = {
+			isa = PBXBuildStyle;
+		};
+		A61C9D943D5E44B591C43BB1 /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		B5BCAED0667A45038D1C8696 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		ECFBB1B7610E42D8A6AE77AC /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		3FD65295CEB645139FD5DFD5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE1B61F1056C433B8581E3F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5411C5FB52B1450E93EF0860;
+			remoteInfo = ZERO_CHECK;
+		};
+		44F6EF9A40B7404EAFB7916C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE1B61F1056C433B8581E3F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0D8CB4931D074B79898E6240;
+			remoteInfo = glfw;
+		};
+		737347D208E24D52B892E2C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE1B61F1056C433B8581E3F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F2D3BD42848749B992DB00F5;
+			remoteInfo = ALL_BUILD;
+		};
+		EC168F4918B946A69053ECA7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE1B61F1056C433B8581E3F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5411C5FB52B1450E93EF0860;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00A2E984BCA64B7CBBACDCAA /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = internal.h; path = src/internal.h; sourceTree = SOURCE_ROOT; };
+		09A687ED4E11468A8FE3B4F6 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/init.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = init.c; path = src/init.c; sourceTree = SOURCE_ROOT; };
+		09E73D6B35C8481D8E5D05F2 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/include/GLFW/glfw3.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3.h; path = include/GLFW/glfw3.h; sourceTree = SOURCE_ROOT; };
+		0BBC809F315044E49FEC1BD7 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/mach_time.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = mach_time.c; path = src/mach_time.c; sourceTree = SOURCE_ROOT; };
+		39230C1A457C4638A247CE02 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/cocoa_window.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_window.m; path = src/cocoa_window.m; sourceTree = SOURCE_ROOT; };
+		3C5CCED7130049CDA7F140FE /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		40D5680C77F34772AF317DAA /* /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw/src/glfw_config.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw_config.h; path = ../../../Build/Glitter/Vendor/glfw/src/glfw_config.h; sourceTree = SOURCE_ROOT; };
+		4BE26F32B01B4C55B9F924BE /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/iokit_joystick.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = iokit_joystick.h; path = src/iokit_joystick.h; sourceTree = SOURCE_ROOT; };
+		5AEACF7348C74782B06AE10C /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/iokit_joystick.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = iokit_joystick.m; path = src/iokit_joystick.m; sourceTree = SOURCE_ROOT; };
+		6DBE9127318043FD8C0079E5 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/window.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = window.c; path = src/window.c; sourceTree = SOURCE_ROOT; };
+		787062D406D74D12900C56C1 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/posix_tls.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = posix_tls.c; path = src/posix_tls.c; sourceTree = SOURCE_ROOT; };
+		8FE2FADEB0EC4153AA62A603 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/input.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = input.c; path = src/input.c; sourceTree = SOURCE_ROOT; };
+		95D4E083F93042ABB0E3B3FD /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/nsgl_context.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = nsgl_context.m; path = src/nsgl_context.m; sourceTree = SOURCE_ROOT; };
+		A05B95FC39A848A38971D109 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = src/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		A73CC68AC83E4D78B21F6CA2 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/posix_tls.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = posix_tls.h; path = src/posix_tls.h; sourceTree = SOURCE_ROOT; };
+		B9EC363D771143BAAE400D6F /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		BE93E3007A3E40E3A9AA9FB8 /* glfw */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglfw3.a; refType = 0; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6FAD2BBDEF44A529B8429C1 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/include/GLFW/glfw3native.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3native.h; path = include/GLFW/glfw3native.h; sourceTree = SOURCE_ROOT; };
+		C96183520BD2495C96A48F34 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/cocoa_monitor.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_monitor.m; path = src/cocoa_monitor.m; sourceTree = SOURCE_ROOT; };
+		CBF0A103C2904C8AA93266D7 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = context.c; path = src/context.c; sourceTree = SOURCE_ROOT; };
+		CEED2CE2C30D47528C6499B4 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/monitor.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = monitor.c; path = src/monitor.c; sourceTree = SOURCE_ROOT; };
+		D70CCD0C27834F9F843485C6 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		DC8EDB600E814498A7ED41A5 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/cocoa_init.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_init.m; path = src/cocoa_init.m; sourceTree = SOURCE_ROOT; };
+		E007F45BE28C4E05BF22B55B /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/cocoa_platform.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_platform.h; path = src/cocoa_platform.h; sourceTree = SOURCE_ROOT; };
+		F84F6930B1C74FFCA7414FC8 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/nsgl_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = nsgl_context.h; path = src/nsgl_context.h; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0B019DFDA3E3430C9441BC54 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		0C55481D662B424D8840D484 /* glfw */ = {
+			isa = PBXGroup;
+			children = (
+				E3D134E6D250491ABE99CEDA /* Source Files */,
+				BB9A0E3CFA2F425EB0A33069 /* Header Files */,
+				A05B95FC39A848A38971D109 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/CMakeLists.txt */,
+			);
+			name = glfw;
+			sourceTree = "<group>";
+		};
+		1E1CC6BB0D9642CA8346219F /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				AA8E97FEFF444C85A15A5247 /* CMake Rules */,
+				D70CCD0C27834F9F843485C6 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		6190E7683F8A476E90654760 /* ZERO_CHECK */ = {
+			isa = PBXGroup;
+			children = (
+				0B019DFDA3E3430C9441BC54 /* CMake Rules */,
+				B9EC363D771143BAAE400D6F /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/CMakeLists.txt */,
+			);
+			name = ZERO_CHECK;
+			sourceTree = "<group>";
+		};
+		AA8E97FEFF444C85A15A5247 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		ABF14BD23832484588A0C708 /* GLFW3 */ = {
+			isa = PBXGroup;
+			children = (
+				0C55481D662B424D8840D484 /* glfw */,
+			);
+			name = GLFW3;
+			sourceTree = "<group>";
+		};
+		BB06F7EE723B4E2A89E53BEF /* uninstall */ = {
+			isa = PBXGroup;
+			children = (
+				D2C54ADE830D4F2194F0D14A /* CMake Rules */,
+				3C5CCED7130049CDA7F140FE /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/CMakeLists.txt */,
+			);
+			name = uninstall;
+			sourceTree = "<group>";
+		};
+		BB9A0E3CFA2F425EB0A33069 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				40D5680C77F34772AF317DAA /* /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw/src/glfw_config.h */,
+				09E73D6B35C8481D8E5D05F2 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/include/GLFW/glfw3.h */,
+				C6FAD2BBDEF44A529B8429C1 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/include/GLFW/glfw3native.h */,
+				E007F45BE28C4E05BF22B55B /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/cocoa_platform.h */,
+				00A2E984BCA64B7CBBACDCAA /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/internal.h */,
+				4BE26F32B01B4C55B9F924BE /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/iokit_joystick.h */,
+				F84F6930B1C74FFCA7414FC8 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/nsgl_context.h */,
+				A73CC68AC83E4D78B21F6CA2 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/posix_tls.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		CBDA9688BED949A497FC3140 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D2C54ADE830D4F2194F0D14A /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		E3D134E6D250491ABE99CEDA /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC8EDB600E814498A7ED41A5 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/cocoa_init.m */,
+				C96183520BD2495C96A48F34 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/cocoa_monitor.m */,
+				39230C1A457C4638A247CE02 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/cocoa_window.m */,
+				CBF0A103C2904C8AA93266D7 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/context.c */,
+				09A687ED4E11468A8FE3B4F6 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/init.c */,
+				8FE2FADEB0EC4153AA62A603 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/input.c */,
+				5AEACF7348C74782B06AE10C /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/iokit_joystick.m */,
+				0BBC809F315044E49FEC1BD7 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/mach_time.c */,
+				CEED2CE2C30D47528C6499B4 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/monitor.c */,
+				95D4E083F93042ABB0E3B3FD /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/nsgl_context.m */,
+				787062D406D74D12900C56C1 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/posix_tls.c */,
+				6DBE9127318043FD8C0079E5 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/window.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		E63D3AB7D0064363B43C3ECB = {
+			isa = PBXGroup;
+			children = (
+				EA4C981F0D934019B425E03E /* Sources */,
+				CBDA9688BED949A497FC3140 /* Resources */,
+				F0EEF7FB610B410F89844E9B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EA4C981F0D934019B425E03E /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				BB06F7EE723B4E2A89E53BEF /* uninstall */,
+				1E1CC6BB0D9642CA8346219F /* ALL_BUILD */,
+				6190E7683F8A476E90654760 /* ZERO_CHECK */,
+				ABF14BD23832484588A0C708 /* GLFW3 */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		F0EEF7FB610B410F89844E9B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE93E3007A3E40E3A9AA9FB8 /* glfw */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0D8CB4931D074B79898E6240 /* glfw */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FFF9FF4D5924DC3873A26B0 /* Build configuration list for PBXNativeTarget "glfw" */;
+			buildPhases = (
+				7A1A05EF41D34FC7B57B81DC /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = glfw;
+			productName = glfw;
+			productReference = BE93E3007A3E40E3A9AA9FB8 /* glfw */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE1B61F1056C433B8581E3F4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+			};
+			buildConfigurationList = 4782F093F4E74302BE62838B /* Build configuration list for PBXProject "GLFW" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				B5BCAED0667A45038D1C8696 /* Debug */,
+				ECFBB1B7610E42D8A6AE77AC /* Release */,
+				4CED77E9CCAB4C64AC342CD4 /* MinSizeRel */,
+				A61C9D943D5E44B591C43BB1 /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = E63D3AB7D0064363B43C3ECB;
+			projectDirPath = ../../../../Glitter/Vendor/glfw;
+			projectRoot = "";
+			targets = (
+				F2D3BD42848749B992DB00F5 /* ALL_BUILD */,
+				5411C5FB52B1450E93EF0860 /* ZERO_CHECK */,
+				1DE1341828C44B0F92F3C62B /* install */,
+				05DCF1EABD934D959092699A /* uninstall */,
+				0D8CB4931D074B79898E6240 /* glfw */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2C7A02A172A545B89FCA82B8 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		2EB0748589A34E4AB1FB8AB2 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw -f /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw/CMakeScripts/uninstall_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		341C65F5B25F4D89B60ED163 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		366BC3A7A4B649A2908CF25D /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw -f /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		75E8299A6BB648CAACA6002C /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw -f /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		80AD106EE670490EB8F8F0E0 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		DBA3966B58B64A8D959950E5 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		F51AED2F896945EE8CFF2B1C /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw -f /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw/CMakeScripts/install_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7A1A05EF41D34FC7B57B81DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B0C9F400FED40B6B964F10D /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/cocoa_init.m */,
+				80FD8AF54B2D491EAB033E02 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/cocoa_monitor.m */,
+				DD0845088685404684B6131F /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/cocoa_window.m */,
+				B0F8C48B33D2445A8EA67D8F /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/context.c */,
+				CD1E33A3B82342D29236E574 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/init.c */,
+				25D4B3BCEB744A52A950BDCE /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/input.c */,
+				A41D468B25FF4D9B8E8B8175 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/iokit_joystick.m */,
+				AB447E9CD110450591184D19 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/mach_time.c */,
+				5D3B6AD741404D3A9A84C833 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/monitor.c */,
+				92BB29E14AF14C839EF7AF5D /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/nsgl_context.m */,
+				B869EF4FC6124D61B8A202A7 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/posix_tls.c */,
+				4F83EFC857E049879D3F3978 /* /Users/student/Documents/Glitter/Glitter/Vendor/glfw/src/window.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B532CEC293E74E638C8DE781 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5411C5FB52B1450E93EF0860 /* ZERO_CHECK */;
+			targetProxy = EC168F4918B946A69053ECA7 /* PBXContainerItemProxy */;
+		};
+		E113067B321F4B70962BDEC9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0D8CB4931D074B79898E6240 /* glfw */;
+			targetProxy = 44F6EF9A40B7404EAFB7916C /* PBXContainerItemProxy */;
+		};
+		EF6477E537C84D14AA2D741C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F2D3BD42848749B992DB00F5 /* ALL_BUILD */;
+			targetProxy = 737347D208E24D52B892E2C8 /* PBXContainerItemProxy */;
+		};
+		EFF86B46207F4EFFBDC5ABF0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5411C5FB52B1450E93EF0860 /* ZERO_CHECK */;
+			targetProxy = 3FD65295CEB645139FD5DFD5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		01E6D915310448EAA3A9A805 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", _GLFW_USE_CONFIG_H, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/student/Documents/Glitter/Glitter/Vendor/glfw/src, /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw/src, );
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG -fPIC   -Wall";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw/src;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Release;
+		};
+		0ED4D56F80874820879CF83E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Debug;
+		};
+		1C2243C9246744AB9BB30ECF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Release;
+		};
+		35964F6AE32C40FD803C8BB2 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = RelWithDebInfo;
+		};
+		3652CB808C3F4615AD2A2878 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Debug;
+		};
+		3BE79FBD1D7A4933856163C7 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", _GLFW_USE_CONFIG_H, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/student/Documents/Glitter/Glitter/Vendor/glfw/src, /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw/src, );
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "       -DNDEBUG -fPIC   -Wall";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw/src;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = RelWithDebInfo;
+		};
+		3EA5EAEFA5D34BB3942D7732 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = MinSizeRel;
+		};
+		4441BF0C59514C7C8BFE9F91 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", _GLFW_USE_CONFIG_H, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/student/Documents/Glitter/Glitter/Vendor/glfw/src, /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw/src, );
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG -fPIC   -Wall";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw/src;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = MinSizeRel;
+		};
+		4492BCE6548E4CC3AAC6B15F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Release;
+		};
+		44FE5DCA77E34DBE80069DCF /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk;
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw/build;
+			};
+			name = RelWithDebInfo;
+		};
+		4ECE748692874A57B9DC0923 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = RelWithDebInfo;
+		};
+		7BA71FC25DC24FC5BEFACB21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", _GLFW_USE_CONFIG_H, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/student/Documents/Glitter/Glitter/Vendor/glfw/src, /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw/src, );
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "   -fPIC   -Wall";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw/src;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Debug;
+		};
+		85ABD519083D4FA593A45081 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Debug;
+		};
+		862141D2B8624FB5B319C74C /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = MinSizeRel;
+		};
+		8C5A736FDF4C4B5E96D41C44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Release;
+		};
+		9163D573067E4DB5BF154D27 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = RelWithDebInfo;
+		};
+		96778A067296429EB9B833F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Debug;
+		};
+		9A2C02FD3F7F4BB5B087FF9B /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = MinSizeRel;
+		};
+		A9DBD191E2D64267A8D437C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk;
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw/build;
+			};
+			name = Release;
+		};
+		AA5BE05ECADF4FB68BF4B80D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Release;
+		};
+		B4F01E54642443118535334C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk;
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw/build;
+			};
+			name = Debug;
+		};
+		BC4DFC8A97CA4DF88189C3F4 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = MinSizeRel;
+		};
+		D9B4273AD0604DEA9AA62C46 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = RelWithDebInfo;
+		};
+		DC988FC99F7B4BA4A9EABCAF /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk;
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw/build;
+			};
+			name = MinSizeRel;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3A02B94DC7ED48A0BC042242 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96778A067296429EB9B833F5 /* Debug */,
+				4492BCE6548E4CC3AAC6B15F /* Release */,
+				3EA5EAEFA5D34BB3942D7732 /* MinSizeRel */,
+				9163D573067E4DB5BF154D27 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4782F093F4E74302BE62838B /* Build configuration list for PBXProject "GLFW" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4F01E54642443118535334C /* Debug */,
+				A9DBD191E2D64267A8D437C7 /* Release */,
+				DC988FC99F7B4BA4A9EABCAF /* MinSizeRel */,
+				44FE5DCA77E34DBE80069DCF /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8FFF9FF4D5924DC3873A26B0 /* Build configuration list for PBXNativeTarget "glfw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BA71FC25DC24FC5BEFACB21 /* Debug */,
+				01E6D915310448EAA3A9A805 /* Release */,
+				4441BF0C59514C7C8BFE9F91 /* MinSizeRel */,
+				3BE79FBD1D7A4933856163C7 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		AB6E628B31364099B9ABDBC7 /* Build configuration list for PBXAggregateTarget "uninstall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85ABD519083D4FA593A45081 /* Debug */,
+				AA5BE05ECADF4FB68BF4B80D /* Release */,
+				9A2C02FD3F7F4BB5B087FF9B /* MinSizeRel */,
+				4ECE748692874A57B9DC0923 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B9CB702875DC413A93E8B690 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3652CB808C3F4615AD2A2878 /* Debug */,
+				1C2243C9246744AB9BB30ECF /* Release */,
+				BC4DFC8A97CA4DF88189C3F4 /* MinSizeRel */,
+				35964F6AE32C40FD803C8BB2 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C299C9F56274482296F2929B /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0ED4D56F80874820879CF83E /* Debug */,
+				8C5A736FDF4C4B5E96D41C44 /* Release */,
+				862141D2B8624FB5B319C74C /* MinSizeRel */,
+				D9B4273AD0604DEA9AA62C46 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE1B61F1056C433B8581E3F4 /* Project object */;
+}

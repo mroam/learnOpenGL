@@ -1,0 +1,3719 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		05DCF1EABD934D959092699A /* uninstall */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 32E6E8C5F8B44D5B952A9555 /* Build configuration list for PBXAggregateTarget "uninstall" */;
+			buildPhases = (
+				B717187F8870409B9E1F8FF2 /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = uninstall;
+			productName = uninstall;
+		};
+		1DE1341828C44B0F92F3C62B /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = C685AA2A11D34D9EAFE3C2B8 /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				1B860CAB0EC94C2CB47E8AED /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				A5BD5C843C7F445C8C4CB05D /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+		5411C5FB52B1450E93EF0860 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A0FED024F4954D5BA62BED85 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				4AD16DF7345A4A6DBFE9F193 /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		F2D3BD42848749B992DB00F5 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = BA3630FBA462486EADB40DB3 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				98F7CF5ADF3146A1991B63CB /* CMake Rules */,
+			);
+			dependencies = (
+				2AF67C325E4043DBA2296F5C /* PBXTargetDependency */,
+				492A137D666147BF8CBD7E8A /* PBXTargetDependency */,
+				E88AA5A7F1014E14930B30C8 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		0BF0EC1547AC4108A66C3233 /* context.c in Sources */ = {isa = PBXBuildFile; fileRef = CB91875117BE464EAC706C16 /* context.c */; settings = {COMPILER_FLAGS = ""; }; };
+		26F74BAD2EA34D18ADFE0AD4 /* cocoa_monitor.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8E7656717648B8B72A878E /* cocoa_monitor.m */; settings = {COMPILER_FLAGS = ""; }; };
+		567DE50899914DDAA88918AB /* window.c in Sources */ = {isa = PBXBuildFile; fileRef = 424A78DF3D814DD0812EBC0A /* window.c */; settings = {COMPILER_FLAGS = ""; }; };
+		6CF991BC95614305A31CBA89 /* input.c in Sources */ = {isa = PBXBuildFile; fileRef = 065262662722431E8AA8D513 /* input.c */; settings = {COMPILER_FLAGS = ""; }; };
+		842302CD3E66418C82A28974 /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 8CC5B5FDE7614FFA975DFE58 /* glad.c */; settings = {COMPILER_FLAGS = ""; }; };
+		8E585F9B91994A40BFF7A407 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 641ACA41C80B4A589492C44D /* main.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		BA2E19C2969E4C03BA3C92C4 /* cocoa_window.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF2EB3187574BB6B4AA84B4 /* cocoa_window.m */; settings = {COMPILER_FLAGS = ""; }; };
+		CE09BA72AC8249B0A8F27B85 /* monitor.c in Sources */ = {isa = PBXBuildFile; fileRef = 4E8FC548FFDE4673AB77A7ED /* monitor.c */; settings = {COMPILER_FLAGS = ""; }; };
+		CF60F282E59A4F65BC21E3AC /* iokit_joystick.m in Sources */ = {isa = PBXBuildFile; fileRef = 87AFCA0AFB2E496A8780D4C8 /* iokit_joystick.m */; settings = {COMPILER_FLAGS = ""; }; };
+		CFD1F4E0B7AE4C68A7EFB559 /* cocoa_init.m in Sources */ = {isa = PBXBuildFile; fileRef = B60FEBC149D94B39BB429043 /* cocoa_init.m */; settings = {COMPILER_FLAGS = ""; }; };
+		DBCD4A853FD049139D324BAD /* posix_tls.c in Sources */ = {isa = PBXBuildFile; fileRef = 7C10345B45F649E99C7A2EF3 /* posix_tls.c */; settings = {COMPILER_FLAGS = ""; }; };
+		E22413D7B7934F4293580C6B /* nsgl_context.m in Sources */ = {isa = PBXBuildFile; fileRef = 2941D3EFDA52475A89E57856 /* nsgl_context.m */; settings = {COMPILER_FLAGS = ""; }; };
+		E7BBB63FFE4442F790A0E5E4 /* mach_time.c in Sources */ = {isa = PBXBuildFile; fileRef = 3FD2A449CA6242E089B576F7 /* mach_time.c */; settings = {COMPILER_FLAGS = ""; }; };
+		E963790DF5DD4FCE8CD7E6E0 /* init.c in Sources */ = {isa = PBXBuildFile; fileRef = 06A58D7AD9DB4EDCAAAB70F4 /* init.c */; settings = {COMPILER_FLAGS = ""; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		005ABA3C0F5540F1BBE93EB6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C0E7C86E6754D3D824A2C8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5411C5FB52B1450E93EF0860;
+			remoteInfo = ZERO_CHECK;
+		};
+		27C3E910B99746D19BA20E40 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C0E7C86E6754D3D824A2C8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC1CC6B01FE448568DED1EEC;
+			remoteInfo = BulletDynamics;
+		};
+		2D6E80325C1A4C82A93535B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C0E7C86E6754D3D824A2C8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F2D3BD42848749B992DB00F5;
+			remoteInfo = ALL_BUILD;
+		};
+		442B9FADC4DA496792D3AC49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C0E7C86E6754D3D824A2C8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5411C5FB52B1450E93EF0860;
+			remoteInfo = ZERO_CHECK;
+		};
+		44B2878745C24F1491594483 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C0E7C86E6754D3D824A2C8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5411C5FB52B1450E93EF0860;
+			remoteInfo = ZERO_CHECK;
+		};
+		5CC54D3BCD0F4727B2B9C04B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C0E7C86E6754D3D824A2C8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5411C5FB52B1450E93EF0860;
+			remoteInfo = ZERO_CHECK;
+		};
+		626158DC494B488C85CC7D25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C0E7C86E6754D3D824A2C8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5411C5FB52B1450E93EF0860;
+			remoteInfo = ZERO_CHECK;
+		};
+		62D4AA5B45424521B1CAB199 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C0E7C86E6754D3D824A2C8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5411C5FB52B1450E93EF0860;
+			remoteInfo = ZERO_CHECK;
+		};
+		7F8332ACE3374A9BA18E3008 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C0E7C86E6754D3D824A2C8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9EFEDAE800E94EF9B7ABBCE0;
+			remoteInfo = Glitter;
+		};
+		815ABBB3E2D24B36AF3A9A66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C0E7C86E6754D3D824A2C8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0D8CB4931D074B79898E6240;
+			remoteInfo = glfw;
+		};
+		8300A2B69A71429BB6578D17 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C0E7C86E6754D3D824A2C8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5411C5FB52B1450E93EF0860;
+			remoteInfo = ZERO_CHECK;
+		};
+		983CF5C2DDE34CC7A189D7BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C0E7C86E6754D3D824A2C8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7B1AA9674A7426F802B8120;
+			remoteInfo = LinearMath;
+		};
+		AF091A728A18441C9E056EBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C0E7C86E6754D3D824A2C8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA9914B46E2F417795F5AD51;
+			remoteInfo = BulletCollision;
+		};
+		C129DF98094D406FBCBE3241 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C0E7C86E6754D3D824A2C8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5411C5FB52B1450E93EF0860;
+			remoteInfo = ZERO_CHECK;
+		};
+		C7A6DBC67F39416CB04609F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C0E7C86E6754D3D824A2C8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0D8CB4931D074B79898E6240;
+			remoteInfo = glfw;
+		};
+		CBCF6FEC65BC400D8CD43F64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C0E7C86E6754D3D824A2C8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5411C5FB52B1450E93EF0860;
+			remoteInfo = ZERO_CHECK;
+		};
+		CC9A05B307B44D3CB5817D9B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C0E7C86E6754D3D824A2C8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5411C5FB52B1450E93EF0860;
+			remoteInfo = ZERO_CHECK;
+		};
+		D09D48A4B19144F29BCB3870 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C0E7C86E6754D3D824A2C8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5411C5FB52B1450E93EF0860;
+			remoteInfo = ZERO_CHECK;
+		};
+		DC2223EEFCBA411A84112F25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C0E7C86E6754D3D824A2C8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5411C5FB52B1450E93EF0860;
+			remoteInfo = ZERO_CHECK;
+		};
+		E037DB24242E42EC98518985 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C0E7C86E6754D3D824A2C8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5411C5FB52B1450E93EF0860;
+			remoteInfo = ZERO_CHECK;
+		};
+		F00BCE4E36054C21886DBD8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C0E7C86E6754D3D824A2C8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 65AA262DAACF481C9E37BFD7;
+			remoteInfo = assimp;
+		};
+		F4751942465247C99E7CFC17 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C0E7C86E6754D3D824A2C8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5411C5FB52B1450E93EF0860;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		065262662722431E8AA8D513 /* input.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = input.c; path = Glitter/Vendor/glfw/src/input.c; sourceTree = SOURCE_ROOT; };
+		06A58D7AD9DB4EDCAAAB70F4 /* init.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = init.c; path = Glitter/Vendor/glfw/src/init.c; sourceTree = SOURCE_ROOT; };
+		1074E196967C481B990A686A /* libBulletSoftBodyd.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libBulletSoftBodyd.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		188F4CD5E6844FA3989A972A /* Glitter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = Glitter; sourceTree = BUILT_PRODUCTS_DIR; };
+		231C2E2C45274701B4D72EC6 /* nsgl_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = nsgl_context.h; path = Glitter/Vendor/glfw/src/nsgl_context.h; sourceTree = SOURCE_ROOT; };
+		23D24ECB59344EE1A3BF5792 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = Glitter/Vendor/glfw/src/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		27F3F9E3853E4E9290B72AE1 /* glitter.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = glitter.hpp; path = Glitter/Headers/glitter.hpp; sourceTree = SOURCE_ROOT; };
+		2941D3EFDA52475A89E57856 /* nsgl_context.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = nsgl_context.m; path = Glitter/Vendor/glfw/src/nsgl_context.m; sourceTree = SOURCE_ROOT; };
+		3F1CE0DB1C57C8C8007F6539 /* fragshader_mh1.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = fragshader_mh1.frag; path = Glitter/Sources/fragshader_mh1.frag; sourceTree = "<group>"; };
+		3FA93E68BF9A41BF8C650B46 /* glfw3native.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3native.h; path = Glitter/Vendor/glfw/include/GLFW/glfw3native.h; sourceTree = SOURCE_ROOT; };
+		3FCB7FC71C4E913B008D785F /* vertexshader_mh1.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = vertexshader_mh1.vert; path = Glitter/Sources/vertexshader_mh1.vert; sourceTree = "<group>"; };
+		3FD2A449CA6242E089B576F7 /* mach_time.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = mach_time.c; path = Glitter/Vendor/glfw/src/mach_time.c; sourceTree = SOURCE_ROOT; };
+		424A78DF3D814DD0812EBC0A /* window.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = window.c; path = Glitter/Vendor/glfw/src/window.c; sourceTree = SOURCE_ROOT; };
+		43B79DA6DC004F77A4D1AC68 /* libBulletDynamicsd.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libBulletDynamicsd.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C53CD8AF235453A831D72F9 /* libassimpd.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libassimpd.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E8FC548FFDE4673AB77A7ED /* monitor.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = monitor.c; path = Glitter/Vendor/glfw/src/monitor.c; sourceTree = SOURCE_ROOT; };
+		50EFF2D300494148811B12E9 /* .gitignore */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; path = .gitignore; sourceTree = SOURCE_ROOT; };
+		567A9892F6674A798B3C084C /* libBullet3Collisiond.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libBullet3Collisiond.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		59C6767377094479B749EFFA /* libLinearMathd.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libLinearMathd.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C68B23E672D47B3A098FA75 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		641ACA41C80B4A589492C44D /* main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = Glitter/Sources/main.cpp; sourceTree = SOURCE_ROOT; };
+		64B4C7CBEBC6485AAA0A8007 /* libBullet3OpenCL_clewd.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libBullet3OpenCL_clewd.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C5FC493429342E4A011CABF /* .gitmodules */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; path = .gitmodules; sourceTree = SOURCE_ROOT; };
+		7BEB5F32FAE64E5F938E54D9 /* libBullet3Commond.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libBullet3Commond.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C10345B45F649E99C7A2EF3 /* posix_tls.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = posix_tls.c; path = Glitter/Vendor/glfw/src/posix_tls.c; sourceTree = SOURCE_ROOT; };
+		7F694ED2AD1043FF808771E5 /* libBulletCollisiond.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libBulletCollisiond.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		87AFCA0AFB2E496A8780D4C8 /* iokit_joystick.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = iokit_joystick.m; path = Glitter/Vendor/glfw/src/iokit_joystick.m; sourceTree = SOURCE_ROOT; };
+		8A5971956330463883F44218 /* posix_tls.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = posix_tls.h; path = Glitter/Vendor/glfw/src/posix_tls.h; sourceTree = SOURCE_ROOT; };
+		8AF2EB3187574BB6B4AA84B4 /* cocoa_window.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_window.m; path = Glitter/Vendor/glfw/src/cocoa_window.m; sourceTree = SOURCE_ROOT; };
+		8CC5B5FDE7614FFA975DFE58 /* glad.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = glad.c; path = Glitter/Vendor/glad/src/glad.c; sourceTree = SOURCE_ROOT; };
+		9185D91B68124C46A349C473 /* libBullet3Dynamicsd.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libBullet3Dynamicsd.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3761424F47045EA819272FA /* libBullet3Geometryd.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libBullet3Geometryd.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5E6CFCA578947449F7C63FD /* cocoa_platform.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_platform.h; path = Glitter/Vendor/glfw/src/cocoa_platform.h; sourceTree = SOURCE_ROOT; };
+		AEBAC82FF1A14311A7E8FCF9 /* iokit_joystick.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = iokit_joystick.h; path = Glitter/Vendor/glfw/src/iokit_joystick.h; sourceTree = SOURCE_ROOT; };
+		B60FEBC149D94B39BB429043 /* cocoa_init.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_init.m; path = Glitter/Vendor/glfw/src/cocoa_init.m; sourceTree = SOURCE_ROOT; };
+		BF8115DBAD094E17925506E5 /* Readme.md */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; path = Readme.md; sourceTree = SOURCE_ROOT; };
+		C69AC6C3E96A41C18C0A6BCD /* libBullet2FileLoaderd.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libBullet2FileLoaderd.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C896E6F0EDDC4B2BBE8404CA /* glfw_config.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw_config.h; path = Build/Glitter/Vendor/glfw/src/glfw_config.h; sourceTree = SOURCE_ROOT; };
+		CB91875117BE464EAC706C16 /* context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = context.c; path = Glitter/Vendor/glfw/src/context.c; sourceTree = SOURCE_ROOT; };
+		CC8E7656717648B8B72A878E /* cocoa_monitor.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_monitor.m; path = Glitter/Vendor/glfw/src/cocoa_monitor.m; sourceTree = SOURCE_ROOT; };
+		CD4E78B11B5B4A709425176D /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		DAD87C7653A14108ADD44433 /* internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = internal.h; path = Glitter/Vendor/glfw/src/internal.h; sourceTree = SOURCE_ROOT; };
+		DB7A1A270E3A43D2AC5D8C79 /* glfw3.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3.h; path = Glitter/Vendor/glfw/include/GLFW/glfw3.h; sourceTree = SOURCE_ROOT; };
+		E93ECD934EF44EE8981C9ABF /* .gitattributes */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; path = .gitattributes; sourceTree = SOURCE_ROOT; };
+		EE3D7E71995647CBB02F03CC /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		F2CCE89485EE4A9EB2B3042D /* libglfw3.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglfw3.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F61AC97B1AEB48DF8C493F80 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = Glitter/Vendor/glfw/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0675207521CC4A3DAF377767 /* uninstall */ = {
+			isa = PBXGroup;
+			children = (
+				8D98CCAD8E634A69A327EF11 /* CMake Rules */,
+				F61AC97B1AEB48DF8C493F80 /* CMakeLists.txt */,
+			);
+			name = uninstall;
+			sourceTree = "<group>";
+		};
+		08BCD2644C8847A9AA39F5B1 /* glfw */ = {
+			isa = PBXGroup;
+			children = (
+				AB9C8F96AC994B8E93A0C6DD /* Source Files */,
+				251B396060B2430A95CDF60D /* Header Files */,
+				23D24ECB59344EE1A3BF5792 /* CMakeLists.txt */,
+			);
+			name = glfw;
+			sourceTree = "<group>";
+		};
+		251B396060B2430A95CDF60D /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				C896E6F0EDDC4B2BBE8404CA /* glfw_config.h */,
+				DB7A1A270E3A43D2AC5D8C79 /* glfw3.h */,
+				3FA93E68BF9A41BF8C650B46 /* glfw3native.h */,
+				A5E6CFCA578947449F7C63FD /* cocoa_platform.h */,
+				DAD87C7653A14108ADD44433 /* internal.h */,
+				AEBAC82FF1A14311A7E8FCF9 /* iokit_joystick.h */,
+				231C2E2C45274701B4D72EC6 /* nsgl_context.h */,
+				8A5971956330463883F44218 /* posix_tls.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		2D85EA8637AC4D54A2317923 /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				8CC5B5FDE7614FFA975DFE58 /* glad.c */,
+			);
+			name = Vendors;
+			sourceTree = "<group>";
+		};
+		3C9CB0E7BE6A428E81281ED8 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				9B480E6EFE2A455A8B90DD93 /* Glitter */,
+				CF7BB3D2D5E7474A87367FD6 /* ALL_BUILD */,
+				F4B842F034024B7EA2F16D44 /* ZERO_CHECK */,
+				0675207521CC4A3DAF377767 /* uninstall */,
+				FFDACBD69B284776A74640D9 /* GLFW3 */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		4306F81AB5324017A6CCF051 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		43C903C46EEC4EF5B9E27B76 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				641ACA41C80B4A589492C44D /* main.cpp */,
+				3F1CE0DB1C57C8C8007F6539 /* fragshader_mh1.frag */,
+				3FCB7FC71C4E913B008D785F /* vertexshader_mh1.vert */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		501765BC5FB049889B90C122 = {
+			isa = PBXGroup;
+			children = (
+				3C9CB0E7BE6A428E81281ED8 /* Sources */,
+				B7ABCAB0162B4EE7B628E98F /* Resources */,
+				A862BDECFA4D4189999C7F69 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		856BF90B6CD64CDDB4F6A9FD /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		8D98CCAD8E634A69A327EF11 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		9B480E6EFE2A455A8B90DD93 /* Glitter */ = {
+			isa = PBXGroup;
+			children = (
+				43C903C46EEC4EF5B9E27B76 /* Sources */,
+				A39A872AB37F416B990C96F6 /* Headers */,
+				2D85EA8637AC4D54A2317923 /* Vendors */,
+				E93ECD934EF44EE8981C9ABF /* .gitattributes */,
+				50EFF2D300494148811B12E9 /* .gitignore */,
+				6C5FC493429342E4A011CABF /* .gitmodules */,
+				CD4E78B11B5B4A709425176D /* CMakeLists.txt */,
+				BF8115DBAD094E17925506E5 /* Readme.md */,
+			);
+			name = Glitter;
+			sourceTree = "<group>";
+		};
+		A39A872AB37F416B990C96F6 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				27F3F9E3853E4E9290B72AE1 /* glitter.hpp */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		A862BDECFA4D4189999C7F69 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				188F4CD5E6844FA3989A972A /* Glitter */,
+				F2CCE89485EE4A9EB2B3042D /* libglfw3.a */,
+				4C53CD8AF235453A831D72F9 /* libassimpd.a */,
+				64B4C7CBEBC6485AAA0A8007 /* libBullet3OpenCL_clewd.a */,
+				C69AC6C3E96A41C18C0A6BCD /* libBullet2FileLoaderd.a */,
+				9185D91B68124C46A349C473 /* libBullet3Dynamicsd.a */,
+				567A9892F6674A798B3C084C /* libBullet3Collisiond.a */,
+				A3761424F47045EA819272FA /* libBullet3Geometryd.a */,
+				7BEB5F32FAE64E5F938E54D9 /* libBullet3Commond.a */,
+				1074E196967C481B990A686A /* libBulletSoftBodyd.a */,
+				7F694ED2AD1043FF808771E5 /* libBulletCollisiond.a */,
+				43B79DA6DC004F77A4D1AC68 /* libBulletDynamicsd.a */,
+				59C6767377094479B749EFFA /* libLinearMathd.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AB9C8F96AC994B8E93A0C6DD /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				B60FEBC149D94B39BB429043 /* cocoa_init.m */,
+				CC8E7656717648B8B72A878E /* cocoa_monitor.m */,
+				8AF2EB3187574BB6B4AA84B4 /* cocoa_window.m */,
+				CB91875117BE464EAC706C16 /* context.c */,
+				06A58D7AD9DB4EDCAAAB70F4 /* init.c */,
+				065262662722431E8AA8D513 /* input.c */,
+				87AFCA0AFB2E496A8780D4C8 /* iokit_joystick.m */,
+				3FD2A449CA6242E089B576F7 /* mach_time.c */,
+				4E8FC548FFDE4673AB77A7ED /* monitor.c */,
+				2941D3EFDA52475A89E57856 /* nsgl_context.m */,
+				7C10345B45F649E99C7A2EF3 /* posix_tls.c */,
+				424A78DF3D814DD0812EBC0A /* window.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		B7ABCAB0162B4EE7B628E98F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		CF7BB3D2D5E7474A87367FD6 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				856BF90B6CD64CDDB4F6A9FD /* CMake Rules */,
+				5C68B23E672D47B3A098FA75 /* CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		F4B842F034024B7EA2F16D44 /* ZERO_CHECK */ = {
+			isa = PBXGroup;
+			children = (
+				4306F81AB5324017A6CCF051 /* CMake Rules */,
+				EE3D7E71995647CBB02F03CC /* CMakeLists.txt */,
+			);
+			name = ZERO_CHECK;
+			sourceTree = "<group>";
+		};
+		FFDACBD69B284776A74640D9 /* GLFW3 */ = {
+			isa = PBXGroup;
+			children = (
+				08BCD2644C8847A9AA39F5B1 /* glfw */,
+			);
+			name = GLFW3;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0D8CB4931D074B79898E6240 /* glfw */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A1ABF3A174D44C1B615F6CA /* Build configuration list for PBXNativeTarget "glfw" */;
+			buildPhases = (
+				562E2501FF2B4C04A8B9F87A /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B703A6BC9D404E7594B527F2 /* PBXTargetDependency */,
+			);
+			name = glfw;
+			productName = glfw;
+			productReference = F2CCE89485EE4A9EB2B3042D /* libglfw3.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		1DA7CE3861824D939C4418BE /* Bullet3Dynamics */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94770AB50B1C4A859FC75307 /* Build configuration list for PBXNativeTarget "Bullet3Dynamics" */;
+			buildPhases = (
+				28F1FEBF764648A582589F30 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF7D2C6E329E4AF38CC6EE78 /* PBXTargetDependency */,
+			);
+			name = Bullet3Dynamics;
+			productName = Bullet3Dynamics;
+			productReference = 9185D91B68124C46A349C473 /* libBullet3Dynamicsd.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		320F74CF7C394D3C921F0322 /* Bullet3OpenCL_clew */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70FF051C3F494F4BB6D551A8 /* Build configuration list for PBXNativeTarget "Bullet3OpenCL_clew" */;
+			buildPhases = (
+				C04F2494D5C34FDEA270F3AE /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD8774BF8F8E49E5B95F73A7 /* PBXTargetDependency */,
+			);
+			name = Bullet3OpenCL_clew;
+			productName = Bullet3OpenCL_clew;
+			productReference = 64B4C7CBEBC6485AAA0A8007 /* libBullet3OpenCL_clewd.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		40344EB7D90A433586490CD4 /* BulletSoftBody */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC740EA99BF0497699A85E82 /* Build configuration list for PBXNativeTarget "BulletSoftBody" */;
+			buildPhases = (
+				1017E0A36658432F88C5294B /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F50F4D3ED4FC4766B7EB2E3D /* PBXTargetDependency */,
+			);
+			name = BulletSoftBody;
+			productName = BulletSoftBody;
+			productReference = 1074E196967C481B990A686A /* libBulletSoftBodyd.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		46745D12E4C24BC0A8E9C534 /* Bullet3Common */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7BCD4BD85A543D7B9155E2E /* Build configuration list for PBXNativeTarget "Bullet3Common" */;
+			buildPhases = (
+				7BE35B6E679E438985D12750 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				89EECD644CDC4101B1D4EC3E /* PBXTargetDependency */,
+			);
+			name = Bullet3Common;
+			productName = Bullet3Common;
+			productReference = 7BEB5F32FAE64E5F938E54D9 /* libBullet3Commond.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		65AA262DAACF481C9E37BFD7 /* assimp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE69F05892704A07B607792E /* Build configuration list for PBXNativeTarget "assimp" */;
+			buildPhases = (
+				C48C2ADFCD804541ADE71C55 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0174288020CA4A389EC09FEC /* PBXTargetDependency */,
+			);
+			name = assimp;
+			productName = assimp;
+			productReference = 4C53CD8AF235453A831D72F9 /* libassimpd.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		9EFEDAE800E94EF9B7ABBCE0 /* Glitter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D16DCDBEAE74E28BDC1CD0C /* Build configuration list for PBXNativeTarget "Glitter" */;
+			buildPhases = (
+				6A497B7607EE4FC885143482 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2FD4AAA1D12447A7B42A01FF /* PBXTargetDependency */,
+				DC2545842D3043829930C33D /* PBXTargetDependency */,
+				2739A30F3DA74BCAB9A472C7 /* PBXTargetDependency */,
+				D40C7A5418814033B559654E /* PBXTargetDependency */,
+				BA53E3F21CE54D4ABA9F1AD4 /* PBXTargetDependency */,
+				068ACE01510C4B8A9BD5719D /* PBXTargetDependency */,
+			);
+			name = Glitter;
+			productName = Glitter;
+			productReference = 188F4CD5E6844FA3989A972A /* Glitter */;
+			productType = "com.apple.product-type.tool";
+		};
+		BB24CD1B20A240C1B8EECD54 /* Bullet2FileLoader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B948663C0704D27B1FF32B8 /* Build configuration list for PBXNativeTarget "Bullet2FileLoader" */;
+			buildPhases = (
+				46E27923D865441CBC07F284 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				42AF4461B2E64848A0D4CFF7 /* PBXTargetDependency */,
+			);
+			name = Bullet2FileLoader;
+			productName = Bullet2FileLoader;
+			productReference = C69AC6C3E96A41C18C0A6BCD /* libBullet2FileLoaderd.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		C53BB466748F4481AC4AF43E /* Bullet3Collision */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DCCB686DCF24EEE9A231CBC /* Build configuration list for PBXNativeTarget "Bullet3Collision" */;
+			buildPhases = (
+				69B86B66F0E04E16B5A9791B /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A10BB5D24BCE4662A6B58963 /* PBXTargetDependency */,
+			);
+			name = Bullet3Collision;
+			productName = Bullet3Collision;
+			productReference = 567A9892F6674A798B3C084C /* libBullet3Collisiond.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CD7C9D1B0ADA4DF3AC65AD87 /* Bullet3Geometry */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 734CD09BB3864212B3E42C2C /* Build configuration list for PBXNativeTarget "Bullet3Geometry" */;
+			buildPhases = (
+				F71114BD10034225B6F1F077 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0CAAC56FACA34810882FD655 /* PBXTargetDependency */,
+			);
+			name = Bullet3Geometry;
+			productName = Bullet3Geometry;
+			productReference = A3761424F47045EA819272FA /* libBullet3Geometryd.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D7B1AA9674A7426F802B8120 /* LinearMath */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD0EAF1CB75A445999EBBF13 /* Build configuration list for PBXNativeTarget "LinearMath" */;
+			buildPhases = (
+				83D10B783A41410B93FA3119 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6D6F4031090342BF81C7695C /* PBXTargetDependency */,
+			);
+			name = LinearMath;
+			productName = LinearMath;
+			productReference = 59C6767377094479B749EFFA /* libLinearMathd.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		DC1CC6B01FE448568DED1EEC /* BulletDynamics */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB7C3D3F43154605BA0BAB24 /* Build configuration list for PBXNativeTarget "BulletDynamics" */;
+			buildPhases = (
+				C7444FE1AFE54FFEA82C011F /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A530EA0A53F0468A972D9E59 /* PBXTargetDependency */,
+			);
+			name = BulletDynamics;
+			productName = BulletDynamics;
+			productReference = 43B79DA6DC004F77A4D1AC68 /* libBulletDynamicsd.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		FA9914B46E2F417795F5AD51 /* BulletCollision */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFFF333E992A4D048BCAF7C0 /* Build configuration list for PBXNativeTarget "BulletCollision" */;
+			buildPhases = (
+				1333B9B3A34142A89E5ECF32 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C51D111815F34873A0258C0A /* PBXTargetDependency */,
+			);
+			name = BulletCollision;
+			productName = BulletCollision;
+			productReference = 7F694ED2AD1043FF808771E5 /* libBulletCollisiond.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5C0E7C86E6754D3D824A2C8E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 0720;
+			};
+			buildConfigurationList = B71A3FA6B69F42E1A4EA8CE4 /* Build configuration list for PBXProject "Glitter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 501765BC5FB049889B90C122;
+			projectDirPath = ../;
+			projectRoot = "";
+			targets = (
+				F2D3BD42848749B992DB00F5 /* ALL_BUILD */,
+				9EFEDAE800E94EF9B7ABBCE0 /* Glitter */,
+				5411C5FB52B1450E93EF0860 /* ZERO_CHECK */,
+				1DE1341828C44B0F92F3C62B /* install */,
+				05DCF1EABD934D959092699A /* uninstall */,
+				0D8CB4931D074B79898E6240 /* glfw */,
+				65AA262DAACF481C9E37BFD7 /* assimp */,
+				320F74CF7C394D3C921F0322 /* Bullet3OpenCL_clew */,
+				BB24CD1B20A240C1B8EECD54 /* Bullet2FileLoader */,
+				1DA7CE3861824D939C4418BE /* Bullet3Dynamics */,
+				C53BB466748F4481AC4AF43E /* Bullet3Collision */,
+				CD7C9D1B0ADA4DF3AC65AD87 /* Bullet3Geometry */,
+				46745D12E4C24BC0A8E9C534 /* Bullet3Common */,
+				40344EB7D90A433586490CD4 /* BulletSoftBody */,
+				FA9914B46E2F417795F5AD51 /* BulletCollision */,
+				DC1CC6B01FE448568DED1EEC /* BulletDynamics */,
+				D7B1AA9674A7426F802B8120 /* LinearMath */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B860CAB0EC94C2CB47E8AED /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/student/Documents/Glitter/Build -f /Users/student/Documents/Glitter/Build/CMakeScripts/install_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		4AD16DF7345A4A6DBFE9F193 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/student/Documents/Glitter/Build -f /Users/student/Documents/Glitter/Build/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		98F7CF5ADF3146A1991B63CB /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/student/Documents/Glitter/Build -f /Users/student/Documents/Glitter/Build/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		B717187F8870409B9E1F8FF2 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw -f /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw/CMakeScripts/uninstall_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1017E0A36658432F88C5294B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1333B9B3A34142A89E5ECF32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28F1FEBF764648A582589F30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46E27923D865441CBC07F284 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		562E2501FF2B4C04A8B9F87A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFD1F4E0B7AE4C68A7EFB559 /* cocoa_init.m in Sources */,
+				26F74BAD2EA34D18ADFE0AD4 /* cocoa_monitor.m in Sources */,
+				BA2E19C2969E4C03BA3C92C4 /* cocoa_window.m in Sources */,
+				0BF0EC1547AC4108A66C3233 /* context.c in Sources */,
+				E963790DF5DD4FCE8CD7E6E0 /* init.c in Sources */,
+				6CF991BC95614305A31CBA89 /* input.c in Sources */,
+				CF60F282E59A4F65BC21E3AC /* iokit_joystick.m in Sources */,
+				E7BBB63FFE4442F790A0E5E4 /* mach_time.c in Sources */,
+				CE09BA72AC8249B0A8F27B85 /* monitor.c in Sources */,
+				E22413D7B7934F4293580C6B /* nsgl_context.m in Sources */,
+				DBCD4A853FD049139D324BAD /* posix_tls.c in Sources */,
+				567DE50899914DDAA88918AB /* window.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69B86B66F0E04E16B5A9791B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A497B7607EE4FC885143482 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E585F9B91994A40BFF7A407 /* main.cpp in Sources */,
+				842302CD3E66418C82A28974 /* glad.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BE35B6E679E438985D12750 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83D10B783A41410B93FA3119 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C04F2494D5C34FDEA270F3AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C48C2ADFCD804541ADE71C55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7444FE1AFE54FFEA82C011F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F71114BD10034225B6F1F077 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0174288020CA4A389EC09FEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5411C5FB52B1450E93EF0860 /* ZERO_CHECK */;
+			targetProxy = F4751942465247C99E7CFC17 /* PBXContainerItemProxy */;
+		};
+		068ACE01510C4B8A9BD5719D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 65AA262DAACF481C9E37BFD7 /* assimp */;
+			targetProxy = F00BCE4E36054C21886DBD8B /* PBXContainerItemProxy */;
+		};
+		0CAAC56FACA34810882FD655 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5411C5FB52B1450E93EF0860 /* ZERO_CHECK */;
+			targetProxy = DC2223EEFCBA411A84112F25 /* PBXContainerItemProxy */;
+		};
+		2739A30F3DA74BCAB9A472C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5411C5FB52B1450E93EF0860 /* ZERO_CHECK */;
+			targetProxy = CBCF6FEC65BC400D8CD43F64 /* PBXContainerItemProxy */;
+		};
+		2AF67C325E4043DBA2296F5C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9EFEDAE800E94EF9B7ABBCE0 /* Glitter */;
+			targetProxy = 7F8332ACE3374A9BA18E3008 /* PBXContainerItemProxy */;
+		};
+		2FD4AAA1D12447A7B42A01FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA9914B46E2F417795F5AD51 /* BulletCollision */;
+			targetProxy = AF091A728A18441C9E056EBB /* PBXContainerItemProxy */;
+		};
+		42AF4461B2E64848A0D4CFF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5411C5FB52B1450E93EF0860 /* ZERO_CHECK */;
+			targetProxy = 62D4AA5B45424521B1CAB199 /* PBXContainerItemProxy */;
+		};
+		492A137D666147BF8CBD7E8A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5411C5FB52B1450E93EF0860 /* ZERO_CHECK */;
+			targetProxy = 8300A2B69A71429BB6578D17 /* PBXContainerItemProxy */;
+		};
+		6D6F4031090342BF81C7695C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5411C5FB52B1450E93EF0860 /* ZERO_CHECK */;
+			targetProxy = 442B9FADC4DA496792D3AC49 /* PBXContainerItemProxy */;
+		};
+		89EECD644CDC4101B1D4EC3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5411C5FB52B1450E93EF0860 /* ZERO_CHECK */;
+			targetProxy = D09D48A4B19144F29BCB3870 /* PBXContainerItemProxy */;
+		};
+		A10BB5D24BCE4662A6B58963 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5411C5FB52B1450E93EF0860 /* ZERO_CHECK */;
+			targetProxy = 44B2878745C24F1491594483 /* PBXContainerItemProxy */;
+		};
+		A530EA0A53F0468A972D9E59 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5411C5FB52B1450E93EF0860 /* ZERO_CHECK */;
+			targetProxy = 005ABA3C0F5540F1BBE93EB6 /* PBXContainerItemProxy */;
+		};
+		A5BD5C843C7F445C8C4CB05D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F2D3BD42848749B992DB00F5 /* ALL_BUILD */;
+			targetProxy = 2D6E80325C1A4C82A93535B0 /* PBXContainerItemProxy */;
+		};
+		B703A6BC9D404E7594B527F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5411C5FB52B1450E93EF0860 /* ZERO_CHECK */;
+			targetProxy = CC9A05B307B44D3CB5817D9B /* PBXContainerItemProxy */;
+		};
+		BA53E3F21CE54D4ABA9F1AD4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7B1AA9674A7426F802B8120 /* LinearMath */;
+			targetProxy = 983CF5C2DDE34CC7A189D7BB /* PBXContainerItemProxy */;
+		};
+		C51D111815F34873A0258C0A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5411C5FB52B1450E93EF0860 /* ZERO_CHECK */;
+			targetProxy = 5CC54D3BCD0F4727B2B9C04B /* PBXContainerItemProxy */;
+		};
+		D40C7A5418814033B559654E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0D8CB4931D074B79898E6240 /* glfw */;
+			targetProxy = 815ABBB3E2D24B36AF3A9A66 /* PBXContainerItemProxy */;
+		};
+		DC2545842D3043829930C33D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC1CC6B01FE448568DED1EEC /* BulletDynamics */;
+			targetProxy = 27C3E910B99746D19BA20E40 /* PBXContainerItemProxy */;
+		};
+		E88AA5A7F1014E14930B30C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0D8CB4931D074B79898E6240 /* glfw */;
+			targetProxy = C7A6DBC67F39416CB04609F5 /* PBXContainerItemProxy */;
+		};
+		EF7D2C6E329E4AF38CC6EE78 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5411C5FB52B1450E93EF0860 /* ZERO_CHECK */;
+			targetProxy = C129DF98094D406FBCBE3241 /* PBXContainerItemProxy */;
+		};
+		F50F4D3ED4FC4766B7EB2E3D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5411C5FB52B1450E93EF0860 /* ZERO_CHECK */;
+			targetProxy = 626158DC494B488C85CC7D25 /* PBXContainerItemProxy */;
+		};
+		FD8774BF8F8E49E5B95F73A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5411C5FB52B1450E93EF0860 /* ZERO_CHECK */;
+			targetProxy = E037DB24242E42EC98518985 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		030340B6DA41414CA5AB57B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					USE_GRAPHICAL_BENCHMARK,
+					NO_OPENGL3,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/student/Documents/Glitter/Glitter/Vendor/bullet/src;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Bullet3Dynamics;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/Bullet3Dynamics;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		0522C14ECB5840F493BB0C62 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					USE_GRAPHICAL_BENCHMARK,
+					NO_OPENGL3,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/student/Documents/Glitter/Glitter/Vendor/bullet/src;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Bullet3Geometry;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/Bullet3Geometry;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		0E29F017BAFC4BE68D200A4D /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					_GLFW_USE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/student/Documents/Glitter/Glitter/Vendor/glfw/src,
+					/Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw/src,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-Wall",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw/src;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		11DD0AAE09614C129E5565E3 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk;
+				SYMROOT = /Users/student/Documents/Glitter/Build/build;
+			};
+			name = RelWithDebInfo;
+		};
+		1371A41EBDF043E4A1E85894 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					_GLFW_USE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/student/Documents/Glitter/Glitter/Vendor/glfw/src,
+					/Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw/src,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-Wall",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw/src;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		16EC63E0D553446B8F63AD53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					USE_GRAPHICAL_BENCHMARK,
+					NO_OPENGL3,
+					B3_USE_CLEW,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/student/Documents/Glitter/Glitter/Vendor/bullet/src;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    ";
+				OTHER_CPLUSPLUSFLAGS = "   -D_DEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Bullet3OpenCL_clewd;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/Bullet3OpenCL;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		18D3A1A3FBCD4FB3ABC8BBA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					USE_GRAPHICAL_BENCHMARK,
+					NO_OPENGL3,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/student/Documents/Glitter/Glitter/Vendor/bullet/src;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "   -D_DEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Bullet3Commond;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/Bullet3Common;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		1B8A46B6F2694C9EB8775F8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/student/Documents/Glitter/Build/Glitter/Release;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					GLFW_INCLUDE_NONE,
+					"'PROJECT_SOURCE_DIR=\"/Users/student/Documents/Glitter\"'",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/student/Documents/Glitter/Glitter/Headers,
+					/Users/student/Documents/Glitter/Glitter/Vendor/assimp/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/bullet/src,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glad/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glfw/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glm,
+					/Users/student/Documents/Glitter/Glitter/Vendor/stb,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_CPLUSPLUSFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wpedantic",
+					"-std=c++11",
+					"-DNDEBUG",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					/Users/student/Documents/Glitter/Build/Glitter/Vendor/assimp/code/Release/libassimp.a,
+					/Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw/src/Release/libglfw3.a,
+					"-framework",
+					Cocoa,
+					"-framework",
+					OpenGL,
+					"-framework",
+					IOKit,
+					"-framework",
+					CoreFoundation,
+					"-framework",
+					CoreVideo,
+					"-ldl",
+					/Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/BulletDynamics/Release/libBulletDynamics.a,
+					/Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/BulletCollision/Release/libBulletCollision.a,
+					/Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/LinearMath/Release/libLinearMath.a,
+					/usr/lib/libz.dylib,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Glitter;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		1F9A7716E95244C482855322 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					OPENDDL_NO_USE_CPP11,
+					ASSIMP_BUILD_BOOST_WORKAROUND,
+					ASSIMP_BUILD_NO_OWN_ZLIB,
+					ASSIMP_BUILD_NO_C4D_IMPORTER,
+					ASSIMP_BUILD_DLL_EXPORT,
+					OPENDDLPARSER_BUILD,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/student/Documents/Glitter/Build/Glitter/Vendor/assimp,
+					/Users/student/Documents/Glitter/Glitter/Vendor/assimp/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/assimp/code/BoostWorkaround,
+					/Users/student/Documents/Glitter/Glitter/Vendor/assimp/code/../contrib/openddlparser/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/assimp/code/../contrib/unzip,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    ";
+				OTHER_CPLUSPLUSFLAGS = "    ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = assimpd;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/assimp/code;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		22AB4106C0E84D1DB7A17243 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					USE_GRAPHICAL_BENCHMARK,
+					NO_OPENGL3,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/student/Documents/Glitter/Glitter/Vendor/bullet/src;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = BulletCollision;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/BulletCollision;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		242028AB7F284C40BD30946E /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					USE_GRAPHICAL_BENCHMARK,
+					NO_OPENGL3,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/student/Documents/Glitter/Glitter/Vendor/bullet/src;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Bullet3Collision;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/Bullet3Collision;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		28DB6ECF38DB44D89297380A /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					USE_GRAPHICAL_BENCHMARK,
+					NO_OPENGL3,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/student/Documents/Glitter/Glitter/Vendor/bullet/src;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Bullet3Geometry;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/Bullet3Geometry;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		3364579CA38F43D9A4093177 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					USE_GRAPHICAL_BENCHMARK,
+					NO_OPENGL3,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/student/Documents/Glitter/Glitter/Vendor/bullet/src;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "   -D_DEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = BulletCollisiond;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/BulletCollision;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		3863C231293B4EA6844A291F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					USE_GRAPHICAL_BENCHMARK,
+					NO_OPENGL3,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/student/Documents/Glitter/Glitter/Vendor/bullet/src;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "   -D_DEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Bullet2FileLoaderd;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/Bullet3Serialize/Bullet2FileLoader;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		39117CFD15D04599B089A9D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					USE_GRAPHICAL_BENCHMARK,
+					NO_OPENGL3,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/student/Documents/Glitter/Glitter/Vendor/bullet/src;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "   -D_DEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Bullet3Geometryd;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/Bullet3Geometry;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		399629009ADD4B3BB5C43D42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					USE_GRAPHICAL_BENCHMARK,
+					NO_OPENGL3,
+					B3_USE_CLEW,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/student/Documents/Glitter/Glitter/Vendor/bullet/src;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Bullet3OpenCL_clew;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/Bullet3OpenCL;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		3FBA915C036B436EA611CF56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		40CDCCB6E0A4453C86C5EDAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					USE_GRAPHICAL_BENCHMARK,
+					NO_OPENGL3,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/student/Documents/Glitter/Glitter/Vendor/bullet/src;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Bullet2FileLoader;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/Bullet3Serialize/Bullet2FileLoader;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		44E2790E5535442ABF1C9216 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/student/Documents/Glitter/Glitter/Headers,
+					/Users/student/Documents/Glitter/Glitter/Vendor/assimp/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/bullet/src,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glad/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glfw/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glm,
+					/Users/student/Documents/Glitter/Glitter/Vendor/stb,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		46ABD9FFEF254F0A92A39635 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/student/Documents/Glitter/Build/Glitter/MinSizeRel;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					GLFW_INCLUDE_NONE,
+					"'PROJECT_SOURCE_DIR=\"/Users/student/Documents/Glitter\"'",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/student/Documents/Glitter/Glitter/Headers,
+					/Users/student/Documents/Glitter/Glitter/Vendor/assimp/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/bullet/src,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glad/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glfw/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glm,
+					/Users/student/Documents/Glitter/Glitter/Vendor/stb,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_CPLUSPLUSFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wpedantic",
+					"-std=c++11",
+					"-DNDEBUG",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					/Users/student/Documents/Glitter/Build/Glitter/Vendor/assimp/code/MinSizeRel/libassimp.a,
+					/Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw/src/MinSizeRel/libglfw3.a,
+					"-framework",
+					Cocoa,
+					"-framework",
+					OpenGL,
+					"-framework",
+					IOKit,
+					"-framework",
+					CoreFoundation,
+					"-framework",
+					CoreVideo,
+					"-ldl",
+					/Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/BulletDynamics/MinSizeRel/libBulletDynamics.a,
+					/Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/BulletCollision/MinSizeRel/libBulletCollision.a,
+					/Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/LinearMath/MinSizeRel/libLinearMath.a,
+					/usr/lib/libz.dylib,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Glitter;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		490832158DA54C90B870F92D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					USE_GRAPHICAL_BENCHMARK,
+					NO_OPENGL3,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/student/Documents/Glitter/Glitter/Vendor/bullet/src;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "   -D_DEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Bullet3Dynamicsd;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/Bullet3Dynamics;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		49FD078CEFD54F029230BA23 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		4BA3AB1317BE4907A7DC4FC1 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					USE_GRAPHICAL_BENCHMARK,
+					NO_OPENGL3,
+					B3_USE_CLEW,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/student/Documents/Glitter/Glitter/Vendor/bullet/src;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Bullet3OpenCL_clew;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/Bullet3OpenCL;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		509BC28449F24BCF8D487155 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/student/Documents/Glitter/Glitter/Headers,
+					/Users/student/Documents/Glitter/Glitter/Vendor/assimp/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/bullet/src,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glad/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glfw/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glm,
+					/Users/student/Documents/Glitter/Glitter/Vendor/stb,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		5498A820CB8A497387370AE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					USE_GRAPHICAL_BENCHMARK,
+					NO_OPENGL3,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/student/Documents/Glitter/Glitter/Vendor/bullet/src;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "   -D_DEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = BulletDynamicsd;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/BulletDynamics;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		5B1DEE175E5648A6AA1F2613 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					USE_GRAPHICAL_BENCHMARK,
+					NO_OPENGL3,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/student/Documents/Glitter/Glitter/Vendor/bullet/src;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Bullet3Common;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/Bullet3Common;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		678E93CF9A3744E0A1A70DF5 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					USE_GRAPHICAL_BENCHMARK,
+					NO_OPENGL3,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/student/Documents/Glitter/Glitter/Vendor/bullet/src;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Bullet3Dynamics;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/Bullet3Dynamics;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		69B8A218B5A44346B1D52FC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					_GLFW_USE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/student/Documents/Glitter/Glitter/Vendor/glfw/src,
+					/Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw/src,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = (
+					"-fPIC",
+					"-Wall",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw/src;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		6C0BCB1BB0B641CB8803D892 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					USE_GRAPHICAL_BENCHMARK,
+					NO_OPENGL3,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/student/Documents/Glitter/Glitter/Vendor/bullet/src;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Bullet2FileLoader;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/Bullet3Serialize/Bullet2FileLoader;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		6E0C207C63EB4A6F9A4D219D /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/student/Documents/Glitter/Build/Glitter/RelWithDebInfo;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					GLFW_INCLUDE_NONE,
+					"'PROJECT_SOURCE_DIR=\"/Users/student/Documents/Glitter\"'",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/student/Documents/Glitter/Glitter/Headers,
+					/Users/student/Documents/Glitter/Glitter/Vendor/assimp/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/bullet/src,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glad/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glfw/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glm,
+					/Users/student/Documents/Glitter/Glitter/Vendor/stb,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "       -DNDEBUG  ";
+				OTHER_CPLUSPLUSFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wpedantic",
+					"-std=c++11",
+					"-DNDEBUG",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					/Users/student/Documents/Glitter/Build/Glitter/Vendor/assimp/code/RelWithDebInfo/libassimp.a,
+					/Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw/src/RelWithDebInfo/libglfw3.a,
+					"-framework",
+					Cocoa,
+					"-framework",
+					OpenGL,
+					"-framework",
+					IOKit,
+					"-framework",
+					CoreFoundation,
+					"-framework",
+					CoreVideo,
+					"-ldl",
+					/Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/BulletDynamics/RelWithDebInfo/libBulletDynamics.a,
+					/Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/BulletCollision/RelWithDebInfo/libBulletCollision.a,
+					/Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/LinearMath/RelWithDebInfo/libLinearMath.a,
+					/usr/lib/libz.dylib,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Glitter;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		70344268030E4F2A9BA83B20 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/student/Documents/Glitter/Glitter/Headers,
+					/Users/student/Documents/Glitter/Glitter/Vendor/assimp/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/bullet/src,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glad/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glfw/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glm,
+					/Users/student/Documents/Glitter/Glitter/Vendor/stb,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		706567CD163A475592035279 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/student/Documents/Glitter/Glitter/Headers,
+					/Users/student/Documents/Glitter/Glitter/Vendor/assimp/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/bullet/src,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glad/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glfw/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glm,
+					/Users/student/Documents/Glitter/Glitter/Vendor/stb,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		70775F5C918A4FDD97DFEF34 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					USE_GRAPHICAL_BENCHMARK,
+					NO_OPENGL3,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/student/Documents/Glitter/Glitter/Vendor/bullet/src;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Bullet2FileLoader;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/Bullet3Serialize/Bullet2FileLoader;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		715EE8511BCE4EA59147A91A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/student/Documents/Glitter/Glitter/Headers,
+					/Users/student/Documents/Glitter/Glitter/Vendor/assimp/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/bullet/src,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glad/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glfw/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glm,
+					/Users/student/Documents/Glitter/Glitter/Vendor/stb,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		72BEAA36097B49E9AEFCC521 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					USE_GRAPHICAL_BENCHMARK,
+					NO_OPENGL3,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/student/Documents/Glitter/Glitter/Vendor/bullet/src;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Bullet3Collision;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/Bullet3Collision;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		76215706D6D84CFDB624710B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		772B61CEC38D4D43BFE9C21D /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					USE_GRAPHICAL_BENCHMARK,
+					NO_OPENGL3,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/student/Documents/Glitter/Glitter/Vendor/bullet/src;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = BulletCollision;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/BulletCollision;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		7D7CB7BB4F6F4A5CAD8C1273 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					USE_GRAPHICAL_BENCHMARK,
+					NO_OPENGL3,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/student/Documents/Glitter/Glitter/Vendor/bullet/src;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = LinearMath;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/LinearMath;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		8032F794F29444CC91C194B1 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					USE_GRAPHICAL_BENCHMARK,
+					NO_OPENGL3,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/student/Documents/Glitter/Glitter/Vendor/bullet/src;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = BulletDynamics;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/BulletDynamics;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		86687587D15D4235B393B453 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					USE_GRAPHICAL_BENCHMARK,
+					NO_OPENGL3,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/student/Documents/Glitter/Glitter/Vendor/bullet/src;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = BulletDynamics;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/BulletDynamics;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		87CA11AA8C0441D5BDE539D8 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					USE_GRAPHICAL_BENCHMARK,
+					NO_OPENGL3,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/student/Documents/Glitter/Glitter/Vendor/bullet/src;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = BulletDynamics;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/BulletDynamics;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		89BE9C15AF56485B8E8508BB /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/student/Documents/Glitter/Glitter/Headers,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glad/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glfw/include,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		92C7F5776551433E998F8494 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					USE_GRAPHICAL_BENCHMARK,
+					NO_OPENGL3,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/student/Documents/Glitter/Glitter/Vendor/bullet/src;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = LinearMath;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/LinearMath;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		96147F4A66524B148A93F215 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					USE_GRAPHICAL_BENCHMARK,
+					NO_OPENGL3,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/student/Documents/Glitter/Glitter/Vendor/bullet/src;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Bullet3Geometry;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/Bullet3Geometry;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		9AEA3C35CA584CC3A92F964C /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					USE_GRAPHICAL_BENCHMARK,
+					NO_OPENGL3,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/student/Documents/Glitter/Glitter/Vendor/bullet/src;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = BulletSoftBody;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/BulletSoftBody;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		9BE62D2A1A224C14852FF884 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					USE_GRAPHICAL_BENCHMARK,
+					NO_OPENGL3,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/student/Documents/Glitter/Glitter/Vendor/bullet/src;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "   -D_DEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = BulletSoftBodyd;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/BulletSoftBody;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		9C5B0066E3D84BEC9AE1FA5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/student/Documents/Glitter/Build/Glitter/Debug;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					GLFW_INCLUDE_NONE,
+					"'PROJECT_SOURCE_DIR=\"/Users/student/Documents/Glitter\"'",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/student/Documents/Glitter/Glitter/Headers,
+					/Users/student/Documents/Glitter/Glitter/Vendor/assimp/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/bullet/src,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glad/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glfw/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glm,
+					/Users/student/Documents/Glitter/Glitter/Vendor/stb,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    ";
+				OTHER_CPLUSPLUSFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wpedantic",
+					"-std=c++11",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					/Users/student/Documents/Glitter/Build/Glitter/Vendor/assimp/code/Debug/libassimpd.a,
+					/Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw/src/Debug/libglfw3.a,
+					"-framework",
+					Cocoa,
+					"-framework",
+					OpenGL,
+					"-framework",
+					IOKit,
+					"-framework",
+					CoreFoundation,
+					"-framework",
+					CoreVideo,
+					"-ldl",
+					/Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/BulletDynamics/Debug/libBulletDynamicsd.a,
+					/Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/BulletCollision/Debug/libBulletCollisiond.a,
+					/Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/LinearMath/Debug/libLinearMathd.a,
+					/usr/lib/libz.dylib,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Glitter;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		9ECE24D214814D79A4A65AE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/student/Documents/Glitter/Glitter/Headers,
+					/Users/student/Documents/Glitter/Glitter/Vendor/assimp/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/bullet/src,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glad/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glfw/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glm,
+					/Users/student/Documents/Glitter/Glitter/Vendor/stb,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		A956E2333485459182FB005F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					OPENDDL_NO_USE_CPP11,
+					ASSIMP_BUILD_BOOST_WORKAROUND,
+					ASSIMP_BUILD_NO_OWN_ZLIB,
+					ASSIMP_BUILD_NO_C4D_IMPORTER,
+					ASSIMP_BUILD_DLL_EXPORT,
+					OPENDDLPARSER_BUILD,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/student/Documents/Glitter/Build/Glitter/Vendor/assimp,
+					/Users/student/Documents/Glitter/Glitter/Vendor/assimp/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/assimp/code/BoostWorkaround,
+					/Users/student/Documents/Glitter/Glitter/Vendor/assimp/code/../contrib/openddlparser/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/assimp/code/../contrib/unzip,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = assimp;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/assimp/code;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		AC2F97F0462A4862A3AB1BE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					USE_GRAPHICAL_BENCHMARK,
+					NO_OPENGL3,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/student/Documents/Glitter/Glitter/Vendor/bullet/src;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = BulletSoftBody;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/BulletSoftBody;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		B1C358AE84A94C22BBA627FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/student/Documents/Glitter/Glitter/Headers,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glad/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glfw/include,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		B5D7C47FB1814A618DAAD0A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk;
+				SYMROOT = /Users/student/Documents/Glitter/Build/build;
+			};
+			name = Release;
+		};
+		B8FE236586054E6582B4996B /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					USE_GRAPHICAL_BENCHMARK,
+					NO_OPENGL3,
+					B3_USE_CLEW,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/student/Documents/Glitter/Glitter/Vendor/bullet/src;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "       -DNDEBUG  ";
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Bullet3OpenCL_clew;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/Bullet3OpenCL;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		B953743280BA404F9BE4679D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/student/Documents/Glitter/Glitter/Headers,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glad/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glfw/include,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		B99E067B2B9A47DFB8F377FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					USE_GRAPHICAL_BENCHMARK,
+					NO_OPENGL3,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/student/Documents/Glitter/Glitter/Vendor/bullet/src;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Bullet3Common;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/Bullet3Common;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		BA3E8B0339BE4FF081EB8DBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk;
+				SYMROOT = /Users/student/Documents/Glitter/Build/build;
+			};
+			name = Debug;
+		};
+		BF9BE335B85F447090EA4C79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					_GLFW_USE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/student/Documents/Glitter/Glitter/Vendor/glfw/src,
+					/Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw/src,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-Wall",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw/src;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		C34E445A51FE4A8986B75E4B /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					USE_GRAPHICAL_BENCHMARK,
+					NO_OPENGL3,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/student/Documents/Glitter/Glitter/Vendor/bullet/src;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Bullet3Dynamics;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/Bullet3Dynamics;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		C81853A1B6784C1F989505D4 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk;
+				SYMROOT = /Users/student/Documents/Glitter/Build/build;
+			};
+			name = MinSizeRel;
+		};
+		D0F531FBA5114C8CB0C0ECF1 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					OPENDDL_NO_USE_CPP11,
+					ASSIMP_BUILD_BOOST_WORKAROUND,
+					ASSIMP_BUILD_NO_OWN_ZLIB,
+					ASSIMP_BUILD_NO_C4D_IMPORTER,
+					ASSIMP_BUILD_DLL_EXPORT,
+					OPENDDLPARSER_BUILD,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/student/Documents/Glitter/Build/Glitter/Vendor/assimp,
+					/Users/student/Documents/Glitter/Glitter/Vendor/assimp/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/assimp/code/BoostWorkaround,
+					/Users/student/Documents/Glitter/Glitter/Vendor/assimp/code/../contrib/openddlparser/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/assimp/code/../contrib/unzip,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = assimp;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/assimp/code;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		D42C1E57E19C4F619E6E2665 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					OPENDDL_NO_USE_CPP11,
+					ASSIMP_BUILD_BOOST_WORKAROUND,
+					ASSIMP_BUILD_NO_OWN_ZLIB,
+					ASSIMP_BUILD_NO_C4D_IMPORTER,
+					ASSIMP_BUILD_DLL_EXPORT,
+					OPENDDLPARSER_BUILD,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/student/Documents/Glitter/Build/Glitter/Vendor/assimp,
+					/Users/student/Documents/Glitter/Glitter/Vendor/assimp/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/assimp/code/BoostWorkaround,
+					/Users/student/Documents/Glitter/Glitter/Vendor/assimp/code/../contrib/openddlparser/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/assimp/code/../contrib/unzip,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "       -DNDEBUG  ";
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = assimp;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/assimp/code;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		D9A920A524B142709D53C8D5 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/student/Documents/Glitter/Glitter/Headers,
+					/Users/student/Documents/Glitter/Glitter/Vendor/assimp/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/bullet/src,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glad/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glfw/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glm,
+					/Users/student/Documents/Glitter/Glitter/Vendor/stb,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		E02FBD3B98EF4E5FB5F80699 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					USE_GRAPHICAL_BENCHMARK,
+					NO_OPENGL3,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/student/Documents/Glitter/Glitter/Vendor/bullet/src;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Bullet3Collision;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/Bullet3Collision;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		E373166D5E484E2F94D8CD59 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					USE_GRAPHICAL_BENCHMARK,
+					NO_OPENGL3,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/student/Documents/Glitter/Glitter/Vendor/bullet/src;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = LinearMath;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/LinearMath;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		E53B040547344B32A21AB65B /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/student/Documents/Glitter/Glitter/Headers,
+					/Users/student/Documents/Glitter/Glitter/Vendor/assimp/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/bullet/src,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glad/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glfw/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glm,
+					/Users/student/Documents/Glitter/Glitter/Vendor/stb,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		E6D9F133A44B43698A28FEBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					USE_GRAPHICAL_BENCHMARK,
+					NO_OPENGL3,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/student/Documents/Glitter/Glitter/Vendor/bullet/src;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "   -D_DEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = LinearMathd;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/LinearMath;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		EA4A316FA9894DF890207039 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					USE_GRAPHICAL_BENCHMARK,
+					NO_OPENGL3,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/student/Documents/Glitter/Glitter/Vendor/bullet/src;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = BulletCollision;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/BulletCollision;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		ECFBC4AFF2134E3DB9D53DB9 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					USE_GRAPHICAL_BENCHMARK,
+					NO_OPENGL3,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/student/Documents/Glitter/Glitter/Vendor/bullet/src;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = BulletSoftBody;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/BulletSoftBody;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		EE834B8B5CE3493D93CEB938 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/glfw;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		F0C3AB320E614F7992285771 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					USE_GRAPHICAL_BENCHMARK,
+					NO_OPENGL3,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/student/Documents/Glitter/Glitter/Vendor/bullet/src;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Bullet3Common;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/Bullet3Common;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		FCF16988CD7846F4A58277C7 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/student/Documents/Glitter/Glitter/Headers,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glad/include,
+					/Users/student/Documents/Glitter/Glitter/Vendor/glfw/include,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		FEC97B2AA6EE41A283FB7F19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					USE_GRAPHICAL_BENCHMARK,
+					NO_OPENGL3,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/student/Documents/Glitter/Glitter/Vendor/bullet/src;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "   -D_DEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Bullet3Collisiond;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/student/Documents/Glitter/Build/Glitter/Vendor/bullet/src/Bullet3Collision;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1A1ABF3A174D44C1B615F6CA /* Build configuration list for PBXNativeTarget "glfw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69B8A218B5A44346B1D52FC2 /* Debug */,
+				BF9BE335B85F447090EA4C79 /* Release */,
+				1371A41EBDF043E4A1E85894 /* MinSizeRel */,
+				0E29F017BAFC4BE68D200A4D /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		32E6E8C5F8B44D5B952A9555 /* Build configuration list for PBXAggregateTarget "uninstall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FBA915C036B436EA611CF56 /* Debug */,
+				76215706D6D84CFDB624710B /* Release */,
+				EE834B8B5CE3493D93CEB938 /* MinSizeRel */,
+				49FD078CEFD54F029230BA23 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		3B948663C0704D27B1FF32B8 /* Build configuration list for PBXNativeTarget "Bullet2FileLoader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3863C231293B4EA6844A291F /* Debug */,
+				40CDCCB6E0A4453C86C5EDAB /* Release */,
+				70775F5C918A4FDD97DFEF34 /* MinSizeRel */,
+				6C0BCB1BB0B641CB8803D892 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		5DCCB686DCF24EEE9A231CBC /* Build configuration list for PBXNativeTarget "Bullet3Collision" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEC97B2AA6EE41A283FB7F19 /* Debug */,
+				72BEAA36097B49E9AEFCC521 /* Release */,
+				E02FBD3B98EF4E5FB5F80699 /* MinSizeRel */,
+				242028AB7F284C40BD30946E /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		70FF051C3F494F4BB6D551A8 /* Build configuration list for PBXNativeTarget "Bullet3OpenCL_clew" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16EC63E0D553446B8F63AD53 /* Debug */,
+				399629009ADD4B3BB5C43D42 /* Release */,
+				4BA3AB1317BE4907A7DC4FC1 /* MinSizeRel */,
+				B8FE236586054E6582B4996B /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		734CD09BB3864212B3E42C2C /* Build configuration list for PBXNativeTarget "Bullet3Geometry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39117CFD15D04599B089A9D5 /* Debug */,
+				96147F4A66524B148A93F215 /* Release */,
+				28DB6ECF38DB44D89297380A /* MinSizeRel */,
+				0522C14ECB5840F493BB0C62 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8D16DCDBEAE74E28BDC1CD0C /* Build configuration list for PBXNativeTarget "Glitter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C5B0066E3D84BEC9AE1FA5C /* Debug */,
+				1B8A46B6F2694C9EB8775F8D /* Release */,
+				46ABD9FFEF254F0A92A39635 /* MinSizeRel */,
+				6E0C207C63EB4A6F9A4D219D /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		94770AB50B1C4A859FC75307 /* Build configuration list for PBXNativeTarget "Bullet3Dynamics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				490832158DA54C90B870F92D /* Debug */,
+				030340B6DA41414CA5AB57B9 /* Release */,
+				678E93CF9A3744E0A1A70DF5 /* MinSizeRel */,
+				C34E445A51FE4A8986B75E4B /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A0FED024F4954D5BA62BED85 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9ECE24D214814D79A4A65AE2 /* Debug */,
+				509BC28449F24BCF8D487155 /* Release */,
+				70344268030E4F2A9BA83B20 /* MinSizeRel */,
+				D9A920A524B142709D53C8D5 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B71A3FA6B69F42E1A4EA8CE4 /* Build configuration list for PBXProject "Glitter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA3E8B0339BE4FF081EB8DBB /* Debug */,
+				B5D7C47FB1814A618DAAD0A0 /* Release */,
+				C81853A1B6784C1F989505D4 /* MinSizeRel */,
+				11DD0AAE09614C129E5565E3 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B7BCD4BD85A543D7B9155E2E /* Build configuration list for PBXNativeTarget "Bullet3Common" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18D3A1A3FBCD4FB3ABC8BBA4 /* Debug */,
+				B99E067B2B9A47DFB8F377FF /* Release */,
+				5B1DEE175E5648A6AA1F2613 /* MinSizeRel */,
+				F0C3AB320E614F7992285771 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		BA3630FBA462486EADB40DB3 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B953743280BA404F9BE4679D /* Debug */,
+				B1C358AE84A94C22BBA627FB /* Release */,
+				FCF16988CD7846F4A58277C7 /* MinSizeRel */,
+				89BE9C15AF56485B8E8508BB /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		BD0EAF1CB75A445999EBBF13 /* Build configuration list for PBXNativeTarget "LinearMath" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6D9F133A44B43698A28FEBA /* Debug */,
+				7D7CB7BB4F6F4A5CAD8C1273 /* Release */,
+				92C7F5776551433E998F8494 /* MinSizeRel */,
+				E373166D5E484E2F94D8CD59 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C685AA2A11D34D9EAFE3C2B8 /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				715EE8511BCE4EA59147A91A /* Debug */,
+				44E2790E5535442ABF1C9216 /* Release */,
+				E53B040547344B32A21AB65B /* MinSizeRel */,
+				706567CD163A475592035279 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CC740EA99BF0497699A85E82 /* Build configuration list for PBXNativeTarget "BulletSoftBody" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BE62D2A1A224C14852FF884 /* Debug */,
+				AC2F97F0462A4862A3AB1BE9 /* Release */,
+				9AEA3C35CA584CC3A92F964C /* MinSizeRel */,
+				ECFBC4AFF2134E3DB9D53DB9 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		DE69F05892704A07B607792E /* Build configuration list for PBXNativeTarget "assimp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F9A7716E95244C482855322 /* Debug */,
+				A956E2333485459182FB005F /* Release */,
+				D0F531FBA5114C8CB0C0ECF1 /* MinSizeRel */,
+				D42C1E57E19C4F619E6E2665 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		EFFF333E992A4D048BCAF7C0 /* Build configuration list for PBXNativeTarget "BulletCollision" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3364579CA38F43D9A4093177 /* Debug */,
+				EA4A316FA9894DF890207039 /* Release */,
+				22AB4106C0E84D1DB7A17243 /* MinSizeRel */,
+				772B61CEC38D4D43BFE9C21D /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FB7C3D3F43154605BA0BAB24 /* Build configuration list for PBXNativeTarget "BulletDynamics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5498A820CB8A497387370AE0 /* Debug */,
+				86687587D15D4235B393B453 /* Release */,
+				87CA11AA8C0441D5BDE539D8 /* MinSizeRel */,
+				8032F794F29444CC91C194B1 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5C0E7C86E6754D3D824A2C8E /* Project object */;
+}
