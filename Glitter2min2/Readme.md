@@ -5,8 +5,11 @@
 Mike & Harry Notes:
 To do:
 [ ] Figure out whether moving to new machine allows opengl 4.0
+
 [ ] Figure out whether changing the internal shaders makes a difference.
+
 [ ] Figure out how to use the separate-file shaders. (Probably could copy from the "Glitter/OurWork" version of main.cpp)
+
 [ ] Figure out how to build a working Xcode from scratch ( or at least figure out how to build a minimal Xcode opengl project from cmake).
 
 
