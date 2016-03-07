@@ -51,12 +51,14 @@ const GLchar* vertexShaderSource = "#version 330 core\n"
 "{\n"
 "gl_Position = vec4(position.x, position.y, position.z, 1.0);\n"
 "}\0";
+
 const GLchar* fragmentShaderSource = "#version 330 core\n"
 "out vec4 color;\n"
 "void main()\n"
 "{\n"
-"color = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n"
-"}\n\0";
+"color = vec4(1.0f, 0.5f, 0.7f, 1.0f);\n"
+"}\n\0"; /* was vec4(1.0f, 0.5f, 0.2f, 1.0f); */
+
 
 // The MAIN function, from here we start the application and run the game loop
 int main()
