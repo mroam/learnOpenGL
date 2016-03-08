@@ -248,13 +248,11 @@
 		43B79DA6DC004F77A4D1AC68 /* libBulletDynamicsd.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libBulletDynamicsd.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C53CD8AF235453A831D72F9 /* libassimpd.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libassimpd.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E8FC548FFDE4673AB77A7ED /* monitor.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = monitor.c; path = Glitter/Vendor/glfw/src/monitor.c; sourceTree = SOURCE_ROOT; };
-		50EFF2D300494148811B12E9 /* .gitignore */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		567A9892F6674A798B3C084C /* libBullet3Collisiond.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libBullet3Collisiond.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		59C6767377094479B749EFFA /* libLinearMathd.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libLinearMathd.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C68B23E672D47B3A098FA75 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
 		641ACA41C80B4A589492C44D /* main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = Glitter/Sources/main.cpp; sourceTree = SOURCE_ROOT; };
 		64B4C7CBEBC6485AAA0A8007 /* libBullet3OpenCL_clewd.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libBullet3OpenCL_clewd.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		6C5FC493429342E4A011CABF /* .gitmodules */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; path = .gitmodules; sourceTree = SOURCE_ROOT; };
 		7BEB5F32FAE64E5F938E54D9 /* libBullet3Commond.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libBullet3Commond.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C10345B45F649E99C7A2EF3 /* posix_tls.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = posix_tls.c; path = Glitter/Vendor/glfw/src/posix_tls.c; sourceTree = SOURCE_ROOT; };
 		7F694ED2AD1043FF808771E5 /* libBulletCollisiond.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libBulletCollisiond.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -275,7 +273,6 @@
 		CD4E78B11B5B4A709425176D /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
 		DAD87C7653A14108ADD44433 /* internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = internal.h; path = Glitter/Vendor/glfw/src/internal.h; sourceTree = SOURCE_ROOT; };
 		DB7A1A270E3A43D2AC5D8C79 /* glfw3.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3.h; path = Glitter/Vendor/glfw/include/GLFW/glfw3.h; sourceTree = SOURCE_ROOT; };
-		E93ECD934EF44EE8981C9ABF /* .gitattributes */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; path = .gitattributes; sourceTree = SOURCE_ROOT; };
 		EE3D7E71995647CBB02F03CC /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
 		F2CCE89485EE4A9EB2B3042D /* libglfw3.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglfw3.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F61AC97B1AEB48DF8C493F80 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = Glitter/Vendor/glfw/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
@@ -382,9 +379,6 @@
 				43C903C46EEC4EF5B9E27B76 /* Sources */,
 				A39A872AB37F416B990C96F6 /* Headers */,
 				2D85EA8637AC4D54A2317923 /* Vendors */,
-				E93ECD934EF44EE8981C9ABF /* .gitattributes */,
-				50EFF2D300494148811B12E9 /* .gitignore */,
-				6C5FC493429342E4A011CABF /* .gitmodules */,
 				CD4E78B11B5B4A709425176D /* CMakeLists.txt */,
 				BF8115DBAD094E17925506E5 /* Readme.md */,
 			);
@@ -759,7 +753,7 @@
 			name = "CMake Rules";
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "make -C /Users/student/Documents/Glitter/Build -f /Users/student/Documents/Glitter/Build/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			shellScript = "make -C /Users/student/Documents/learnOpenGL/Glitter2min2/Glitter/Build -f /Users/student/Documents/learnOpenGL/Glitter2min2/Glitter/Build/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
 			showEnvVarsInLog = 0;
 		};
 		B717187F8870409B9E1F8FF2 /* CMake Rules */ = {
@@ -2491,16 +2485,17 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/student/Documents/Glitter/Glitter/Headers,
-					/Users/student/Documents/Glitter/Glitter/Vendor/glad/include,
-					/Users/student/Documents/Glitter/Glitter/Vendor/glfw/include,
+					/Users/student/Documents/learnOpenGL/Glitter2min2/Glitter/Headers,
+					/Users/student/Documents/learnOpenGL/Glitter2min2/Glitter/Vendor/glad/include,
+					/Users/student/Documents/learnOpenGL/Glitter2min2/Glitter/Vendor/glfw/include,
 				);
 				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = " ";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ALL_BUILD;
 				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/student/Documents/Glitter/Build;
+				SYMROOT = /Users/student/Documents/learnOpenGL/Glitter2min2/Build;
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -2839,16 +2834,17 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/student/Documents/Glitter/Glitter/Headers,
-					/Users/student/Documents/Glitter/Glitter/Vendor/glad/include,
-					/Users/student/Documents/Glitter/Glitter/Vendor/glfw/include,
+					/Users/student/Documents/learnOpenGL/Glitter2min2/Glitter/Headers,
+					/Users/student/Documents/learnOpenGL/Glitter2min2/Glitter/Vendor/glad/include,
+					/Users/student/Documents/learnOpenGL/Glitter2min2/Glitter/Vendor/glfw/include,
 				);
 				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = " ";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ALL_BUILD;
 				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/student/Documents/Glitter/Build;
+				SYMROOT = /Users/student/Documents/learnOpenGL/Glitter2min2/Build;
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -2914,16 +2910,17 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/student/Documents/Glitter/Glitter/Headers,
-					/Users/student/Documents/Glitter/Glitter/Vendor/glad/include,
-					/Users/student/Documents/Glitter/Glitter/Vendor/glfw/include,
+					/Users/student/Documents/learnOpenGL/Glitter2min2/Glitter/Headers,
+					/Users/student/Documents/learnOpenGL/Glitter2min2/Glitter/Vendor/glad/include,
+					/Users/student/Documents/learnOpenGL/Glitter2min2/Glitter/Vendor/glfw/include,
 				);
 				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = " ";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ALL_BUILD;
 				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/student/Documents/Glitter/Build;
+				SYMROOT = /Users/student/Documents/learnOpenGL/Glitter2min2/Build;
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -3458,16 +3455,17 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/student/Documents/Glitter/Glitter/Headers,
-					/Users/student/Documents/Glitter/Glitter/Vendor/glad/include,
-					/Users/student/Documents/Glitter/Glitter/Vendor/glfw/include,
+					/Users/student/Documents/learnOpenGL/Glitter2min2/Glitter/Headers,
+					/Users/student/Documents/learnOpenGL/Glitter2min2/Glitter/Vendor/glad/include,
+					/Users/student/Documents/learnOpenGL/Glitter2min2/Glitter/Vendor/glfw/include,
 				);
 				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = " ";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ALL_BUILD;
 				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/student/Documents/Glitter/Build;
+				SYMROOT = /Users/student/Documents/learnOpenGL/Glitter2min2/Build;
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = (
 					"-Wmost",
