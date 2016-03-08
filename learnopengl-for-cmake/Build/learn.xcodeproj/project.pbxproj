@@ -1,0 +1,1289 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		A43A44B0991A49C9B6D42F40 /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 41AB07892962470B9F6214F3 /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				986A7F20762744DCAC9FACAF /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				5A526A2A75CF4FDF9A3391BB /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+		ABA4CF3FD4104456B34DE8EA /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 841DC8F3D5194699BF171D4E /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				AF57E07E825049AD8BA7085D /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		DDBFE1C443BA4993BF1B7095 /* uninstall */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B7D8BB25F55F4DCF88EF4C0D /* Build configuration list for PBXAggregateTarget "uninstall" */;
+			buildPhases = (
+				30AF4627EB504F64A3E7306C /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = uninstall;
+			productName = uninstall;
+		};
+		EC10791A9EA2490C9F288E96 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 98F6D5DC960E446BA0E31CD5 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				CC59EDDF14C54840BC02CE85 /* CMake Rules */,
+			);
+			dependencies = (
+				15484769A4CD45F4962F4BB7 /* PBXTargetDependency */,
+				B4518F3DE3C547C7BE0B2B8D /* PBXTargetDependency */,
+				6875FA512C7C4CEF814565C4 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		1094CED7101B44E384C0D4B3 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Sources/oldmain.cpp */ = {isa = PBXBuildFile; fileRef = 0AC17C5AD3BA4888A6C5EB56 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Sources/oldmain.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		230FEE9CB30A432C96EEE2C9 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/cocoa_platform.h */ = {isa = PBXBuildFile; fileRef = 7E793890361D4636A7EE54D8 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/cocoa_platform.h */; settings = {COMPILER_FLAGS = ""; }; };
+		250757B69E434B80B3F401FA /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/input.c */ = {isa = PBXBuildFile; fileRef = D02D563C6A7747EA8F6C5551 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/input.c */; settings = {COMPILER_FLAGS = ""; }; };
+		2D28DBA8EDB14E41AE64672C /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/include/GLFW/glfw3native.h */ = {isa = PBXBuildFile; fileRef = 24CB337C92B743E1AFC62187 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/include/GLFW/glfw3native.h */; settings = {COMPILER_FLAGS = ""; }; };
+		31B8727FFA9141B2AFCDA5DA /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/posix_tls.c */ = {isa = PBXBuildFile; fileRef = 7591C5BF74A64B19BE5C9BBA /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/posix_tls.c */; settings = {COMPILER_FLAGS = ""; }; };
+		4C0DB36606DD449B8184BB71 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = D1D5FC78635741D0A680021C /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/CMakeLists.txt */; settings = {COMPILER_FLAGS = ""; }; };
+		512EA6E604274FD589599650 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/init.c */ = {isa = PBXBuildFile; fileRef = 5F5D1A4BC7614EEA98BFBF6E /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/init.c */; settings = {COMPILER_FLAGS = ""; }; };
+		64F0D6F31C454EF98C0B6A93 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/monitor.c */ = {isa = PBXBuildFile; fileRef = 0FDCD572774F40FB9C21E1A4 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/monitor.c */; settings = {COMPILER_FLAGS = ""; }; };
+		676EF7FD84824368AD30F4B2 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/internal.h */ = {isa = PBXBuildFile; fileRef = 4F9AC5848CF040DAB0A19010 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/internal.h */; settings = {COMPILER_FLAGS = ""; }; };
+		69D76DB6C84A45458204B46F /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/mach_time.c */ = {isa = PBXBuildFile; fileRef = 82F3453E0D9C4B06BF3ECFC1 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/mach_time.c */; settings = {COMPILER_FLAGS = ""; }; };
+		69DE453DBA4F4D88A9596700 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/cocoa_monitor.m */ = {isa = PBXBuildFile; fileRef = 8FD6929B17DC49ED85129C98 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/cocoa_monitor.m */; settings = {COMPILER_FLAGS = ""; }; };
+		6D9F3DF66187477A84FD7937 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glad/src/glad.c */ = {isa = PBXBuildFile; fileRef = FA6B79E304D347E08AC22EB7 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glad/src/glad.c */; settings = {COMPILER_FLAGS = ""; }; };
+		7A8EC94D718B436CA31D72C0 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/iokit_joystick.h */ = {isa = PBXBuildFile; fileRef = 4A31A27BD84242F09F9007D6 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/iokit_joystick.h */; settings = {COMPILER_FLAGS = ""; }; };
+		94B0C1312C4842C3AD511811 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/iokit_joystick.m */ = {isa = PBXBuildFile; fileRef = 2E96A416A5F74862B0797637 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/iokit_joystick.m */; settings = {COMPILER_FLAGS = ""; }; };
+		94D824357E344B26817751D1 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Headers/glitter.hpp */ = {isa = PBXBuildFile; fileRef = EEEF8062219B486695490085 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Headers/glitter.hpp */; settings = {COMPILER_FLAGS = ""; }; };
+		9F1F28CEE7EF414F9A17B507 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/cocoa_window.m */ = {isa = PBXBuildFile; fileRef = C6C242D1CBA74DCDBF7BF659 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/cocoa_window.m */; settings = {COMPILER_FLAGS = ""; }; };
+		A0E8DE10F9774A14A89D0027 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/nsgl_context.h */ = {isa = PBXBuildFile; fileRef = A83BF6B1A0B24E46A7731323 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/nsgl_context.h */; settings = {COMPILER_FLAGS = ""; }; };
+		A7660EC5E25F4FECA004C599 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/window.c */ = {isa = PBXBuildFile; fileRef = CC1F616B322F444D976BA17E /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/window.c */; settings = {COMPILER_FLAGS = ""; }; };
+		AE2FB447CAE74E959ACBA939 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/cocoa_init.m */ = {isa = PBXBuildFile; fileRef = B512F04DFA5F4860AC5FB66D /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/cocoa_init.m */; settings = {COMPILER_FLAGS = ""; }; };
+		B3DC9C5BBE96442CB98BA35B /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/posix_tls.h */ = {isa = PBXBuildFile; fileRef = 167BC55B51D04520A8A9EF51 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/posix_tls.h */; settings = {COMPILER_FLAGS = ""; }; };
+		B97D0BE15EBF436781780CC2 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/include/GLFW/glfw3.h */ = {isa = PBXBuildFile; fileRef = D10681C8438D4C839E7CBB8F /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/include/GLFW/glfw3.h */; settings = {COMPILER_FLAGS = ""; }; };
+		BA0B39F6A8114374B32DDA2C /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build/learn/Vendor/glfw/src/glfw_config.h */ = {isa = PBXBuildFile; fileRef = DC0F0CC839124E59B0E157CE /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build/learn/Vendor/glfw/src/glfw_config.h */; settings = {COMPILER_FLAGS = ""; }; };
+		C78D7CA49928458796F0C327 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/context.c */ = {isa = PBXBuildFile; fileRef = B45279F0D62E41E4B6842C2E /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/context.c */; settings = {COMPILER_FLAGS = ""; }; };
+		CAAFAE4B06874518997B1951 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = B722F9E62A9643C4A19B738F /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/CMakeLists.txt */; settings = {COMPILER_FLAGS = ""; }; };
+		F29B2E22CC1A443382F93A83 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/nsgl_context.m */ = {isa = PBXBuildFile; fileRef = 3B6295A553814F0FA2031093 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/nsgl_context.m */; settings = {COMPILER_FLAGS = ""; }; };
+		F83DBA9013C74D52A6A60E8A /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Sources/main.cpp */ = {isa = PBXBuildFile; fileRef = A2B86035CCCE4B22AC7E753A /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Sources/main.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		0A578641590D492AB1CB6639 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		4F5F874582AB4CDDADA697F3 = {
+			isa = PBXBuildStyle;
+		};
+		981B70276A414F0F942F23F6 /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		CE284A858D2D48D587CC9D48 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		F6933097532E4CF09AE8A8B3 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		3720D40CD7984FDABB0C33F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D73F24896E446BD90835E00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC10791A9EA2490C9F288E96;
+			remoteInfo = ALL_BUILD;
+		};
+		3CF250E90BB04470BD73555F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D73F24896E446BD90835E00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A713DB9CA704770A65FF545;
+			remoteInfo = learn;
+		};
+		517E1B642CD64DDE8757E17C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D73F24896E446BD90835E00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9CA9F27376714BFDA2822764;
+			remoteInfo = glfw;
+		};
+		8148728BF90346F1B53D7C42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D73F24896E446BD90835E00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABA4CF3FD4104456B34DE8EA;
+			remoteInfo = ZERO_CHECK;
+		};
+		9E553F99AFC040B793AD1497 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D73F24896E446BD90835E00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABA4CF3FD4104456B34DE8EA;
+			remoteInfo = ZERO_CHECK;
+		};
+		A7DAF81B3FA4486C9A01B8E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D73F24896E446BD90835E00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABA4CF3FD4104456B34DE8EA;
+			remoteInfo = ZERO_CHECK;
+		};
+		DB5E41E3231146439E7323BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D73F24896E446BD90835E00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9CA9F27376714BFDA2822764;
+			remoteInfo = glfw;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0AC17C5AD3BA4888A6C5EB56 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Sources/oldmain.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = oldmain.cpp; path = learn/Sources/oldmain.cpp; sourceTree = SOURCE_ROOT; };
+		0FDCD572774F40FB9C21E1A4 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/monitor.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = monitor.c; path = learn/Vendor/glfw/src/monitor.c; sourceTree = SOURCE_ROOT; };
+		167BC55B51D04520A8A9EF51 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/posix_tls.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = posix_tls.h; path = learn/Vendor/glfw/src/posix_tls.h; sourceTree = SOURCE_ROOT; };
+		19B0F94BDE794D3AACD1BF92 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		24CB337C92B743E1AFC62187 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/include/GLFW/glfw3native.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3native.h; path = learn/Vendor/glfw/include/GLFW/glfw3native.h; sourceTree = SOURCE_ROOT; };
+		2E96A416A5F74862B0797637 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/iokit_joystick.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = iokit_joystick.m; path = learn/Vendor/glfw/src/iokit_joystick.m; sourceTree = SOURCE_ROOT; };
+		3B6295A553814F0FA2031093 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/nsgl_context.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = nsgl_context.m; path = learn/Vendor/glfw/src/nsgl_context.m; sourceTree = SOURCE_ROOT; };
+		3C2AF48FA74B4D9CBBC6BA11 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = learn/Vendor/glfw/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		4A31A27BD84242F09F9007D6 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/iokit_joystick.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = iokit_joystick.h; path = learn/Vendor/glfw/src/iokit_joystick.h; sourceTree = SOURCE_ROOT; };
+		4F9AC5848CF040DAB0A19010 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = internal.h; path = learn/Vendor/glfw/src/internal.h; sourceTree = SOURCE_ROOT; };
+		544CE2395BE74D64969DF4A6 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		5883989E8BFB467AAB1739B8 /* learn */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = learn; refType = 0; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F5D1A4BC7614EEA98BFBF6E /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/init.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = init.c; path = learn/Vendor/glfw/src/init.c; sourceTree = SOURCE_ROOT; };
+		7591C5BF74A64B19BE5C9BBA /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/posix_tls.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = posix_tls.c; path = learn/Vendor/glfw/src/posix_tls.c; sourceTree = SOURCE_ROOT; };
+		7E793890361D4636A7EE54D8 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/cocoa_platform.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_platform.h; path = learn/Vendor/glfw/src/cocoa_platform.h; sourceTree = SOURCE_ROOT; };
+		82F3453E0D9C4B06BF3ECFC1 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/mach_time.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = mach_time.c; path = learn/Vendor/glfw/src/mach_time.c; sourceTree = SOURCE_ROOT; };
+		8FD6929B17DC49ED85129C98 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/cocoa_monitor.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_monitor.m; path = learn/Vendor/glfw/src/cocoa_monitor.m; sourceTree = SOURCE_ROOT; };
+		A2B86035CCCE4B22AC7E753A /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Sources/main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = learn/Sources/main.cpp; sourceTree = SOURCE_ROOT; };
+		A83BF6B1A0B24E46A7731323 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/nsgl_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = nsgl_context.h; path = learn/Vendor/glfw/src/nsgl_context.h; sourceTree = SOURCE_ROOT; };
+		B45279F0D62E41E4B6842C2E /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = context.c; path = learn/Vendor/glfw/src/context.c; sourceTree = SOURCE_ROOT; };
+		B512F04DFA5F4860AC5FB66D /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/cocoa_init.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_init.m; path = learn/Vendor/glfw/src/cocoa_init.m; sourceTree = SOURCE_ROOT; };
+		B722F9E62A9643C4A19B738F /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		C6C242D1CBA74DCDBF7BF659 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/cocoa_window.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_window.m; path = learn/Vendor/glfw/src/cocoa_window.m; sourceTree = SOURCE_ROOT; };
+		CC1F616B322F444D976BA17E /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/window.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = window.c; path = learn/Vendor/glfw/src/window.c; sourceTree = SOURCE_ROOT; };
+		D02D563C6A7747EA8F6C5551 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/input.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = input.c; path = learn/Vendor/glfw/src/input.c; sourceTree = SOURCE_ROOT; };
+		D10681C8438D4C839E7CBB8F /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/include/GLFW/glfw3.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3.h; path = learn/Vendor/glfw/include/GLFW/glfw3.h; sourceTree = SOURCE_ROOT; };
+		D1D5FC78635741D0A680021C /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = learn/Vendor/glfw/src/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		DC0F0CC839124E59B0E157CE /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build/learn/Vendor/glfw/src/glfw_config.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw_config.h; path = Build/learn/Vendor/glfw/src/glfw_config.h; sourceTree = SOURCE_ROOT; };
+		E976FCB973CB4598A39D3C09 /* glfw */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglfw3.a; refType = 0; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEEF8062219B486695490085 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Headers/glitter.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = glitter.hpp; path = learn/Headers/glitter.hpp; sourceTree = SOURCE_ROOT; };
+		FA6B79E304D347E08AC22EB7 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glad/src/glad.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = glad.c; path = learn/Vendor/glad/src/glad.c; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		1009AE86B998447999101551 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				EEEF8062219B486695490085 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Headers/glitter.hpp */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		12B09A5FF56B4C0186398403 /* glfw */ = {
+			isa = PBXGroup;
+			children = (
+				63DE8E1B2EC84C5F88855BCB /* Source Files */,
+				E3AAA57A7F3243E78C600309 /* Header Files */,
+				D1D5FC78635741D0A680021C /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/CMakeLists.txt */,
+			);
+			name = glfw;
+			sourceTree = "<group>";
+		};
+		2841DD370A254B439FF53552 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D7483EA0AF5F4372A12E3EA5 /* learn */,
+				EC72449D30AE46228AB43B05 /* ALL_BUILD */,
+				641CF3337E934E68B33E9FD5 /* ZERO_CHECK */,
+				C5C5655EE3E645598366E2ED /* uninstall */,
+				4470A0C1A14F4134937AF6D7 /* GLFW3 */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		369016ABAFDF411EB42DF17C /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				FA6B79E304D347E08AC22EB7 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glad/src/glad.c */,
+			);
+			name = Vendors;
+			sourceTree = "<group>";
+		};
+		4470A0C1A14F4134937AF6D7 /* GLFW3 */ = {
+			isa = PBXGroup;
+			children = (
+				12B09A5FF56B4C0186398403 /* glfw */,
+			);
+			name = GLFW3;
+			sourceTree = "<group>";
+		};
+		63DE8E1B2EC84C5F88855BCB /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				B512F04DFA5F4860AC5FB66D /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/cocoa_init.m */,
+				8FD6929B17DC49ED85129C98 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/cocoa_monitor.m */,
+				C6C242D1CBA74DCDBF7BF659 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/cocoa_window.m */,
+				B45279F0D62E41E4B6842C2E /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/context.c */,
+				5F5D1A4BC7614EEA98BFBF6E /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/init.c */,
+				D02D563C6A7747EA8F6C5551 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/input.c */,
+				2E96A416A5F74862B0797637 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/iokit_joystick.m */,
+				82F3453E0D9C4B06BF3ECFC1 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/mach_time.c */,
+				0FDCD572774F40FB9C21E1A4 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/monitor.c */,
+				3B6295A553814F0FA2031093 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/nsgl_context.m */,
+				7591C5BF74A64B19BE5C9BBA /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/posix_tls.c */,
+				CC1F616B322F444D976BA17E /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/window.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		641CF3337E934E68B33E9FD5 /* ZERO_CHECK */ = {
+			isa = PBXGroup;
+			children = (
+				CE683024447149C6B6EDCCBB /* CMake Rules */,
+				19B0F94BDE794D3AACD1BF92 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/CMakeLists.txt */,
+			);
+			name = ZERO_CHECK;
+			sourceTree = "<group>";
+		};
+		675D7C44BC1B47CBB476BCEB /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		8ADC1415188C4BDFB3F4E0E5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		BF9DF2F2494243D0B72545C1 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		C5C5655EE3E645598366E2ED /* uninstall */ = {
+			isa = PBXGroup;
+			children = (
+				675D7C44BC1B47CBB476BCEB /* CMake Rules */,
+				3C2AF48FA74B4D9CBBC6BA11 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/CMakeLists.txt */,
+			);
+			name = uninstall;
+			sourceTree = "<group>";
+		};
+		CD6329BAC3BE4CE28E73BC6A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5883989E8BFB467AAB1739B8 /* learn */,
+				E976FCB973CB4598A39D3C09 /* glfw */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE683024447149C6B6EDCCBB /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		D7483EA0AF5F4372A12E3EA5 /* learn */ = {
+			isa = PBXGroup;
+			children = (
+				FFB58EB482E24210BB439AA0 /* Sources */,
+				1009AE86B998447999101551 /* Headers */,
+				369016ABAFDF411EB42DF17C /* Vendors */,
+				B722F9E62A9643C4A19B738F /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/CMakeLists.txt */,
+			);
+			name = learn;
+			sourceTree = "<group>";
+		};
+		DE53072D34D24D1D95A0DD2E = {
+			isa = PBXGroup;
+			children = (
+				2841DD370A254B439FF53552 /* Sources */,
+				8ADC1415188C4BDFB3F4E0E5 /* Resources */,
+				CD6329BAC3BE4CE28E73BC6A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E3AAA57A7F3243E78C600309 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC0F0CC839124E59B0E157CE /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build/learn/Vendor/glfw/src/glfw_config.h */,
+				D10681C8438D4C839E7CBB8F /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/include/GLFW/glfw3.h */,
+				24CB337C92B743E1AFC62187 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/include/GLFW/glfw3native.h */,
+				7E793890361D4636A7EE54D8 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/cocoa_platform.h */,
+				4F9AC5848CF040DAB0A19010 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/internal.h */,
+				4A31A27BD84242F09F9007D6 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/iokit_joystick.h */,
+				A83BF6B1A0B24E46A7731323 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/nsgl_context.h */,
+				167BC55B51D04520A8A9EF51 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/posix_tls.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		EC72449D30AE46228AB43B05 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				BF9DF2F2494243D0B72545C1 /* CMake Rules */,
+				544CE2395BE74D64969DF4A6 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		FFB58EB482E24210BB439AA0 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A2B86035CCCE4B22AC7E753A /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Sources/main.cpp */,
+				0AC17C5AD3BA4888A6C5EB56 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Sources/oldmain.cpp */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3A713DB9CA704770A65FF545 /* learn */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02C3817B12334762ACE148AF /* Build configuration list for PBXNativeTarget "learn" */;
+			buildPhases = (
+				A270BCA1DD714546A23A4266 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A5D5D9AF53844A02AD1F2E30 /* PBXTargetDependency */,
+				558FF641560D46C3ACBA7417 /* PBXTargetDependency */,
+			);
+			name = learn;
+			productName = learn;
+			productReference = 5883989E8BFB467AAB1739B8 /* learn */;
+			productType = "com.apple.product-type.tool";
+		};
+		9CA9F27376714BFDA2822764 /* glfw */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B30C8670DA041F5A83722B6 /* Build configuration list for PBXNativeTarget "glfw" */;
+			buildPhases = (
+				03B3E71002FE4D01872F305B /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				62ACF3DDF96F4CF292AE23F0 /* PBXTargetDependency */,
+			);
+			name = glfw;
+			productName = glfw;
+			productReference = E976FCB973CB4598A39D3C09 /* glfw */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5D73F24896E446BD90835E00 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+			};
+			buildConfigurationList = AC305213D71F40A3867D2534 /* Build configuration list for PBXProject "learn" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				F6933097532E4CF09AE8A8B3 /* Debug */,
+				0A578641590D492AB1CB6639 /* Release */,
+				CE284A858D2D48D587CC9D48 /* MinSizeRel */,
+				981B70276A414F0F942F23F6 /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = DE53072D34D24D1D95A0DD2E;
+			projectDirPath = ../;
+			projectRoot = "";
+			targets = (
+				EC10791A9EA2490C9F288E96 /* ALL_BUILD */,
+				ABA4CF3FD4104456B34DE8EA /* ZERO_CHECK */,
+				A43A44B0991A49C9B6D42F40 /* install */,
+				3A713DB9CA704770A65FF545 /* learn */,
+				DDBFE1C443BA4993BF1B7095 /* uninstall */,
+				9CA9F27376714BFDA2822764 /* glfw */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C8BF332FB014ED4B5F754CA = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		0E240831F4B34F0FA14C3770 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		30AF4627EB504F64A3E7306C /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build/learn/Vendor/glfw -f /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build/learn/Vendor/glfw/CMakeScripts/uninstall_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		409F39B7C5FD4AE180048DF1 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		986A7F20762744DCAC9FACAF /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build -f /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build/CMakeScripts/install_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		AF57E07E825049AD8BA7085D /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build -f /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		CC59EDDF14C54840BC02CE85 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build -f /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		EE42BE4ED6D74CA5A89276D9 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		03B3E71002FE4D01872F305B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE2FB447CAE74E959ACBA939 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/cocoa_init.m */,
+				69DE453DBA4F4D88A9596700 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/cocoa_monitor.m */,
+				9F1F28CEE7EF414F9A17B507 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/cocoa_window.m */,
+				C78D7CA49928458796F0C327 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/context.c */,
+				512EA6E604274FD589599650 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/init.c */,
+				250757B69E434B80B3F401FA /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/input.c */,
+				94B0C1312C4842C3AD511811 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/iokit_joystick.m */,
+				69D76DB6C84A45458204B46F /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/mach_time.c */,
+				64F0D6F31C454EF98C0B6A93 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/monitor.c */,
+				F29B2E22CC1A443382F93A83 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/nsgl_context.m */,
+				31B8727FFA9141B2AFCDA5DA /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/posix_tls.c */,
+				A7660EC5E25F4FECA004C599 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src/window.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A270BCA1DD714546A23A4266 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F83DBA9013C74D52A6A60E8A /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Sources/main.cpp */,
+				1094CED7101B44E384C0D4B3 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Sources/oldmain.cpp */,
+				6D9F3DF66187477A84FD7937 /* /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glad/src/glad.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		15484769A4CD45F4962F4BB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9CA9F27376714BFDA2822764 /* glfw */;
+			targetProxy = 517E1B642CD64DDE8757E17C /* PBXContainerItemProxy */;
+		};
+		558FF641560D46C3ACBA7417 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ABA4CF3FD4104456B34DE8EA /* ZERO_CHECK */;
+			targetProxy = 8148728BF90346F1B53D7C42 /* PBXContainerItemProxy */;
+		};
+		5A526A2A75CF4FDF9A3391BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC10791A9EA2490C9F288E96 /* ALL_BUILD */;
+			targetProxy = 3720D40CD7984FDABB0C33F3 /* PBXContainerItemProxy */;
+		};
+		62ACF3DDF96F4CF292AE23F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ABA4CF3FD4104456B34DE8EA /* ZERO_CHECK */;
+			targetProxy = A7DAF81B3FA4486C9A01B8E7 /* PBXContainerItemProxy */;
+		};
+		6875FA512C7C4CEF814565C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ABA4CF3FD4104456B34DE8EA /* ZERO_CHECK */;
+			targetProxy = 9E553F99AFC040B793AD1497 /* PBXContainerItemProxy */;
+		};
+		A5D5D9AF53844A02AD1F2E30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9CA9F27376714BFDA2822764 /* glfw */;
+			targetProxy = DB5E41E3231146439E7323BC /* PBXContainerItemProxy */;
+		};
+		B4518F3DE3C547C7BE0B2B8D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A713DB9CA704770A65FF545 /* learn */;
+			targetProxy = 3CF250E90BB04470BD73555F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0C7E6B701F0046B88E662B19 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk;
+				SYMROOT = "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build/build";
+			};
+			name = MinSizeRel;
+		};
+		151017E0637E40CE8DCCB427 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk;
+				SYMROOT = "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build/build";
+			};
+			name = Debug;
+		};
+		3405D038431A4D2995FC8325 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Headers", "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glad/include", "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/include", );
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Debug;
+		};
+		34E49ED27F7648DB81930F9D /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Headers", "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glad/include", "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/include", );
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = MinSizeRel;
+		};
+		35282FD133324949A78E6DEC /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build/learn/MinSizeRel";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", GLFW_INCLUDE_NONE, "'PROJECT_SOURCE_DIR=\"/Users/student/Documents/learnOpenGL/learnopengl-for-cmake\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Headers", "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glad/include", "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/include", );
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_CPLUSPLUSFLAGS = " -Wall -Wextra -Wpedantic -std=c++11     -DNDEBUG  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build/learn/Vendor/glfw/src/MinSizeRel/libglfw3.a -framework Cocoa -framework OpenGL -framework IOKit -framework CoreFoundation -framework CoreVideo -ldl";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = learn;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = MinSizeRel;
+		};
+		3A69FD6B71DC4D2989EE2370 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build/learn/Vendor/glfw";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Debug;
+		};
+		3D5E1971FD94487D8AF54DBD /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Headers", "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glad/include", "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/include", );
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = RelWithDebInfo;
+		};
+		458F21AF65E44A9A80F4E5CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build/learn/Debug";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", GLFW_INCLUDE_NONE, "'PROJECT_SOURCE_DIR=\"/Users/student/Documents/learnOpenGL/learnopengl-for-cmake\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Headers", "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glad/include", "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/include", );
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    ";
+				OTHER_CPLUSPLUSFLAGS = " -Wall -Wextra -Wpedantic -std=c++11     ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build/learn/Vendor/glfw/src/Debug/libglfw3.a -framework Cocoa -framework OpenGL -framework IOKit -framework CoreFoundation -framework CoreVideo -ldl";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = learn;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Debug;
+		};
+		6D69F67F53AA43C1B69ACD21 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk;
+				SYMROOT = "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build/build";
+			};
+			name = RelWithDebInfo;
+		};
+		7337D9E1E5FA41129851C14E /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Headers", "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glad/include", "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/include", );
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = MinSizeRel;
+		};
+		786106EBE1A64C89817AF1CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build/learn/Release";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", GLFW_INCLUDE_NONE, "'PROJECT_SOURCE_DIR=\"/Users/student/Documents/learnOpenGL/learnopengl-for-cmake\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Headers", "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glad/include", "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/include", );
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_CPLUSPLUSFLAGS = " -Wall -Wextra -Wpedantic -std=c++11     -DNDEBUG  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build/learn/Vendor/glfw/src/Release/libglfw3.a -framework Cocoa -framework OpenGL -framework IOKit -framework CoreFoundation -framework CoreVideo -ldl";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = learn;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Release;
+		};
+		7CFB76A9F99A4BCEAC7A0723 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", _GLFW_USE_CONFIG_H, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src", "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build/learn/Vendor/glfw/src", );
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "       -DNDEBUG -fPIC   -Wall";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build/learn/Vendor/glfw/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = RelWithDebInfo;
+		};
+		8461AF076C414CBBAAD684A6 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build/learn/Vendor/glfw";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = MinSizeRel;
+		};
+		92B2D9631C1B4C68B61D986E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build/learn/Vendor/glfw";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Release;
+		};
+		966FC7F8ED054862A520711B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Headers", "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glad/include", "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/include", );
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Release;
+		};
+		9B878C88E0C848878081A1B7 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Headers", "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glad/include", "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/include", );
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = MinSizeRel;
+		};
+		9D0C3D1C4AE444A4AFB85F33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Headers", "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glad/include", "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/include", );
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Debug;
+		};
+		9F383A0D2B5F460AAF804623 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", _GLFW_USE_CONFIG_H, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src", "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build/learn/Vendor/glfw/src", );
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG -fPIC   -Wall";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build/learn/Vendor/glfw/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Release;
+		};
+		AEFFE22D50F348C9846DCC84 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build/learn/Vendor/glfw";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = RelWithDebInfo;
+		};
+		B86FE2FDC0F14072A8FB0037 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build/learn/RelWithDebInfo";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", GLFW_INCLUDE_NONE, "'PROJECT_SOURCE_DIR=\"/Users/student/Documents/learnOpenGL/learnopengl-for-cmake\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Headers", "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glad/include", "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/include", );
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "       -DNDEBUG  ";
+				OTHER_CPLUSPLUSFLAGS = " -Wall -Wextra -Wpedantic -std=c++11        -DNDEBUG  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build/learn/Vendor/glfw/src/RelWithDebInfo/libglfw3.a -framework Cocoa -framework OpenGL -framework IOKit -framework CoreFoundation -framework CoreVideo -ldl";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = learn;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = RelWithDebInfo;
+		};
+		BCD86FBE1C9F42BC9D57DBFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Headers", "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glad/include", "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/include", );
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Debug;
+		};
+		C1099A7DBB624FC9B2DEF031 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Headers", "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glad/include", "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/include", );
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = RelWithDebInfo;
+		};
+		C3C0894A56494BF6AE3343EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Headers", "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glad/include", "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/include", );
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Release;
+		};
+		D39E0B8A35DE424797E1AC4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk;
+				SYMROOT = "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build/build";
+			};
+			name = Release;
+		};
+		D7C638B6C78046E292AF9A9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", _GLFW_USE_CONFIG_H, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src", "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build/learn/Vendor/glfw/src", );
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "   -fPIC   -Wall";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build/learn/Vendor/glfw/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Debug;
+		};
+		F52833B035234F638482EF42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Headers", "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glad/include", "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/include", );
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Release;
+		};
+		F7E10DCA203E44C89F073E07 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Headers", "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glad/include", "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/include", );
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = RelWithDebInfo;
+		};
+		FFAFE50956AD4DBBBBF44E4C /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", _GLFW_USE_CONFIG_H, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/learn/Vendor/glfw/src", "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build/learn/Vendor/glfw/src", );
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG -fPIC   -Wall";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build/learn/Vendor/glfw/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = MinSizeRel;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		02C3817B12334762ACE148AF /* Build configuration list for PBXNativeTarget "learn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				458F21AF65E44A9A80F4E5CF /* Debug */,
+				786106EBE1A64C89817AF1CD /* Release */,
+				35282FD133324949A78E6DEC /* MinSizeRel */,
+				B86FE2FDC0F14072A8FB0037 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		1B30C8670DA041F5A83722B6 /* Build configuration list for PBXNativeTarget "glfw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7C638B6C78046E292AF9A9E /* Debug */,
+				9F383A0D2B5F460AAF804623 /* Release */,
+				FFAFE50956AD4DBBBBF44E4C /* MinSizeRel */,
+				7CFB76A9F99A4BCEAC7A0723 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		41AB07892962470B9F6214F3 /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D0C3D1C4AE444A4AFB85F33 /* Debug */,
+				966FC7F8ED054862A520711B /* Release */,
+				7337D9E1E5FA41129851C14E /* MinSizeRel */,
+				F7E10DCA203E44C89F073E07 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		841DC8F3D5194699BF171D4E /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCD86FBE1C9F42BC9D57DBFA /* Debug */,
+				C3C0894A56494BF6AE3343EC /* Release */,
+				9B878C88E0C848878081A1B7 /* MinSizeRel */,
+				C1099A7DBB624FC9B2DEF031 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		98F6D5DC960E446BA0E31CD5 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3405D038431A4D2995FC8325 /* Debug */,
+				F52833B035234F638482EF42 /* Release */,
+				34E49ED27F7648DB81930F9D /* MinSizeRel */,
+				3D5E1971FD94487D8AF54DBD /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		AC305213D71F40A3867D2534 /* Build configuration list for PBXProject "learn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				151017E0637E40CE8DCCB427 /* Debug */,
+				D39E0B8A35DE424797E1AC4B /* Release */,
+				0C7E6B701F0046B88E662B19 /* MinSizeRel */,
+				6D69F67F53AA43C1B69ACD21 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B7D8BB25F55F4DCF88EF4C0D /* Build configuration list for PBXAggregateTarget "uninstall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A69FD6B71DC4D2989EE2370 /* Debug */,
+				92B2D9631C1B4C68B61D986E /* Release */,
+				8461AF076C414CBBAAD684A6 /* MinSizeRel */,
+				AEFFE22D50F348C9846DCC84 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5D73F24896E446BD90835E00 /* Project object */;
+}

@@ -1,0 +1,5 @@
+/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build/learn/Vendor/glfw/CMakeFiles/uninstall.dir
+/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build/CMakeFiles/learn.dir
+/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build/CMakeFiles/ALL_BUILD.dir
+/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build/CMakeFiles/ZERO_CHECK.dir
+/Users/student/Documents/learnOpenGL/learnopengl-for-cmake/Build/learn/Vendor/glfw/src/CMakeFiles/glfw.dir
