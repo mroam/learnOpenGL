@@ -57,15 +57,20 @@ Tutorials
 
 To Do
 --------
-* Continue trying to use the mere source from learnopengl.com, which uses glew and glfw, and won't compile on mac xcode. (see glitter2) We have used http://learnopengl.com to add shaders and objects to our Glitter work in progress, and it compiles but nothing appears on our grey screen. ("Vertex shader compilation status: 1 (ok); Fragment shader compilation status: 1 (ok); DANG!--Linking of Shaders failed. ERROR: Compiled vertex shader was corrupt. ERROR: Compiled fragment shader was corrupt.")
+* Draw multiple triangle or 3D polyhedra
+
+* Continue trying to use the mere source from learnopengl.com, which needs glad and glfw to compile on mac xcode. (see glitter2)
  
-* Figure out how to use glew on mac OR how to work around glew on mac and use whatever apple alternative there is. Can I use cmake to install glew into an xcode project??
+* Figure out how to use glew on mac OR how to work around glew on mac and use whatever apple alternative there is. Can I use cmake to install glew into an xcode project?? Work-around: cmake can make glad + glfw projects for us in Xcode.
 
 * Read [OpenGL on mac](http://developer.apple.com/library/mac/documentation/GraphicsImaging/Conceptual/OpenGL-MacProgGuide/opengl_pg_concepts/opengl_pg_concepts.html#//apple_ref/doc/uid/TP40001987-CH208-SW1)
 
 * Is there any hope (or need?) of finding tutorials that don’t use or [glfw](http://www.glfw.org/ and http://learnopengl.com), [Glew](http://glew.sourceforge.net), or [glm](http://glm.g-truc.net/), or [FreeGlut](http://freeglut.sourceforge.net), etc.?
 
-* Figure out the file size bug [Here's a link to something!](http://superuser.com/questions/382120/mac-os-x-not-reporting-directory-sizes-correctly)
+* Figure out the file size bug [Here's a link to something!](http://superuser.com/questions/382120/mac-os-x-not-reporting-directory-sizes-correctly) Work-around: copy across just the cmake and vendor folders (see readme in learnopengl-for-cmake project), get rid of the hidden .git and .gitignore files, and remake with cmake. Voila-small project!
+
+* Resume working with Glitter starter, now that we know how to use CMake, glad, glfw, and "Vendor" folders to make Xcode projects that compile and run with rotating triangles. (Why is our Glitter getting "Vertex shader compilation status: 1 (ok); Fragment shader compilation status: 1 (ok); DANG!--Linking of Shaders failed. ERROR: Compiled vertex shader was corrupt. ERROR: Compiled fragment shader was corrupt.")
+
 
 
 Questions
