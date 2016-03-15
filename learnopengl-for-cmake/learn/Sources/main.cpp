@@ -1,14 +1,19 @@
 #include <iostream>
 #include <glad/glad.h>  // mjr added
+#include <math.h>
 
 // This is source code from learnopengl.com which I've spliced into a copy of my glitter
 // xcode project and then I've spent hours trying to make it compile on mac xcode.
-// The big problem seems to be its use of glew for call backs or window.
+// Using cmake and gala and glfw.
+//
 
 
 /* following is header suggestion from
  http://stackoverflow.com/questions/12229714/building-glew-for-mac-osx
- aswer by Brett Hale
+ answer by Brett Hale
+ ...
+ hmmm, is this necessary since glfw includes all necessary headers anyway??
+ see  http://www.glfw.org/docs/latest/quick.html
  */
 #if defined (__APPLE__)
 #include <OpenGL/gl3.h>
@@ -36,13 +41,15 @@
 
 
 
-
-
 // Function prototypes
-// void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode); <== mjr is blanking
+void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode); // <== mjr was blanking
 
 // Window dimensions
 const GLuint WIDTH = 800, HEIGHT = 600;
+
+
+GLfloat deltaAngle = 0.0001;
+
 
 // Shaders
 const GLchar* vertexShaderSource = "#version 330 core\n"
@@ -58,6 +65,7 @@ const GLchar* fragmentShaderSource = "#version 330 core\n"
 "{\n"
 "color = vec4(1.0f, 0.9f, 0.7f, 1.0f);\n"
 "}\n\0"; /* was vec4(1.0f, 0.5f, 0.2f, 1.0f); */
+
 
 
 // The MAIN function, from here we start the application and run the game loop
@@ -85,14 +93,9 @@ int main()
     gladLoadGL();  // mjr added  ***** THIS MADE IT WORK (along with include glad/glad.h above
     fprintf(stderr, "OpenGL %s\n", glGetString(GL_VERSION));  // mjr added
     
-    // gladLoadGL( );  // <=== mjr added this from glitter sample
-    // Set the required callback functions
-    // glfwSetKeyCallback(window, key_callback);   // necessary??  mjr can't blank it
+    // Set the 'required'(?) callback functions
+    glfwSetKeyCallback(window, key_callback );   // necessary??  mjr can't blank it
     
-    // Set this to true so GLEW knows to use a modern approach to retrieving function pointers and extensions
-    //glewExperimental = GL_FALSE;   // <== is this necessary??  mjr is falsing it
-    // Initialize GLEW to setup the OpenGL Function pointers
-    //glewInit();   // <== is this necessary??  mjr is blanking it
     
     // Define the viewport dimensions
     // glViewport(0, 0, WIDTH, HEIGHT);   <== mjr is blanking
@@ -101,7 +104,7 @@ int main()
     // Build and compile our shader program
     // Vertex shader
     
-    // mjr: the glCreateShader( ) is getting EXC_BAD_ACCESS (code=1) which may be indicative
+    // mjr: the glCreateShader( ) was getting EXC_BAD_ACCESS (code=1) which may be indicative
     // of releasing from memory an object that isn't mine to release. Somebody online with this
     // problem realized that they hadn't set up the openGL context prior to calling glCreateShader
     // but I already have context setup above, I think.
@@ -149,42 +152,87 @@ int main()
         0.5f, -0.5f, 0.0f, // Right
         0.0f,  0.5f, 0.0f  // Top
     };
+    
+    
     GLuint VBO, VAO;
-    glGenVertexArrays(1, &VAO);   // mjr tried glGenVertexArraysAPPLE(1, &VAO);
-    glGenBuffers(1, &VBO);
-    // Bind the Vertex Array Object first, then bind and set vertex buffer(s) and attribute pointer(s).
-    glBindVertexArray(VAO);   // mjr tried glBindVertexArrayAPPLE(VAO);
     
-    glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+    //  glGenVertexArrays(1, &VAO); ... through glBindVertexArray(0); was here
     
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), (GLvoid*)0);
-    glEnableVertexAttribArray(0);
+
     
-    glBindBuffer(GL_ARRAY_BUFFER, 0); // Note that this is allowed, the call to glVertexAttribPointer registered VBO as the currently bound vertex buffer object so afterwards we can safely unbind
+    // let's play with a vertex (mjr, hb)
+    GLfloat deltaV0 = 0.1;
     
-    glBindVertexArray(0); // mjr tried glBindVertexArrayAPPLE(0);
-    // Unbind VAO (it's always a good thing to unbind any buffer/array to prevent strange bugs)
-    
+    GLfloat length = 1;
+    GLfloat angle = 0;
     // Game loop
     while (!glfwWindowShouldClose(window))
     {
-        // Check if any events have been activiated (key pressed, mouse moved etc.) and call corresponding response functions
+        // Check if any events have been activated (key pressed, mouse moved etc.) and call corresponding response functions
         glfwPollEvents();
+        
+        // std::cout << ".";    // << yes, dots show up
         
         // Render
         // Clear the colorbuffer
         glClearColor(0.9f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
         
-        // Draw our first triangle
-        glUseProgram(shaderProgram);
+        
+        // we're going to fool with the vertices
+        if (vertices[0] > 1.0) {
+            deltaV0 = -0.1;
+        } else if (vertices[0] < -1.0) {
+            deltaV0 = 0.1;
+        }
+        vertices[0] += deltaV0;
+        //std::cout << vertices[0] << ",";
+        
+        // originally lower left corner...
+        vertices[0] = cos(angle*180.0/M_PI);
+        vertices[1] = sin(angle*180.0/M_PI);
+        
+        // originally lower right corner...
+        vertices[3] = cos((angle-120.0)*180.0/M_PI);
+        vertices[4] = sin((angle-120.0)*180.0/M_PI);
+        
+        // originally center top vertex...
+        vertices[6] = cos((angle+120.0)*180.0/M_PI);
+        vertices[7] = sin((angle+120.0)*180.0/M_PI);
+        angle += deltaAngle;  // 0.0001 is nice, 'R' keys makes it negative for rotate other way;
+        
+        
+        // ---------
+        glGenVertexArrays(1, &VAO);   // mjr tried glGenVertexArraysAPPLE(1, &VAO);
+        glGenBuffers(1, &VBO);
+        // Bind the Vertex Array Object first, then bind and set vertex buffer(s) and attribute pointer(s).
         glBindVertexArray(VAO);   // mjr tried glBindVertexArrayAPPLE(VAO);
-        glDrawArrays(GL_TRIANGLES, 0, 3);
+        
+        glBindBuffer(GL_ARRAY_BUFFER, VBO);
+        glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW); // fill VBO with data
+        
+        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), (GLvoid*)0);
+        glEnableVertexAttribArray(0);
+        
+        glBindBuffer(GL_ARRAY_BUFFER, 0); // Note that this is allowed, the call to glVertexAttribPointer registered VBO as the currently bound vertex buffer object so afterwards we can safely unbind
+        
+        glBindVertexArray(0); // mjr tried glBindVertexArrayAPPLE(0);
+        // Unbind VAO (it's always a good thing to unbind any buffer/array to prevent strange bugs)
+        // ---------
+        
+        
+        // Draw our first triangle     // ??? how does this differ from glDrawArrays(GL_TRIANGLES,0,3) below??
+        glUseProgram(shaderProgram);
+        
+        glBindVertexArray(VAO);   // mjr tried glBindVertexArrayAPPLE(VAO);
+        glDrawArrays(GL_TRIANGLES, 0, 3);    //  ??? is this the actual drawing?
         glBindVertexArray(0);   // mjr tried glBindVertexArrayAPPLE(0);
         
         // Swap the screen buffers
         glfwSwapBuffers(window);
+        
+        
+
     }
     // Properly de-allocate all resources once they've outlived their purpose
     glDeleteVertexArrays(1, &VAO);    // glDeleteVertexArraysAPPLE(1, &VAO);
@@ -194,12 +242,20 @@ int main()
     return 0;
 }
 
-// mjr is blanking this
+
+// mjr was blanking this; program runs with or without it, and it doesn't let escape key close the window.
 // Is called whenever a key is pressed/released via GLFW
-//void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode)
-//{
-//    if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
-//        glfwSetWindowShouldClose(window, GL_TRUE);
-//}
+//   See http://www.glfw.org/docs/latest/group__input.html
+void key_callback( GLFWwindow* window, int key, int scancode, int action, int mode )
+{
+     if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS) {
+        std::cout << "esc!" << std::endl;
+        glfwSetWindowShouldClose(window, GL_TRUE);
+    }
+    if (key == GLFW_KEY_R && action == GLFW_PRESS) { // can also use GLFW_RELEASE and GLFW_REPEAT
+        deltaAngle *= -1;
+        std::cout << "R!" << std::endl;
+    }
+}
 
 
