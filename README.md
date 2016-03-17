@@ -7,6 +7,8 @@ Potential Projects
 -----------------
 * [Lunar lander](http://www.nasa.gov/multimedia/imagegallery/image_gallery_2104.html) in 3D, as interactive game. (Could it display in red-blue 3d glasses, or virtual reality goggles?)
 
+* International Space Station in 3D. There are several [nasa models](http://nasa3d.arc.nasa.gov/search/iss/model) and the [heavens above](http://www.heavens-above.com/ISS_3D.aspx) version is interactive on web showing ISS in true place in orbit (with moving solar panels, and ISS turns red when it is not lit by the sun.) The heavens above model requires a browser with webGL (works on retina mac osX 10.11 in safari 9, in chrome 48, and in firefox 42).
+
 * [Skydive](http://www.uspa.org) simulator, interactive game. (Virtual reality?)
 
 
