@@ -1,5 +1,5 @@
-This uses the [“Hello Triangle”](http://www.learnopengl.com/#!Getting-started/Hello-Triangle) tutorial 
-from learnopengl.com within an Xcode project that was built using the CMake files from the 
+This uses the [sourcecode](http://www.learnopengl.com/code_viewer.php?code=getting-started/hellotriangle) from the [“Hello Triangle”](http://www.learnopengl.com/#!Getting-started/Hello-Triangle) tutorial 
+from [learnopengl.com](http://www.learnopengl.com/) within an Xcode project that was built using the CMake files from the 
 [“Glitter”](https://github.com/Polytonic/Glitter) project on github.
 
    Our project is using “glad” and “glfw” and has removed the other libraries from Glitter and its CMake file.
