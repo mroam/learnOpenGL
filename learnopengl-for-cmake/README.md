@@ -7,4 +7,5 @@ Our project also uses “glfw” and has removed the other libraries such as ass
 We also removed the “.git” and “.gitignore” hidden files from the Glitter project so that we could synch it with our
 own [“learnOpenGL”](“https://github.com/mroam/learnOpenGL/”) repository.
 
-   We’ve customized the code to make the triangle rotate. Wahoo!
+   We’ve customized the code to make the triangle rotate. [See Movie, Wahoo!](https://www.youtube.com/watch?v=lZn5F2y-Yiw)
+
