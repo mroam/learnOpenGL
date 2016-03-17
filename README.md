@@ -33,6 +33,9 @@ References
 
 * Hey, check out Processing 3 Java Examples of openGL: Demos/LowLevelGLVboInterleaved and /LowLevelGLVboSeparate
 
+* Hey, check out people playing with shaders: http://glslsandbox.com/
+
+
 
 Tutorials
 --------
