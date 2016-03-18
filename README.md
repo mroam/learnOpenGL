@@ -7,7 +7,7 @@ Potential Projects
 -----------------
 * [Lunar lander](http://www.nasa.gov/multimedia/imagegallery/image_gallery_2104.html) in 3D, as interactive game. (Could it display in red-blue 3d glasses, or virtual reality goggles?)
 
-* International Space Station in 3D. There are several [nasa models](http://nasa3d.arc.nasa.gov/search/iss/model) and the [heavens above](http://www.heavens-above.com/ISS_3D.aspx) version is interactive on web showing ISS in true place in orbit (with moving solar panels, and ISS turns red when it is not lit by the sun.) The heavens above model requires a browser with webGL (works on retina mac osX 10.11 in safari 9, in chrome 48, and in firefox 42).
+* International Space Station in 3D. There are several [NASA 3D models](http://nasa3d.arc.nasa.gov/search/iss/model) and  [heavens-above](http://www.heavens-above.com/ISS_3D.aspx) has interactive online ISS using webGL, showing ISS in true place in orbit (with moving solar panels, and ISS turns red when it is not lit by the sun.) The heavens-above model requires a “modern” browser with webGL (works on retina mac osX 10.11 in safari 9, in chrome 48, and in firefox 42).
 
 * [Skydive](http://www.uspa.org) simulator, interactive game. (Virtual reality?)
 
@@ -17,7 +17,7 @@ References
 --------
 * Learning [to install opengl and related tools](http://github.com/mroam/learnOpenGL/blob/master/install-opengl.md).
 
-* See our [dictionary](http://github.com/mroam/learnOpenGL/blob/master/dictionary.md) re “What is..” glew, glut, webgl, glm, glfw, etc...
+* See our [dictionary](http://github.com/mroam/learnOpenGL/blob/master/dictionary.md) re “What is..” glad, glew, glut, webgl, glm, glfw, etc...
 
 * http://www.opengl.org
 
@@ -62,9 +62,7 @@ Tutorials
 
 To Do
 --------
-* Draw multiple triangle or 3D polyhedra
-
-* Continue trying to use the mere source from learnopengl.com, which needs glad and glfw to compile on mac xcode. (see glitter2)
+* Draw multiple triangle or 3D polyhedra, in our working(!) triangle. (From learnopengl.com, uses CMake to build Xcode project with glad and glfw.)
  
 * Figure out how to use glew on mac OR how to work around glew on mac and use whatever apple alternative there is. Can I use cmake to install glew into an xcode project?? Work-around: cmake can make glad + glfw projects for us in Xcode.
 
@@ -80,7 +78,7 @@ To Do
 
 Questions
 --------
-* Can we make cross-platform standalone apps that include everything they need? (glew, glut, x11/xQuartz, or whatever else so that users don’t have to download things we depend upon?? (Isn’t this about “static linking” and/or/versus “installing”??)
+* Can we make cross-platform standalone apps that include everything they need? (glad, glew, glut, x11/xQuartz, or whatever else so that users don’t have to download things we depend upon?? (Isn’t this about “static linking” and/or/versus “installing”??))
 
 * For portability, maybe we should look into “[WebGL](http://www.khronos.org/webgl/)”? (“plugin-free 3D for the web, implemented right in the browser. Major browser vendors Apple (Safari), Google (Chrome), Mozilla (Firefox), and Opera (Opera) are members of the WebGL Working Group.”—http://www.khronos.org/webgl/) (What are limitations of webGL, and its foundation “openGL ES” for mobile devices?) 
 
@@ -95,9 +93,9 @@ Questions
 
 Done
 ----------
-* (√) make our xcode glitter project's main.cpp ALMOST match the glfw demo from http://learnopengl.com
+* (√) Made our xcode glitter project's main.cpp ALMOST match the glfw demo from http://learnopengl.com
 
-* (√) copied “[Glitter](http://github.com/Polytonic/Glitter)” tutorial and used cmake to make Glitter have an xcode project which compiled and ran (after a few changes, see its readme).
+* (√) Copied “[Glitter](http://github.com/Polytonic/Glitter)” tutorial and used cmake to make Glitter have an xcode project which compiled and ran (after a few changes, see its readme).
 
 * (√) Installed “[cmake](http://www.cmake.org/download/)” on our main machine so that the “[Glitter](http://github.com/Polytonic/Glitter)” tutorial can build xcode projects for us.
  
