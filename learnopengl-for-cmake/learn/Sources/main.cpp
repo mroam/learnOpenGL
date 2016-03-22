@@ -1,6 +1,7 @@
 #include <iostream>
 #include <glad/glad.h>  // mjr added
-#include <math.h>
+#include <math.h>    // we added this for trig
+#include <time.h>     // we added this
 
 // This is source code from learnopengl.com which I've spliced into a copy of my glitter
 // xcode project and then I've spent hours trying to make it compile on mac xcode.
@@ -47,8 +48,9 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 // Window dimensions
 const GLuint WIDTH = 800, HEIGHT = 600;
 
-
-GLfloat deltaAngle = 0.0001;
+// fun with rotation...
+GLfloat piOver180 = M_PI/180.0; // for turning Xdeg to Radians ... xDeg * πrad/180deg for cross-cancel.
+GLfloat deltaAngle =  30.0;   // trying to be howManyDegreesPerSecond of turn   // was good with 0.0001;
 
 
 // Shaders
@@ -166,6 +168,10 @@ int main()
     GLfloat length = 1;
     GLfloat angle = 0;
     // Game loop
+    
+  //  double weirdTime = time(NULL);
+    double prevTimeD = glfwGetTime();
+    
     while (!glfwWindowShouldClose(window))
     {
         // Check if any events have been activated (key pressed, mouse moved etc.) and call corresponding response functions
@@ -180,6 +186,7 @@ int main()
         
         
         // we're going to fool with the vertices
+        /* fooling one...
         if (vertices[0] > 1.0) {
             deltaV0 = -0.1;
         } else if (vertices[0] < -1.0) {
@@ -187,20 +194,35 @@ int main()
         }
         vertices[0] += deltaV0;
         //std::cout << vertices[0] << ",";
+         */
         
         // originally lower left corner...
-        vertices[0] = cos(angle*180.0/M_PI);
-        vertices[1] = sin(angle*180.0/M_PI);
+        vertices[0] = cos(angle * piOver180);   //   <== oops, we were saying angle * 180/π, should have been ang * π/180
+        vertices[1] = sin(angle * piOver180);
         
         // originally lower right corner...
-        vertices[3] = cos((angle-120.0)*180.0/M_PI);
-        vertices[4] = sin((angle-120.0)*180.0/M_PI);
+        vertices[3] = cos((angle-120.0) * piOver180);
+        vertices[4] = sin((angle-120.0) * piOver180);
         
         // originally center top vertex...
-        vertices[6] = cos((angle+120.0)*180.0/M_PI);
-        vertices[7] = sin((angle+120.0)*180.0/M_PI);
-        angle += deltaAngle;  // 0.0001 is nice, 'R' keys makes it negative for rotate other way;
+        vertices[6] = cos((angle+120.0) * piOver180);
+        vertices[7] = sin((angle+120.0) * piOver180);
         
+       // angle += deltaAngle;  // 0.0001 is nice, 'R' keys makes it negative for rotate other way;
+        double secondsSincePrevMove = (glfwGetTime()-prevTimeD);
+        angle += ( deltaAngle * secondsSincePrevMove );
+        while (angle < 0.0) {
+            angle += 360.0;
+        }
+        while (angle > 360.0) {
+            angle -= 360.0;
+        }
+        
+       // std::cout << secondsSincePrevMove << "sec, " << angle << "angle ";
+        std::cout << angle << "angle ";
+
+        
+        prevTimeD = glfwGetTime();   //time(NULL);
         
         // ---------
         glGenVertexArrays(1, &VAO);   // mjr tried glGenVertexArraysAPPLE(1, &VAO);

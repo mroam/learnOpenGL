@@ -63,6 +63,8 @@ Tutorials
 To Do
 --------
 * Draw multiple triangle or 3D polyhedra, in our working(!) triangle. (From learnopengl.com, uses CMake to build Xcode project with glad and glfw.)
+
+* Study quaternions.
  
 * Figure out how to use glew on mac OR how to work around glew on mac and use whatever apple alternative there is. Can I use cmake to install glew into an xcode project?? Work-around: cmake can make glad + glfw projects for us in Xcode.
 
@@ -93,6 +95,8 @@ Questions
 
 Done
 ----------
+* (√) Got keyboard working to change rotation direction and close window. Got rotation happening with control over degrees/second.
+
 * (√) Made our xcode glitter project's main.cpp ALMOST match the glfw demo from http://learnopengl.com
 
 * (√) Copied “[Glitter](http://github.com/Polytonic/Glitter)” tutorial and used cmake to make Glitter have an xcode project which compiled and ran (after a few changes, see its readme).
