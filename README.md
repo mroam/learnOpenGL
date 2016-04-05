@@ -1,6 +1,8 @@
 # learnOpenGL
 ========
-Harry and Mike are trying to learn openGL by installing it, reading tutorials, running code, and revising code. (“OpenGL” does 3D graphics: it is a cross-platform multi-language code library API for controlling computer graphics chips to draw pictures of 3d objects.) Here is what we’ve found so far including links to installers, tutorials, versions, references, etc...
+Harry and Mike are trying to learn openGL* by installing it, reading tutorials, running code, and revising code. (Here is what we’ve found so far including links to installers, tutorials, versions, references, etc...
+
+*(“OpenGL” does 3D graphics: it is a cross-platform multi-language code library API for controlling computer graphics chips to draw pictures of 3d objects.) 
 
 
 Potential Projects
@@ -62,7 +64,7 @@ Tutorials
 
 To Do
 --------
-* Draw multiple triangle or 3D polyhedra, in our working(!) triangle. (From learnopengl.com, uses CMake to build Xcode project with glad and glfw.)
+* Give different colors to the multiple triangles in our working(!) sample "learnopengl-for-cmake".
 
 * Study quaternions.
  
@@ -95,6 +97,8 @@ Questions
 
 Done
 ----------
+* (√) Draw multiple triangles in our working(!) triangle. (From learnopengl.com, uses CMake to build Xcode project with glad and glfw.)
+
 * (√) Got keyboard working to change rotation direction and close window. Got rotation happening with control over degrees/second.
 
 * (√) Made our xcode glitter project's main.cpp ALMOST match the glfw demo from http://learnopengl.com

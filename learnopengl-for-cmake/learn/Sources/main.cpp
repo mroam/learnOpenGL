@@ -3,10 +3,12 @@
 #include <math.h>    // we added this for trig
 #include <time.h>     // we added this
 
-// This is source code from learnopengl.com which I've spliced into a copy of my glitter
-// xcode project and then I've spent hours trying to make it compile on mac xcode.
-// Using cmake and gala and glfw.
-//
+/*
+ This is source code from http://learnopengl.com/#!Getting-started/Hello-Triangle
+ which I've spliced into a copy of my glitter xcode project
+ and then I've spent hours getting it to compile on mac xcode.
+ Using cmake and gala(?glad?) and glfw.
+*/
 
 
 /* following is header suggestion from
@@ -51,6 +53,7 @@ const GLuint WIDTH = 800, HEIGHT = 600;
 // fun with rotation...
 GLfloat piOver180 = M_PI/180.0; // for turning Xdeg to Radians ... xDeg * πrad/180deg for cross-cancel.
 GLfloat deltaAngle =  30.0;   // trying to be howManyDegreesPerSecond of turn   // was good with 0.0001;
+GLfloat length = 1.0;  // keys MINUS and PLUS to lower and raise
 
 
 // Shaders
@@ -148,15 +151,16 @@ int main()
     glDeleteShader(fragmentShader);
     
     
-    // Set up vertex data (and buffer(s)) and attribute pointers
+    // Set up vertex data  (note: these initial coords are immediately replaced by trig data down below
     GLfloat vertices[] = {
-        -0.5f, -0.5f, 0.0f, // Left
-        0.5f, -0.5f, 0.0f, // Right
-        0.0f,  0.5f, 0.0f  // Top
+        -0.5f, -0.5f, 0.0f, // lower Left
+        0.5f, -0.5f, 0.0f, // lower Right
+        0.0f,  0.5f, 0.0f,  // Top
+        0.5f, 0.5f, 0.0f      // upper right (shoulder)
     };
+    GLuint howManyVertices = 4;  // was 3 until we added right shoulder
     
-    
-    GLuint VBO, VAO;
+    GLuint VBO, VAO;  // buffer(s)) and attribute pointers
     
     //  glGenVertexArrays(1, &VAO); ... through glBindVertexArray(0); was here
     
@@ -165,8 +169,7 @@ int main()
     // let's play with a vertex (mjr, hb)
     GLfloat deltaV0 = 0.1;
     
-    GLfloat length = 1;
-    GLfloat angle = 0;
+    GLfloat angle = 0.0;
     // Game loop
     
   //  double weirdTime = time(NULL);
@@ -199,14 +202,22 @@ int main()
         // originally lower left corner...
         vertices[0] = cos(angle * piOver180);   //   <== oops, we were saying angle * 180/π, should have been ang * π/180
         vertices[1] = sin(angle * piOver180);
+        // vertices[2] is a z, which probably doesn't make any difference visually, just coming toward us out of screen??
         
         // originally lower right corner...
-        vertices[3] = cos((angle-120.0) * piOver180);
-        vertices[4] = sin((angle-120.0) * piOver180);
+        vertices[3] = length * cos((angle-120.0) * piOver180);  // was -120.0
+        vertices[4] = length * sin((angle-120.0) * piOver180);  // was -120.0
         
         // originally center top vertex...
-        vertices[6] = cos((angle+120.0) * piOver180);
-        vertices[7] = sin((angle+120.0) * piOver180);
+        vertices[6] = cos((angle+120.0) * piOver180);    // was +120.0
+        vertices[7] = sin((angle+120.0) * piOver180);    // was +120.0
+        
+        
+        // originally right shoulder vertex...
+        // without the following two lines, the right shoulder is fixed in one place..
+        vertices[9] = 0.5 + cos((angle-80.0) * piOver180);
+        vertices[10] = 0.5 + sin((angle-80.0) * piOver180);
+
         
        // angle += deltaAngle;  // 0.0001 is nice, 'R' keys makes it negative for rotate other way;
         double secondsSincePrevMove = (glfwGetTime()-prevTimeD);
@@ -219,7 +230,7 @@ int main()
         }
         
        // std::cout << secondsSincePrevMove << "sec, " << angle << "angle ";
-        std::cout << angle << "angle ";
+       // std::cout << angle << "angle ";
 
         
         prevTimeD = glfwGetTime();   //time(NULL);
@@ -233,12 +244,21 @@ int main()
         glBindBuffer(GL_ARRAY_BUFFER, VBO);
         glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW); // fill VBO with data
         
-        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), (GLvoid*)0);
+        /* 
+         Uh-oh; what are these '3's? Apparently NOT the size of our vertices array (which is now 4) but instead
+         specifying that our vertices use 3 coords (x,y,z) rather than 4 (x,y,z,w)
+         see   https://www.opengl.org/sdk/docs/man/html/glVertexAttribPointer.xhtml
+           size: Specifies the number of components per generic vertex attribute (must be 1,2,3,4).
+           stride: Specifies the byte offset between consecutive generic vertex attributes.
+        */
+        glVertexAttribPointer(/*index*/0, /*sizePerVertex*/3, /*type*/GL_FLOAT, /*normalized*/GL_FALSE, /*stride*/3 * sizeof(GLfloat), (GLvoid*)0);
         glEnableVertexAttribArray(0);
         
-        glBindBuffer(GL_ARRAY_BUFFER, 0); // Note that this is allowed, the call to glVertexAttribPointer registered VBO as the currently bound vertex buffer object so afterwards we can safely unbind
+        glBindBuffer(GL_ARRAY_BUFFER, 0); /* Note that this is allowed, the call to glVertexAttribPointer 
+                                           registered VBO as the currently bound vertex buffer object so 
+                                           afterwards we can safely unbind */
         
-        glBindVertexArray(0); // mjr tried glBindVertexArrayAPPLE(0);
+        glBindVertexArray(0); // mjr earlier tried glBindVertexArrayAPPLE(0);
         // Unbind VAO (it's always a good thing to unbind any buffer/array to prevent strange bugs)
         // ---------
         
@@ -246,9 +266,10 @@ int main()
         // Draw our first triangle     // ??? how does this differ from glDrawArrays(GL_TRIANGLES,0,3) below??
         glUseProgram(shaderProgram);
         
-        glBindVertexArray(VAO);   // mjr tried glBindVertexArrayAPPLE(VAO);
-        glDrawArrays(GL_TRIANGLES, 0, 3);    //  ??? is this the actual drawing?
-        glBindVertexArray(0);   // mjr tried glBindVertexArrayAPPLE(0);
+        glBindVertexArray(VAO);   // mjr earlier tried glBindVertexArrayAPPLE(VAO);
+       // worked: glDrawArrays(GL_TRIANGLES, 0, /*howManyVertices*/3);    //  ??? is this the actual drawing?
+        glDrawArrays(GL_TRIANGLE_STRIP, 0, howManyVertices);    //  ??? is this the actual drawing?
+        glBindVertexArray(0);   // mjr earlier tried glBindVertexArrayAPPLE(0);
         
         // Swap the screen buffers
         glfwSwapBuffers(window);
@@ -265,19 +286,38 @@ int main()
 }
 
 
-// mjr was blanking this; program runs with or without it, and it doesn't let escape key close the window.
 // Is called whenever a key is pressed/released via GLFW
 //   See http://www.glfw.org/docs/latest/group__input.html
-void key_callback( GLFWwindow* window, int key, int scancode, int action, int mode )
+void key_callback( GLFWwindow* window, int key, int scancode, int action, int modifiers )
+// action can also use GLFW_RELEASE and GLFW_REPEAT
+// modifiers can also use GLFW_MOD_ALT or  GLFW_MOD_CONTROL  or  GLFW_MOD_SUPER
+// scancode is platform specific
 {
-     if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS) {
-        std::cout << "esc!" << std::endl;
+     if ((key == GLFW_KEY_ESCAPE) && (action == GLFW_PRESS)) {
+        //std::cout << "esc!" << std::endl;
         glfwSetWindowShouldClose(window, GL_TRUE);
     }
-    if (key == GLFW_KEY_R && action == GLFW_PRESS) { // can also use GLFW_RELEASE and GLFW_REPEAT
+    if ((key == GLFW_KEY_R) && (action == GLFW_PRESS)) {
         deltaAngle *= -1;
-        std::cout << "R!" << std::endl;
+        //std::cout << "R!" << std::endl;
     }
+    if ((key == GLFW_KEY_MINUS) && (action == GLFW_PRESS)) {
+        length *= 0.8;
+        //std::cout << "R!" << std::endl;
+    }
+    if ((key == 333 /* mac number pad '-' key */) && (action == GLFW_PRESS)) {
+        length *= 0.8;
+        //std::cout << "R!" << std::endl;
+    }
+    if ((key == GLFW_KEY_EQUAL) /* plus key */ && (action == GLFW_PRESS)) { //  && (modifiers == GLFW_MOD_SHIFT)) {
+        length /= 0.8;
+        //std::cout << "R!" << std::endl;
+    }
+    if ((key == 334) /* mac number pad plus key */ && (action == GLFW_PRESS)) {
+        length /= 0.8;
+        //std::cout << "R!" << std::endl;
+    }
+   // std::cout << key  << std::endl;
 }
 
 
