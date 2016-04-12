@@ -39,7 +39,7 @@ References
 
 * Hey, check out people playing with shaders: http://glslsandbox.com/
 
-*http://www.cplusplus.com/doc/tutorial/files/
+* http://www.cplusplus.com/doc/tutorial/files/
 
 
 
