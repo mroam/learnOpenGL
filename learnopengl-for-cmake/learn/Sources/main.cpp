@@ -3,6 +3,10 @@
 #include <math.h>    // we added this for trig
 #include <time.h>     // we added this
 
+
+#include <fstream>    // so we can read external shader text files
+#include <sstream>    // so we can read external shader as string
+
 /*
  This is source code from http://learnopengl.com/#!Getting-started/Hello-Triangle
  which I've spliced into a copy of my glitter xcode project
@@ -47,7 +51,10 @@
 // Function prototypes
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode); // <== mjr was blanking
 
+
+
 // Window dimensions
+
 const GLuint WIDTH = 800, HEIGHT = 600;
 
 // fun with rotation...
@@ -56,20 +63,56 @@ GLfloat deltaAngle =  30.0;   // trying to be howManyDegreesPerSecond of turn   
 GLfloat length = 1.0;  // keys MINUS and PLUS to lower and raise
 
 
+const char * getAShader(std::string path ) {
+    //// Now we'll try to load some shaders from external files
+    // source stackoverflow.com/questions...
+    std::ifstream theFile(path);
+    if (! theFile.is_open( ) ) { /* trouble! */
+        std::cout << "tried to read from file at " << path << " but told file not is_open( )" << std::endl;
+        return "";
+    } else { /* Ok, proceed ... */
+        std::stringstream ourShaderBuffer;
+        ourShaderBuffer << theFile.rdbuf( );
+        // conversion from string to GLchar *   is from
+        //  http://stackoverflow.com/questions/34836454/neither-vertex-shader-nor-fragment-shader-are-compiling-after-loading-from-a-fil
+        // char * vertShaderSource = ourVertexShaderBuffer.c_str( );//const_cast<const GLchar*>(ourVertexShaderBuffer.str( ));
+        std::string shaderSourceStr = ourShaderBuffer.str( );
+        std::cout << "tried to read from file at " << path << " and got " << shaderSourceStr << std::endl;
+        return shaderSourceStr.c_str( );
+    }
+} // getAShader( )
+
+
 // Shaders
-const GLchar* vertexShaderSource = "#version 330 core\n"
+/* Hmmm, tried to read from external file but it isn't working yet...
+ Experiment with file ...mh2 being added to "target"
+When I copy these shaders by hand to
+~/Documents/learnOpenGL/learnopengl-for-cmake/learn/Build/learn/Debug 
+ then mh2.frag and mh1.vert are actually openable files, but not ...mh1.frag.
+ Why?? And how to tell xcode to put the files into the build destination??
+ (Is this a "scheme" thing? Settable when files are added??
+ */
+//const GLchar* fragmentShaderSource2 = getAShader("fragshader_mh2.frag");
+
+//const GLchar* vertexShaderSource = getAShader("vertextshader_mh1.vert");
+
+ const GLchar* vertexShaderSource = "#version 330 core\n"
 "layout (location = 0) in vec3 position;\n"
 "void main()\n"
 "{\n"
 "gl_Position = vec4(position.x, position.y, position.z, 1.0);\n"
 "}\0";
 
+// const GLchar* fragmentShaderSource = getAShader("fragshader_mh1.frag");
+
 const GLchar* fragmentShaderSource = "#version 330 core\n"
 "out vec4 color;\n"
 "void main()\n"
 "{\n"
-"color = vec4(1.0f, 0.9f, 0.7f, 1.0f);\n"
-"}\n\0"; /* was vec4(1.0f, 0.5f, 0.2f, 1.0f); */
+"color = vec4(1.0f, 0.9f, 0.7f, 1.0f);\n"  // was vec4(1.0f, 0.5f, 0.2f, 1.0f);
+"}\n\0";
+
+
 
 
 
