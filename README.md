@@ -84,6 +84,8 @@ To Do
 
 Questions
 --------
+* How to tell xcode to include our shader files in the build folder next to the app? (For now we're putting them there by hand.)
+
 * Can we make cross-platform standalone apps that include everything they need? (glad, glew, glut, x11/xQuartz, or whatever else so that users don’t have to download things we depend upon?? (Isn’t this about “static linking” and/or/versus “installing”??))
 
 * For portability, maybe we should look into “[WebGL](http://www.khronos.org/webgl/)”? (“plugin-free 3D for the web, implemented right in the browser. Major browser vendors Apple (Safari), Google (Chrome), Mozilla (Firefox), and Opera (Opera) are members of the WebGL Working Group.”—http://www.khronos.org/webgl/) (What are limitations of webGL, and its foundation “openGL ES” for mobile devices?) 
@@ -99,6 +101,8 @@ Questions
 
 Done
 ----------
+* (√) Read in shader(s) from external files (as long as those files are in the (xcode) project directory Build/learn/Debug and it works with unicode 8, unix LF)
+
 * (√) Draw multiple triangles in our working(!) triangle. (From learnopengl.com, uses CMake to build Xcode project with glad and glfw.)
 
 * (√) Got keyboard working to change rotation direction and close window. Got rotation happening with control over degrees/second.
