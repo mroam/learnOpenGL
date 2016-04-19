@@ -1,6 +1,6 @@
 # learnOpenGL
 ========
-Harry and Mike are trying to learn openGL* by installing it, reading tutorials, running code, and revising code. (Here is what we’ve found so far including links to installers, tutorials, versions, references, etc...
+Harry and Mike are trying to learn openGL* by installing it, reading tutorials, running code, and revising code. Here is what we’ve found so far including links to installers, tutorials, versions, references, etc...
 
 *(“OpenGL” does 3D graphics: it is a cross-platform multi-language code library API for controlling computer graphics chips to draw pictures of 3d objects.) 
 
