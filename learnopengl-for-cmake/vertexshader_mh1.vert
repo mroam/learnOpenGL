@@ -1,4 +1,4 @@
-version 330 core
+#version 330 core
 // vertex shader!! Is 330 a good version number??
 // from http://learnopengl.com/#!Getting-started/Shaders
 // (see also http://open.gl/drawing for a slightly different version

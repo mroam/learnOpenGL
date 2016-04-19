@@ -1,7 +1,9 @@
-version 330 core
+#version 330 core
 // vertex shader!! Is 330 a good version number??
 // from http://learnopengl.com/#!Getting-started/Shaders
 // (see also http://open.gl/drawing for a slightly different version
+
+// for shader examples also see http://www.lighthouse3d.com/tutorials/glsl-12-tutorial/shader-examples
 
 layout (location = 0) in vec3 position; // The position variable has attribute position 0
 

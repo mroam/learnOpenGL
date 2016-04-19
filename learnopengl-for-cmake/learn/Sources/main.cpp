@@ -63,7 +63,10 @@ GLfloat deltaAngle =  30.0;   // trying to be howManyDegreesPerSecond of turn   
 GLfloat length = 1.0;  // keys MINUS and PLUS to lower and raise
 
 
-const char * getAShader(std::string path ) {
+/* note: GLchar *   and  char *  are recognized by compiler as same thing ("aka") */
+const GLchar* getAShader(std::string path ) {
+// was    const char * getAShader(std::string path ) {
+// std::string getAShader( std::string path ) {
     //// Now we'll try to load some shaders from external files
     // source stackoverflow.com/questions...
     std::ifstream theFile(path);
@@ -77,8 +80,23 @@ const char * getAShader(std::string path ) {
         //  http://stackoverflow.com/questions/34836454/neither-vertex-shader-nor-fragment-shader-are-compiling-after-loading-from-a-fil
         // char * vertShaderSource = ourVertexShaderBuffer.c_str( );//const_cast<const GLchar*>(ourVertexShaderBuffer.str( ));
         std::string shaderSourceStr = ourShaderBuffer.str( );
-        std::cout << "tried to read from file at " << path << " and got " << shaderSourceStr << std::endl;
-        return shaderSourceStr.c_str( );
+        std::cout << "tried to read from file at " << path << " and got:"  << std::endl;
+        std::cout << shaderSourceStr << std::endl;
+        std::cout << "......." << std::endl;
+        std::cout << "Here's the c_str( ):" << std::endl;
+        std::cout << shaderSourceStr.c_str( ) << std::endl;
+        std::cout << "-=-=-=-=-=-=-=-=" << std::endl;
+        
+        
+        // The following might be overkill, but has fixed our ability to get a null-terminated c string from a text file.
+        // from http://www.cplusplus.com/reference/string/string/c_str/
+        // which says that c_str( ) returns a "null-terminated sequence of characters (i.e., a C-string)"
+        char * ourCString = new char [shaderSourceStr.length()+1];
+        std::strcpy (ourCString, shaderSourceStr.c_str());
+        
+        // return shaderSourceStr.c_str( );  // is this getting \0 ??
+        return ourCString;
+        // return shaderSourceStr;  // is this getting \0 ??
     }
 } // getAShader( )
 
@@ -94,24 +112,28 @@ When I copy these shaders by hand to
  */
 //const GLchar* fragmentShaderSource2 = getAShader("fragshader_mh2.frag");
 
-//const GLchar* vertexShaderSource = getAShader("vertextshader_mh1.vert");
+//const GLchar* vertexShaderSource = getAShader("vertexshader_mh1.vert");
 
+///*
  const GLchar* vertexShaderSource = "#version 330 core\n"
 "layout (location = 0) in vec3 position;\n"
 "void main()\n"
 "{\n"
 "gl_Position = vec4(position.x, position.y, position.z, 1.0);\n"
-"}\0";
+"}\n\0";
+//*/
 
-// const GLchar* fragmentShaderSource = getAShader("fragshader_mh1.frag");
 
-const GLchar* fragmentShaderSource = "#version 330 core\n"
+const GLchar* fragmentShaderSource = getAShader("fragshader_mh3.frag");
+// should this experiment use strcopy?? const GLchar * fragmentShaderSource = getAShader("fragshader_mh3.frag").c_str( );
+
+/* const GLchar* fragmentShaderSource = "#version 330 core\n"
 "out vec4 color;\n"
 "void main()\n"
 "{\n"
 "color = vec4(1.0f, 0.9f, 0.7f, 1.0f);\n"  // was vec4(1.0f, 0.5f, 0.2f, 1.0f);
 "}\n\0";
-
+*/
 
 
 
@@ -119,6 +141,7 @@ const GLchar* fragmentShaderSource = "#version 330 core\n"
 // The MAIN function, from here we start the application and run the game loop
 int main()
 {
+    std::cout << vertexShaderSource << std::endl;
     // Init GLFW
     glfwInit();
     // Set all the required options for GLFW
