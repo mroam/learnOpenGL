@@ -63,12 +63,16 @@ GLfloat deltaAngle =  30.0;   // trying to be howManyDegreesPerSecond of turn   
 GLfloat length = 1.0;  // keys MINUS and PLUS to lower and raise
 
 
-/* note: GLchar *   and  char *  are recognized by compiler as same thing ("aka") */
+/*
+ Now we'll try to load some shaders from external files
+ source stackoverflow.com/questions... 
+ 
+note: GLchar *   and  char *  are recognized by compiler as same thing ("aka")
+ 
+  had some luck with:    const char * getAShader(std::string path ) {
+  had some luck with:    std::string getAShader( std::string path ) {
+*/
 const GLchar* getAShader(std::string path ) {
-// was    const char * getAShader(std::string path ) {
-// std::string getAShader( std::string path ) {
-    //// Now we'll try to load some shaders from external files
-    // source stackoverflow.com/questions...
     std::ifstream theFile(path);
     if (! theFile.is_open( ) ) { /* trouble! */
         std::cout << "tried to read from file at " << path << " but told file not is_open( )" << std::endl;
@@ -80,12 +84,12 @@ const GLchar* getAShader(std::string path ) {
         //  http://stackoverflow.com/questions/34836454/neither-vertex-shader-nor-fragment-shader-are-compiling-after-loading-from-a-fil
         // char * vertShaderSource = ourVertexShaderBuffer.c_str( );//const_cast<const GLchar*>(ourVertexShaderBuffer.str( ));
         std::string shaderSourceStr = ourShaderBuffer.str( );
-        std::cout << "tried to read from file at " << path << " and got:"  << std::endl;
+        /*std::cout << "tried to read from file at " << path << " and got:"  << std::endl;
         std::cout << shaderSourceStr << std::endl;
         std::cout << "......." << std::endl;
         std::cout << "Here's the c_str( ):" << std::endl;
         std::cout << shaderSourceStr.c_str( ) << std::endl;
-        std::cout << "-=-=-=-=-=-=-=-=" << std::endl;
+        std::cout << "-=-=-=-=-=-=-=-=" << std::endl;*/
         
         
         // The following might be overkill, but has fixed our ability to get a null-terminated c string from a text file.
@@ -94,40 +98,47 @@ const GLchar* getAShader(std::string path ) {
         char * ourCString = new char [shaderSourceStr.length()+1];
         std::strcpy (ourCString, shaderSourceStr.c_str());
         
-        // return shaderSourceStr.c_str( );  // is this getting \0 ??
         return ourCString;
+        // return shaderSourceStr.c_str( );  // is this getting \0 ??
         // return shaderSourceStr;  // is this getting \0 ??
     }
 } // getAShader( )
 
 
 // Shaders
-/* Hmmm, tried to read from external file but it isn't working yet...
- Experiment with file ...mh2 being added to "target"
-When I copy these shaders by hand to
-~/Documents/learnOpenGL/learnopengl-for-cmake/learn/Build/learn/Debug 
- then mh2.frag and mh1.vert are actually openable files, but not ...mh1.frag.
- Why?? And how to tell xcode to put the files into the build destination??
- (Is this a "scheme" thing? Settable when files are added??
- */
+/*
+We can copy these shaders by hand to
+~/Documents/learnOpenGL/learnopengl-for-cmake/learn/Build/learn/Debug
+but now we've figured out how to tell xcode to put the files into the build destination:
+-Make sure we're in standard editor and leftmost column ("navigator") is visible.
+-In navigator, click outermost upper project name ("learn").
+-Just above the name, choose folder icon ("Project navigator") for view.
+-In central main view area, upper left has icon: use it to show a sub sidebar "Project and Targets List"
+ xcdoc://?url=developer.apple.com/library/etc/redirect/xcode/devtools/1157/recipes/xcode_help-project_editor/Articles/CreatingaCopyFilesBuildPhase.html
+-Now can follow the help file re "Copying Files While Building a Product"…
+ -Choose a target in that tiny left sidebar of main central window (we're currently on 'learn' target)
+ -If there is not a "Copy Files" rule then add one,
+ -can drag files onto the list of who gets copied
+ -Specify Destination "Products Directory"
+ Voila!
+*/
+
+const GLchar* vertexShaderSource = getAShader("./vertexshader_mh1.vert");  // "./" isn't necessary, right?
+const GLchar* fragmentShaderSource = getAShader("./fragshader_mh3.frag");
 //const GLchar* fragmentShaderSource2 = getAShader("fragshader_mh2.frag");
+// should this experiment use strcopy?? const GLchar * fragmentShaderSource = getAShader("fragshader_mh3.frag").c_str( );
 
-//const GLchar* vertexShaderSource = getAShader("vertexshader_mh1.vert");
-
-///*
+/*
+// Alternative old way: load these shaders as direct strings:
  const GLchar* vertexShaderSource = "#version 330 core\n"
 "layout (location = 0) in vec3 position;\n"
 "void main()\n"
 "{\n"
 "gl_Position = vec4(position.x, position.y, position.z, 1.0);\n"
 "}\n\0";
-//*/
 
 
-const GLchar* fragmentShaderSource = getAShader("fragshader_mh3.frag");
-// should this experiment use strcopy?? const GLchar * fragmentShaderSource = getAShader("fragshader_mh3.frag").c_str( );
-
-/* const GLchar* fragmentShaderSource = "#version 330 core\n"
+const GLchar* fragmentShaderSource = "#version 330 core\n"
 "out vec4 color;\n"
 "void main()\n"
 "{\n"
@@ -141,7 +152,7 @@ const GLchar* fragmentShaderSource = getAShader("fragshader_mh3.frag");
 // The MAIN function, from here we start the application and run the game loop
 int main()
 {
-    std::cout << vertexShaderSource << std::endl;
+    //std::cout << vertexShaderSource << std::endl;
     // Init GLFW
     glfwInit();
     // Set all the required options for GLFW
@@ -230,17 +241,16 @@ int main()
     
     //  glGenVertexArrays(1, &VAO); ... through glBindVertexArray(0); was here
     
-
     
     // let's play with a vertex (mjr, hb)
     GLfloat deltaV0 = 0.1;
     
     GLfloat angle = 0.0;
-    // Game loop
     
   //  double weirdTime = time(NULL);
     double prevTimeD = glfwGetTime();
-    
+
+        // Game loop…
     while (!glfwWindowShouldClose(window))
     {
         // Check if any events have been activated (key pressed, mouse moved etc.) and call corresponding response functions
@@ -352,12 +362,22 @@ int main()
 }
 
 
-// Is called whenever a key is pressed/released via GLFW
-//   See http://www.glfw.org/docs/latest/group__input.html
+/* 
+ OUR KEYS:
+ esc    quit
+ 'r'    reverse spin direction
+ '-'    shorten a leg
+ '='    lengthen a leg
+ 
+ This callback is called whenever a key is pressed/released via GLFW
+   See http://www.glfw.org/docs/latest/group__input.html
+ 
+ Arguments:
+ 'action' can also use GLFW_RELEASE and GLFW_REPEAT
+ 'modifiers' can also use GLFW_MOD_ALT or  GLFW_MOD_CONTROL  or  GLFW_MOD_SUPER
+ 'scancode' is platform specific
+*/
 void key_callback( GLFWwindow* window, int key, int scancode, int action, int modifiers )
-// action can also use GLFW_RELEASE and GLFW_REPEAT
-// modifiers can also use GLFW_MOD_ALT or  GLFW_MOD_CONTROL  or  GLFW_MOD_SUPER
-// scancode is platform specific
 {
      if ((key == GLFW_KEY_ESCAPE) && (action == GLFW_PRESS)) {
         //std::cout << "esc!" << std::endl;
@@ -365,23 +385,23 @@ void key_callback( GLFWwindow* window, int key, int scancode, int action, int mo
     }
     if ((key == GLFW_KEY_R) && (action == GLFW_PRESS)) {
         deltaAngle *= -1;
-        //std::cout << "R!" << std::endl;
+        //std::cout << "R" << std::endl;
     }
     if ((key == GLFW_KEY_MINUS) && (action == GLFW_PRESS)) {
         length *= 0.8;
-        //std::cout << "R!" << std::endl;
+        //std::cout << "-" << std::endl;
     }
     if ((key == 333 /* mac number pad '-' key */) && (action == GLFW_PRESS)) {
         length *= 0.8;
-        //std::cout << "R!" << std::endl;
+        //std::cout << "-" << std::endl;
     }
     if ((key == GLFW_KEY_EQUAL) /* plus key */ && (action == GLFW_PRESS)) { //  && (modifiers == GLFW_MOD_SHIFT)) {
         length /= 0.8;
-        //std::cout << "R!" << std::endl;
+        //std::cout << "=" << std::endl;
     }
     if ((key == 334) /* mac number pad plus key */ && (action == GLFW_PRESS)) {
         length /= 0.8;
-        //std::cout << "R!" << std::endl;
+        //std::cout << "=" << std::endl;
     }
    // std::cout << key  << std::endl;
 }

@@ -3,8 +3,6 @@
 // from http://learnopengl.com/#!Getting-started/Shaders
 // (see also http://open.gl/drawing for a slightly different version
 
-// for shader examples also see http://www.lighthouse3d.com/tutorials/glsl-12-tutorial/shader-examples
-
 layout (location = 0) in vec3 position; // The position variable has attribute position 0
 
 // out vec4 vertexColor; // Specify a color output to the fragment shader
@@ -22,3 +20,4 @@ void main() {
     // because numbers come out of shaders in range -1 .. 1 and clip the rest
     // gl_Position = vec4(position.x /*  *100 */, position.y /*  *100 */, 0.0, 1.0);
 }
+

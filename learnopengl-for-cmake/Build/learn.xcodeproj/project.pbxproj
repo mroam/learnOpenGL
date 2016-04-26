@@ -61,6 +61,9 @@
 		1094CED7101B44E384C0D4B3 /* oldmain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0AC17C5AD3BA4888A6C5EB56 /* oldmain.cpp */; settings = {COMPILER_FLAGS = ""; }; };
 		250757B69E434B80B3F401FA /* input.c in Sources */ = {isa = PBXBuildFile; fileRef = D02D563C6A7747EA8F6C5551 /* input.c */; settings = {COMPILER_FLAGS = ""; }; };
 		31B8727FFA9141B2AFCDA5DA /* posix_tls.c in Sources */ = {isa = PBXBuildFile; fileRef = 7591C5BF74A64B19BE5C9BBA /* posix_tls.c */; settings = {COMPILER_FLAGS = ""; }; };
+		3F28A9CE1CCFBB4A00828B96 /* test.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3F28A9CA1CCFB8E200828B96 /* test.txt */; };
+		3F28A9CF1CCFBB5000828B96 /* fragshader_mh3.frag in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3F28A9CD1CCFBAE100828B96 /* fragshader_mh3.frag */; };
+		3F28A9D01CCFBB5400828B96 /* vertexshader_mh1.vert in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3F6ADA2A1CBD454000D0C9D5 /* vertexshader_mh1.vert */; };
 		512EA6E604274FD589599650 /* init.c in Sources */ = {isa = PBXBuildFile; fileRef = 5F5D1A4BC7614EEA98BFBF6E /* init.c */; settings = {COMPILER_FLAGS = ""; }; };
 		64F0D6F31C454EF98C0B6A93 /* monitor.c in Sources */ = {isa = PBXBuildFile; fileRef = 0FDCD572774F40FB9C21E1A4 /* monitor.c */; settings = {COMPILER_FLAGS = ""; }; };
 		69D76DB6C84A45458204B46F /* mach_time.c in Sources */ = {isa = PBXBuildFile; fileRef = 82F3453E0D9C4B06BF3ECFC1 /* mach_time.c */; settings = {COMPILER_FLAGS = ""; }; };
@@ -127,6 +130,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3F28A9C91CCFB80700828B96 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				3F28A9CE1CCFBB4A00828B96 /* test.txt in CopyFiles */,
+				3F28A9CF1CCFBB5000828B96 /* fragshader_mh3.frag in CopyFiles */,
+				3F28A9D01CCFBB5400828B96 /* vertexshader_mh1.vert in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0AC17C5AD3BA4888A6C5EB56 /* oldmain.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = oldmain.cpp; path = learn/Sources/oldmain.cpp; sourceTree = SOURCE_ROOT; };
 		0FDCD572774F40FB9C21E1A4 /* monitor.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = monitor.c; path = learn/Vendor/glfw/src/monitor.c; sourceTree = SOURCE_ROOT; };
@@ -136,6 +154,8 @@
 		2E96A416A5F74862B0797637 /* iokit_joystick.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = iokit_joystick.m; path = learn/Vendor/glfw/src/iokit_joystick.m; sourceTree = SOURCE_ROOT; };
 		3B6295A553814F0FA2031093 /* nsgl_context.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = nsgl_context.m; path = learn/Vendor/glfw/src/nsgl_context.m; sourceTree = SOURCE_ROOT; };
 		3C2AF48FA74B4D9CBBC6BA11 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = learn/Vendor/glfw/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		3F28A9CA1CCFB8E200828B96 /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
+		3F28A9CD1CCFBAE100828B96 /* fragshader_mh3.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = fragshader_mh3.frag; sourceTree = "<group>"; };
 		3F6ADA291CBD452F00D0C9D5 /* fragshader_mh1.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = fragshader_mh1.frag; sourceTree = "<group>"; };
 		3F6ADA2A1CBD454000D0C9D5 /* vertexshader_mh1.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = vertexshader_mh1.vert; sourceTree = "<group>"; };
 		3F6ADA2B1CBD4C1C00D0C9D5 /* fragshader_mh2.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = fragshader_mh2.frag; sourceTree = "<group>"; };
@@ -332,6 +352,8 @@
 		FFB58EB482E24210BB439AA0 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				3F28A9CD1CCFBAE100828B96 /* fragshader_mh3.frag */,
+				3F28A9CA1CCFB8E200828B96 /* test.txt */,
 				3F6ADA2B1CBD4C1C00D0C9D5 /* fragshader_mh2.frag */,
 				3F6ADA291CBD452F00D0C9D5 /* fragshader_mh1.frag */,
 				3F6ADA2A1CBD454000D0C9D5 /* vertexshader_mh1.vert */,
@@ -349,6 +371,7 @@
 			buildConfigurationList = 02C3817B12334762ACE148AF /* Build configuration list for PBXNativeTarget "learn" */;
 			buildPhases = (
 				A270BCA1DD714546A23A4266 /* Sources */,
+				3F28A9C91CCFB80700828B96 /* CopyFiles */,
 			);
 			buildRules = (
 			);
