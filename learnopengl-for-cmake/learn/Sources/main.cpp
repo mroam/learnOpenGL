@@ -116,10 +116,10 @@ but now we've figured out how to tell xcode to put the files into the build dest
 -In central main view area, upper left has icon: use it to show a sub sidebar "Project and Targets List"
  xcdoc://?url=developer.apple.com/library/etc/redirect/xcode/devtools/1157/recipes/xcode_help-project_editor/Articles/CreatingaCopyFilesBuildPhase.html
 -Now can follow the help file re "Copying Files While Building a Product"…
- -Choose a target in that tiny left sidebar of main central window (we're currently on 'learn' target)
- -If there is not a "Copy Files" rule then add one,
- -can drag files onto the list of who gets copied
- -Specify Destination "Products Directory"
+ -Choose a target in that tiny left sidebar of main central window (we're currently on 'learn' target).
+ -If there is not a "Copy Files" rule then add one.
+ -Can drag files onto the list of who gets copied.
+ -Specify Destination "Products Directory".
  Voila!
 */
 
@@ -233,9 +233,12 @@ int main()
         -0.5f, -0.5f, 0.0f, // lower Left
         0.5f, -0.5f, 0.0f, // lower Right
         0.0f,  0.5f, 0.0f,  // Top
-        0.5f, 0.5f, 0.0f      // upper right (shoulder)
+        0.5f, 0.5f, 0.0f,// upper right (shoulder)
+        -1.0f, -1.0f, 0.75f,  // steady triangle trying to float above the rotating stuff
+        1.0f, 1.0f, 0.75f,
+        0.0f, 1.0f, 0.75f
     };
-    GLuint howManyVertices = 4;  // was 3 until we added right shoulder
+    GLuint howManyVertices = 7;  // was 3 until we added right shoulder
     
     GLuint VBO, VAO;  // buffer(s)) and attribute pointers
     
@@ -279,21 +282,23 @@ int main()
         vertices[0] = cos(angle * piOver180);   //   <== oops, we were saying angle * 180/π, should have been ang * π/180
         vertices[1] = sin(angle * piOver180);
         // vertices[2] is a z, which probably doesn't make any difference visually, just coming toward us out of screen??
+        vertices[2] = 0.25f;
         
         // originally lower right corner...
         vertices[3] = length * cos((angle-120.0) * piOver180);  // was -120.0
         vertices[4] = length * sin((angle-120.0) * piOver180);  // was -120.0
+        vertices[5] = 0.5f;   // I am the z
         
         // originally center top vertex...
         vertices[6] = cos((angle+120.0) * piOver180);    // was +120.0
         vertices[7] = sin((angle+120.0) * piOver180);    // was +120.0
-        
+        vertices[8] = 0.75f;  // I am the z
         
         // originally right shoulder vertex...
         // without the following two lines, the right shoulder is fixed in one place..
         vertices[9] = 0.5 + cos((angle-80.0) * piOver180);
         vertices[10] = 0.5 + sin((angle-80.0) * piOver180);
-
+        vertices[11] = cos(angle * piOver180);  // I am the z
         
        // angle += deltaAngle;  // 0.0001 is nice, 'R' keys makes it negative for rotate other way;
         double secondsSincePrevMove = (glfwGetTime()-prevTimeD);
@@ -319,7 +324,6 @@ int main()
         
         glBindBuffer(GL_ARRAY_BUFFER, VBO);
         glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW); // fill VBO with data
-        
         /* 
          Uh-oh; what are these '3's? Apparently NOT the size of our vertices array (which is now 4) but instead
          specifying that our vertices use 3 coords (x,y,z) rather than 4 (x,y,z,w)

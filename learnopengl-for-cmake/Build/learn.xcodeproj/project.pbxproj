@@ -156,9 +156,7 @@
 		3C2AF48FA74B4D9CBBC6BA11 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = learn/Vendor/glfw/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
 		3F28A9CA1CCFB8E200828B96 /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
 		3F28A9CD1CCFBAE100828B96 /* fragshader_mh3.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = fragshader_mh3.frag; sourceTree = "<group>"; };
-		3F6ADA291CBD452F00D0C9D5 /* fragshader_mh1.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = fragshader_mh1.frag; sourceTree = "<group>"; };
 		3F6ADA2A1CBD454000D0C9D5 /* vertexshader_mh1.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = vertexshader_mh1.vert; sourceTree = "<group>"; };
-		3F6ADA2B1CBD4C1C00D0C9D5 /* fragshader_mh2.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = fragshader_mh2.frag; sourceTree = "<group>"; };
 		4A31A27BD84242F09F9007D6 /* iokit_joystick.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = iokit_joystick.h; path = learn/Vendor/glfw/src/iokit_joystick.h; sourceTree = SOURCE_ROOT; };
 		4F9AC5848CF040DAB0A19010 /* internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = internal.h; path = learn/Vendor/glfw/src/internal.h; sourceTree = SOURCE_ROOT; };
 		544CE2395BE74D64969DF4A6 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
@@ -354,8 +352,6 @@
 			children = (
 				3F28A9CD1CCFBAE100828B96 /* fragshader_mh3.frag */,
 				3F28A9CA1CCFB8E200828B96 /* test.txt */,
-				3F6ADA2B1CBD4C1C00D0C9D5 /* fragshader_mh2.frag */,
-				3F6ADA291CBD452F00D0C9D5 /* fragshader_mh1.frag */,
 				3F6ADA2A1CBD454000D0C9D5 /* vertexshader_mh1.vert */,
 				A2B86035CCCE4B22AC7E753A /* main.cpp */,
 				0AC17C5AD3BA4888A6C5EB56 /* oldmain.cpp */,
