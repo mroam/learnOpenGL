@@ -9,7 +9,7 @@ Potential Projects
 -----------------
 * [Lunar lander](http://www.nasa.gov/multimedia/imagegallery/image_gallery_2104.html) in 3D, as interactive game. (Could it display in red-blue 3d glasses, or virtual reality goggles?)
 
-* International Space Station in 3D. There are several [NASA 3D models](http://nasa3d.arc.nasa.gov/search/iss/model) and  [heavens-above](http://www.heavens-above.com/ISS_3D.aspx) has interactive online ISS using webGL, showing ISS in true place in orbit (with moving solar panels, and ISS turns red when it is not lit by the sun.) The heavens-above model requires a “modern” browser with webGL (works on retina mac osX 10.11 in safari 9, in chrome 48, and in firefox 42).
+* International Space Station in 3D. There are several [NASA 3D models](http://nasa3d.arc.nasa.gov/search/iss/model), and [heavens-above](http://www.heavens-above.com/ISS_3D.aspx) has interactive online ISS using webGL, showing ISS in true place in orbit (with moving solar panels, and ISS turns red when it is not lit by the sun.) The heavens-above model requires a “modern” browser with webGL (works on retina mac osX 10.11 in safari 9, in chrome 48, and in firefox 42).
 
 * [Skydive](http://www.uspa.org) simulator, interactive game. (Virtual reality?)
 
@@ -37,7 +37,9 @@ References
 
 * Hey, check out Processing 3 Java Examples of openGL: Demos/LowLevelGLVboInterleaved and /LowLevelGLVboSeparate
 
-* Hey, check out people playing with shaders: http://glslsandbox.com/
+* Shaders: people playing http://glslsandbox.com/, [math functions GLSL ES](http://www.shaderific.com/glsl-functions/), 
+
+* [Matrices tutorial](http://www.opengl-tutorial.org/beginners-tutorials/tutorial-3-matrices/), [Matrices and Quaternions in C FAQ](http://www.opengl-tutorial.org/assets/faq_quaternions/index.html) which shows matrices sideways compared to openGL.
 
 * http://www.cplusplus.com/doc/tutorial/files/
 
@@ -45,7 +47,7 @@ References
 
 Tutorials
 --------
-* “[Glitter](http://github.com/Polytonic/Glitter)” is github repo which includes the necessary libraries and instructions for getting started with the [learnopengl.com](http://learnopengl.com) and [open.gl](http://open.gl) tutorials! (Requires only one “dependency”: [cmake](http://www.cmake.org/download/).) ... This is our work in progress but doesn't it need shaders?
+* “[Glitter](http://github.com/Polytonic/Glitter)” is github repo which includes the necessary libraries and instructions for getting started with the [learnopengl.com](http://learnopengl.com) and [open.gl](http://open.gl) tutorials! (Requires only one “dependency”: [cmake](http://www.cmake.org/download/).) ... This is our work in progress -- uses glfw and glad, which cmake and xcode can handle.
 
 * [modern OpenGL with shaders (youtube 3 hour video)](http://youtu.be/6-9XFm7XAT8) from SIGGRAPH!
 
@@ -66,20 +68,19 @@ Tutorials
 
 To Do
 --------
-* Give different colors to the multiple triangles in our working(!) sample "learnopengl-for-cmake".
+* Refactor the big main in our "learnopengl-for-cmake".
+
+* Have multiple vectors of vertices. (Will this affect VAO or VBO or what?)
+
+* Figure out how to have front-most things use alpha to block further backs. [Blending](https://www.opengl.org/wiki/Blending).
 
 * Study quaternions.
  
-* Figure out how to use glew on mac OR how to work around glew on mac and use whatever apple alternative there is. Can I use cmake to install glew into an xcode project?? Work-around: cmake can make glad + glfw projects for us in Xcode.
-
 * Read [OpenGL on mac](http://developer.apple.com/library/mac/documentation/GraphicsImaging/Conceptual/OpenGL-MacProgGuide/opengl_pg_concepts/opengl_pg_concepts.html#//apple_ref/doc/uid/TP40001987-CH208-SW1)
-
-* Is there any hope (or need?) of finding tutorials that don’t use or [glfw](http://www.glfw.org/ and http://learnopengl.com), [Glew](http://glew.sourceforge.net), or [glm](http://glm.g-truc.net/), or [FreeGlut](http://freeglut.sourceforge.net), etc.?
-
-* Figure out the file size bug [Here's a link to something!](http://superuser.com/questions/382120/mac-os-x-not-reporting-directory-sizes-correctly) Work-around: copy across just the cmake and vendor folders (see readme in learnopengl-for-cmake project), get rid of the hidden .git and .gitignore files, and remake with cmake. Voila-small project!
 
 * Resume working with Glitter starter, now that we know how to use CMake, glad, glfw, and "Vendor" folders to make Xcode projects that compile and run with rotating triangles. (Why is our Glitter getting "Vertex shader compilation status: 1 (ok); Fragment shader compilation status: 1 (ok); DANG!--Linking of Shaders failed. ERROR: Compiled vertex shader was corrupt. ERROR: Compiled fragment shader was corrupt.")
 
+* Figure out how to use glew on mac OR how to work around glew on mac and use whatever apple alternative there is. Can I use cmake to install glew into an xcode project?? Is there any hope (or need?) of finding tutorials that don’t use [Glew](http://glew.sourceforge.net), or [glm](http://glm.g-truc.net/), or [FreeGlut](http://freeglut.sourceforge.net), etc.?
 
 
 Questions
@@ -99,6 +100,8 @@ Questions
 
 Done
 ----------
+* (√) Gave different colors to the multiple triangles in our working(!) sample "learnopengl-for-cmake".
+
 * (√) Figured out how to tell xcode to put the files into the build destination:
 ( -Make sure we're in standard editor and leftmost column ("navigator") is visible.
 -In navigator, click outermost upper project name ("learn").
@@ -120,6 +123,10 @@ Done
 * (√) Made our xcode glitter project's main.cpp ALMOST match the glfw demo from http://learnopengl.com
 
 * (√) Copied “[Glitter](http://github.com/Polytonic/Glitter)” tutorial and used cmake to make Glitter have an xcode project which compiled and ran (after a few changes, see its readme).
+
+* (√) Work-around for running tutorials on make: we found that cmake can make glad + glfw projects for us in Xcode, so we can use [glfw](http://www.glfw.org/ in tutorial from  http://learnopengl.com).
+
+* (√) Figured out a fix for our folders being large because having invisible files. [Here's a link to something!](http://superuser.com/questions/382120/mac-os-x-not-reporting-directory-sizes-correctly) Work-around: copy across just the cmake and vendor folders (see readme in learnopengl-for-cmake project), get rid of the hidden .git and .gitignore files, and remake with cmake. Voila-small project!
 
 * (√) Installed “[cmake](http://www.cmake.org/download/)” on our main machine so that the “[Glitter](http://github.com/Polytonic/Glitter)” tutorial can build xcode projects for us.
  
