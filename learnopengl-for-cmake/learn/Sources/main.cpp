@@ -148,7 +148,50 @@ const GLchar* fragmentShaderSource = "#version 330 core\n"
 
 
 
+double prevTimeD;
+GLfloat angle = 0.0;
 
+void rotateVertices(GLfloat vertices[]){
+    
+    // originally lower left corner...
+    vertices[0] = cos(angle * piOver180);   //   <== oops, we were saying angle * 180/π, should have been ang * π/180
+    vertices[1] = sin(angle * piOver180);
+    // vertices[2] is a z, which probably doesn't make any difference visually, just coming toward us out of screen??
+    vertices[2] = 0.25f;
+    
+    // originally lower right corner...
+    vertices[3] = length * cos((angle-120.0) * piOver180);  // was -120.0
+    vertices[4] = length * sin((angle-120.0) * piOver180);  // was -120.0
+    vertices[5] = 0.5f;   // I am the z
+    
+    // originally center top vertex...
+    vertices[6] = cos((angle+120.0) * piOver180);    // was +120.0
+    vertices[7] = sin((angle+120.0) * piOver180);    // was +120.0
+    vertices[8] = 0.75f;  // I am the z
+    
+    // originally right shoulder vertex...
+    // without the following two lines, the right shoulder is fixed in one place..
+    vertices[9] = 0.5 + cos((angle-80.0) * piOver180);
+    vertices[10] = 0.5 + sin((angle-80.0) * piOver180);
+    vertices[11] = cos(angle * piOver180);  // I am the z
+    
+    // angle += deltaAngle;  // 0.0001 is nice, 'R' keys makes it negative for rotate other way;
+    double secondsSincePrevMove = (glfwGetTime()-prevTimeD);
+    angle += ( deltaAngle * secondsSincePrevMove );
+    while (angle < 0.0) {
+        angle += 360.0;
+    }
+    while (angle > 360.0) {
+        angle -= 360.0;
+    }
+    
+    // std::cout << secondsSincePrevMove << "sec, " << angle << "angle ";
+    // std::cout << angle << "angle ";
+    
+    
+    prevTimeD = glfwGetTime();   //time(NULL);
+    
+}
 // The MAIN function, from here we start the application and run the game loop
 int main()
 {
@@ -238,6 +281,9 @@ int main()
         1.0f, 1.0f, 0.75f,
         0.0f, 1.0f, 0.75f
     };
+    //mark the indeces of the last vertices in an object. It makes sense I promise
+    GLuint objectStarts[] = {0, 5};
+    GLuint howManyObjects = 2;
     GLuint howManyVertices = 7;  // was 3 until we added right shoulder
     
     GLuint VBO, VAO;  // buffer(s)) and attribute pointers
@@ -248,10 +294,11 @@ int main()
     // let's play with a vertex (mjr, hb)
     GLfloat deltaV0 = 0.1;
     
-    GLfloat angle = 0.0;
+    
+    
     
   //  double weirdTime = time(NULL);
-    double prevTimeD = glfwGetTime();
+    prevTimeD = glfwGetTime();
 
         // Game loop…
     while (!glfwWindowShouldClose(window))
@@ -278,43 +325,15 @@ int main()
         //std::cout << vertices[0] << ",";
          */
         
-        // originally lower left corner...
-        vertices[0] = cos(angle * piOver180);   //   <== oops, we were saying angle * 180/π, should have been ang * π/180
-        vertices[1] = sin(angle * piOver180);
-        // vertices[2] is a z, which probably doesn't make any difference visually, just coming toward us out of screen??
-        vertices[2] = 0.25f;
+        //rotateVertices(vertices);
         
-        // originally lower right corner...
-        vertices[3] = length * cos((angle-120.0) * piOver180);  // was -120.0
-        vertices[4] = length * sin((angle-120.0) * piOver180);  // was -120.0
-        vertices[5] = 0.5f;   // I am the z
-        
-        // originally center top vertex...
-        vertices[6] = cos((angle+120.0) * piOver180);    // was +120.0
-        vertices[7] = sin((angle+120.0) * piOver180);    // was +120.0
-        vertices[8] = 0.75f;  // I am the z
-        
-        // originally right shoulder vertex...
-        // without the following two lines, the right shoulder is fixed in one place..
-        vertices[9] = 0.5 + cos((angle-80.0) * piOver180);
-        vertices[10] = 0.5 + sin((angle-80.0) * piOver180);
-        vertices[11] = cos(angle * piOver180);  // I am the z
-        
-       // angle += deltaAngle;  // 0.0001 is nice, 'R' keys makes it negative for rotate other way;
-        double secondsSincePrevMove = (glfwGetTime()-prevTimeD);
-        angle += ( deltaAngle * secondsSincePrevMove );
-        while (angle < 0.0) {
-            angle += 360.0;
-        }
-        while (angle > 360.0) {
-            angle -= 360.0;
-        }
-        
-       // std::cout << secondsSincePrevMove << "sec, " << angle << "angle ";
-       // std::cout << angle << "angle ";
-
-        
-        prevTimeD = glfwGetTime();   //time(NULL);
+        vertices[0] += 0.001;
+        vertices[3] += 0.001;
+        vertices[6] += 0.001;
+        vertices[9] += 0.001;
+        vertices[12] -= 0.001;
+        vertices[15] -= 0.001;
+        vertices[18] -= 0.001;
         
         // ---------
         glGenVertexArrays(1, &VAO);   // mjr tried glGenVertexArraysAPPLE(1, &VAO);
@@ -348,7 +367,17 @@ int main()
         
         glBindVertexArray(VAO);   // mjr earlier tried glBindVertexArrayAPPLE(VAO);
        // worked: glDrawArrays(GL_TRIANGLES, 0, /*howManyVertices*/3);    //  ??? is this the actual drawing?
-        glDrawArrays(GL_TRIANGLE_STRIP, 0, howManyVertices);    //  ??? is this the actual drawing?
+        glDrawArrays(GL_TRIANGLE_STRIP, 0, howManyVertices);
+        for(GLuint i = 0; i < howManyObjects; i++){
+            glBindVertexArray(VAO);
+            if(i + 1 == howManyObjects){
+                glDrawArrays(GL_TRIANGLE_STRIP, objectStarts[i], howManyVertices - objectStarts[i]);
+            } else {
+                glDrawArrays(GL_TRIANGLE_STRIP, objectStarts[i], objectStarts[i + 1] - objectStarts[i]);
+            }
+            glBindVertexArray(0);
+            
+        }    //  ??? is this the actual drawing?
         glBindVertexArray(0);   // mjr earlier tried glBindVertexArrayAPPLE(0);
         
         // Swap the screen buffers
@@ -409,5 +438,6 @@ void key_callback( GLFWwindow* window, int key, int scancode, int action, int mo
     }
    // std::cout << key  << std::endl;
 }
+
 
 
