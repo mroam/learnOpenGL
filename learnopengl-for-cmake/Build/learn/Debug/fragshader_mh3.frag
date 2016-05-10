@@ -9,9 +9,9 @@ out vec4 color;
 //attribute gl_Vertex vertex;
 void main()
 {
-    float dist = 1.0f - sqrt(vertexLoc.x * vertexLoc.x + vertexLoc.y * vertexLoc.y);
-    color = vec4(dist, dist, vertexLoc.z, vertexLoc.z);
-    color.a = 0.1f;
+    float distanceFromOrigin = sqrt((vertexLoc.x * vertexLoc.x) + (vertexLoc.y * vertexLoc.y) + (vertexLoc.z * vertexLoc.z));
+    color = vec4(vertexLoc.xyz, 1.0f - distanceFromOrigin / sqrt(2));
+    //color.a = 0.1f;
     //color = vec4(dist, dist, vertexLoc.z, 1.0f); //This works and made a weird blue stained glass thing with an orb of light
     //color = vertexColor;   // this worked!
     //color = vec4(1.0f, 0.5f, gl_FragCoord.z, 1.0f); // this didn't work

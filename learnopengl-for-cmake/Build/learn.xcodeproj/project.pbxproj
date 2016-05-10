@@ -157,6 +157,7 @@
 		3F28A9CA1CCFB8E200828B96 /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
 		3F28A9CD1CCFBAE100828B96 /* fragshader_mh3.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = fragshader_mh3.frag; sourceTree = "<group>"; };
 		3F6ADA2A1CBD454000D0C9D5 /* vertexshader_mh1.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = vertexshader_mh1.vert; sourceTree = "<group>"; };
+		3FF9A1A91CE2260100B8BA7F /* May10Main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = May10Main.cpp; path = learn/Sources/May10Main.cpp; sourceTree = "<group>"; };
 		4A31A27BD84242F09F9007D6 /* iokit_joystick.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = iokit_joystick.h; path = learn/Vendor/glfw/src/iokit_joystick.h; sourceTree = SOURCE_ROOT; };
 		4F9AC5848CF040DAB0A19010 /* internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = internal.h; path = learn/Vendor/glfw/src/internal.h; sourceTree = SOURCE_ROOT; };
 		544CE2395BE74D64969DF4A6 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
@@ -355,6 +356,7 @@
 				3F6ADA2A1CBD454000D0C9D5 /* vertexshader_mh1.vert */,
 				A2B86035CCCE4B22AC7E753A /* main.cpp */,
 				0AC17C5AD3BA4888A6C5EB56 /* oldmain.cpp */,
+				3FF9A1A91CE2260100B8BA7F /* May10Main.cpp */,
 			);
 			name = Sources;
 			sourceTree = "<group>";

@@ -12,7 +12,7 @@
  which I've spliced into a copy of my glitter xcode project
  and then I've spent hours getting it to compile on mac xcode.
  Using cmake and gala(?glad?) and glfw.
-*/
+ */
 
 
 /* following is header suggestion from
@@ -65,13 +65,13 @@ GLfloat length = 1.0;  // keys MINUS and PLUS to lower and raise
 
 /*
  Now we'll try to load some shaders from external files
- source stackoverflow.com/questions... 
+ source stackoverflow.com/questions...
  
-note: GLchar *   and  char *  are recognized by compiler as same thing ("aka")
+ note: GLchar *   and  char *  are recognized by compiler as same thing ("aka")
  
-  had some luck with:    const char * getAShader(std::string path ) {
-  had some luck with:    std::string getAShader( std::string path ) {
-*/
+ had some luck with:    const char * getAShader(std::string path ) {
+ had some luck with:    std::string getAShader( std::string path ) {
+ */
 const GLchar* getAShader(std::string path ) {
     std::ifstream theFile(path);
     if (! theFile.is_open( ) ) { /* trouble! */
@@ -85,11 +85,11 @@ const GLchar* getAShader(std::string path ) {
         // char * vertShaderSource = ourVertexShaderBuffer.c_str( );//const_cast<const GLchar*>(ourVertexShaderBuffer.str( ));
         std::string shaderSourceStr = ourShaderBuffer.str( );
         /*std::cout << "tried to read from file at " << path << " and got:"  << std::endl;
-        std::cout << shaderSourceStr << std::endl;
-        std::cout << "......." << std::endl;
-        std::cout << "Here's the c_str( ):" << std::endl;
-        std::cout << shaderSourceStr.c_str( ) << std::endl;
-        std::cout << "-=-=-=-=-=-=-=-=" << std::endl;*/
+         std::cout << shaderSourceStr << std::endl;
+         std::cout << "......." << std::endl;
+         std::cout << "Here's the c_str( ):" << std::endl;
+         std::cout << shaderSourceStr.c_str( ) << std::endl;
+         std::cout << "-=-=-=-=-=-=-=-=" << std::endl;*/
         
         
         // The following might be overkill, but has fixed our ability to get a null-terminated c string from a text file.
@@ -107,21 +107,21 @@ const GLchar* getAShader(std::string path ) {
 
 // Shaders
 /*
-We can copy these shaders by hand to
-~/Documents/learnOpenGL/learnopengl-for-cmake/learn/Build/learn/Debug
-but now we've figured out how to tell xcode to put the files into the build destination:
--Make sure we're in standard editor and leftmost column ("navigator") is visible.
--In navigator, click outermost upper project name ("learn").
--Just above the name, choose folder icon ("Project navigator") for view.
--In central main view area, upper left has icon: use it to show a sub sidebar "Project and Targets List"
+ We can copy these shaders by hand to
+ ~/Documents/learnOpenGL/learnopengl-for-cmake/learn/Build/learn/Debug
+ but now we've figured out how to tell xcode to put the files into the build destination:
+ -Make sure we're in standard editor and leftmost column ("navigator") is visible.
+ -In navigator, click outermost upper project name ("learn").
+ -Just above the name, choose folder icon ("Project navigator") for view.
+ -In central main view area, upper left has icon: use it to show a sub sidebar "Project and Targets List"
  xcdoc://?url=developer.apple.com/library/etc/redirect/xcode/devtools/1157/recipes/xcode_help-project_editor/Articles/CreatingaCopyFilesBuildPhase.html
--Now can follow the help file re "Copying Files While Building a Product"…
+ -Now can follow the help file re "Copying Files While Building a Product"…
  -Choose a target in that tiny left sidebar of main central window (we're currently on 'learn' target).
  -If there is not a "Copy Files" rule then add one.
  -Can drag files onto the list of who gets copied.
  -Specify Destination "Products Directory".
  Voila!
-*/
+ */
 
 const GLchar* vertexShaderSource = getAShader("./vertexshader_mh1.vert");  // "./" isn't necessary, right?
 const GLchar* fragmentShaderSource = getAShader("./fragshader_mh3.frag");
@@ -129,29 +129,28 @@ const GLchar* fragmentShaderSource = getAShader("./fragshader_mh3.frag");
 // should this experiment use strcopy?? const GLchar * fragmentShaderSource = getAShader("fragshader_mh3.frag").c_str( );
 
 /*
-// Alternative old way: load these shaders as direct strings:
+ // Alternative old way: load these shaders as direct strings:
  const GLchar* vertexShaderSource = "#version 330 core\n"
-"layout (location = 0) in vec3 position;\n"
-"void main()\n"
-"{\n"
-"gl_Position = vec4(position.x, position.y, position.z, 1.0);\n"
-"}\n\0";
-
-
-const GLchar* fragmentShaderSource = "#version 330 core\n"
-"out vec4 color;\n"
-"void main()\n"
-"{\n"
-"color = vec4(1.0f, 0.9f, 0.7f, 1.0f);\n"  // was vec4(1.0f, 0.5f, 0.2f, 1.0f);
-"}\n\0";
-*/
+ "layout (location = 0) in vec3 position;\n"
+ "void main()\n"
+ "{\n"
+ "gl_Position = vec4(position.x, position.y, position.z, 1.0);\n"
+ "}\n\0";
+ 
+ 
+ const GLchar* fragmentShaderSource = "#version 330 core\n"
+ "out vec4 color;\n"
+ "void main()\n"
+ "{\n"
+ "color = vec4(1.0f, 0.9f, 0.7f, 1.0f);\n"  // was vec4(1.0f, 0.5f, 0.2f, 1.0f);
+ "}\n\0";
+ */
 
 
 
 double prevTimeD;
 GLfloat angle = 0.0;
 
-// rotates some triangles
 void rotateVertices(GLfloat vertices[]){
     
     // originally lower left corner...
@@ -189,73 +188,10 @@ void rotateVertices(GLfloat vertices[]){
     // std::cout << secondsSincePrevMove << "sec, " << angle << "angle ";
     // std::cout << angle << "angle ";
     
-    prevTimeD = glfwGetTime();   //time(NULL);
-}
-
-
-
-// will try to rotate a tetrahedron made up of many triangles
-// for now it just fools with some of the vertices
-void rotateTetrahedron(GLfloat vertices[]){
-    
-    // originally lower left corner...
-    vertices[0] = cos(angle * piOver180);   //   <== oops, we were saying angle * 180/π, should have been ang * π/180
-    vertices[1] = sin(angle * piOver180);
-    // vertices[2] is a z, which probably doesn't make any difference visually, just coming toward us out of screen??
-    vertices[2] = 0.25f;
-    
-    // originally lower right corner...
-    vertices[3] = length * cos((angle-120.0) * piOver180);  // was -120.0
-    vertices[4] = length * sin((angle-120.0) * piOver180);  // was -120.0
-    vertices[5] = 0.5f;   // I am the z
-    
-    // originally center top vertex...
-    vertices[6] = cos((angle+120.0) * piOver180);    // was +120.0
-    vertices[7] = sin((angle+120.0) * piOver180);    // was +120.0
-    vertices[8] = 0.75f;  // I am the z
-    
-    // originally right shoulder vertex...
-    // without the following two lines, the right shoulder is fixed in one place..
-    vertices[9] = 0.5 + cos((angle-80.0) * piOver180);
-    vertices[10] = 0.5 + sin((angle-80.0) * piOver180);
-    vertices[11] = cos(angle * piOver180);  // I am the z
-    
-    // angle += deltaAngle;  // 0.0001 is nice, 'R' keys makes it negative for rotate other way;
-    double secondsSincePrevMove = (glfwGetTime()-prevTimeD);
-    angle += ( deltaAngle * secondsSincePrevMove );
-    while (angle < 0.0) {
-        angle += 360.0;
-    }
-    while (angle > 360.0) {
-        angle -= 360.0;
-    }
-    
-    // std::cout << secondsSincePrevMove << "sec, " << angle << "angle ";
-    // std::cout << angle << "angle ";
     
     prevTimeD = glfwGetTime();   //time(NULL);
-}  // rotateTetrahedron
-
-
-
-// re-factoring
-GLfloat* setUpVertices(  ) {
     
-    GLfloat vertLowerLeft[] = {  0.0f, 0.0f, 0.0f };
-    GLfloat vertLowerRight[] = { 1.0f, 0.0f, 0.0f };
-    GLfloat vertTop[] = {  0.5f,  1.0f, 0.0f };
-    GLfloat vertNose[] = { 0.5f, 0.2f, 1.0f };
-    static GLfloat vertices[] = {
-        vertLowerLeft[0],vertLowerLeft[1],vertLowerLeft[2],    vertLowerRight[0],vertLowerRight[1],vertLowerRight[2],    vertTop[0],vertTop[1],vertTop[2],   // flat
-        vertLowerLeft[0],vertLowerLeft[1],vertLowerLeft[2],    vertNose[0],vertNose[1],vertNose[2],                      vertTop[0],vertTop[1],vertTop[2],          // leftslant
-        vertNose[0],vertNose[1],vertNose[2],                   vertLowerRight[0],vertLowerRight[1],vertLowerRight[2],    vertTop[0],vertTop[1],vertTop[2],   // rightslant
-        vertLowerLeft[0],vertLowerLeft[1],vertLowerLeft[2],    vertLowerRight[0],vertLowerRight[1],vertLowerRight[2],    vertNose[0],vertNose[1],vertNose[2]  // botslant
-    };
-    return vertices; // does anybody know how many elements this has?
 }
-
-
-
 // The MAIN function, from here we start the application and run the game loop
 int main()
 {
@@ -336,44 +272,19 @@ int main()
     
     
     // Set up vertex data  (note: these initial coords are immediately replaced by trig data down below
-//    GLfloat vertices[] = {
-//        -0.9f, -0.9f, 0.0f, // lower Left
-//        -0.0f, -0.9f, 0.0f, // lower Right
-//        -0.9f,  -0.0f, 0.0f,  // Top
-//        0.9f, 0.9f, 0.0f,// upper right (shoulder)
-//        0.9f, 0.0f, 0.0f,  // steady triangle trying to float above the rotating stuff
-//        0.0f, 0.9f, 0.0f/*,
-//        0.0f, 1.0f, 0.75f*/
-//    };
-    GLfloat verticesTemp[] = {
-        0.0f, 0.0f, 0.0f, // lower Left
-        1.0f, 0.0f, 0.0f, // lower Right
-        0.0f,  1.0f, 0.0f,  // Top
-        0.0f, 0.0f, 1.0f, // Nose
-    };
-    
-    GLfloat vertLowerLeft[] = {  0.0f, 0.0f, 0.0f };
-    GLfloat vertLowerRight[] = { 1.0f, 0.0f, 0.0f };
-    GLfloat vertTop[] = {  0.5f,  1.0f, 0.0f };
-    GLfloat vertNose[] = { 0.5f, 0.2f, 1.0f };
-    GLuint objectStarts[] = {0, 5};
-    GLuint howManyObjects = 1;
-    GLuint howManyVertices = 36;  // was 3 until we added right shoulder
-    // GLfloat * vertices; //[howManyVertices];
-    // vertices = setUpVertices(); /* {
     GLfloat vertices[] = {
-        vertLowerLeft[0],vertLowerLeft[1],vertLowerLeft[2],    vertLowerRight[0],vertLowerRight[1],vertLowerRight[2],    vertTop[0],vertTop[1],vertTop[2],   // flat
-        vertLowerLeft[0],vertLowerLeft[1],vertLowerLeft[2],    vertNose[0],vertNose[1],vertNose[2],                      vertTop[0],vertTop[1],vertTop[2],          // leftslant
-        vertNose[0],vertNose[1],vertNose[2],                   vertLowerRight[0],vertLowerRight[1],vertLowerRight[2],    vertTop[0],vertTop[1],vertTop[2],   // rightslant
-        vertLowerLeft[0],vertLowerLeft[1],vertLowerLeft[2],    vertLowerRight[0],vertLowerRight[1],vertLowerRight[2],    vertNose[0],vertNose[1],vertNose[2]  // botslant
+        -0.5f, -0.5f, 0.0f, // lower Left
+        0.5f, -0.5f, 0.0f, // lower Right
+        0.0f,  0.5f, 0.0f,  // Top
+        0.5f, 0.5f, 0.0f,// upper right (shoulder)
+        -1.0f, -1.0f, 0.75f,  // steady triangle trying to float above the rotating stuff
+        1.0f, 1.0f, 0.75f,
+        0.0f, 1.0f, 0.75f
     };
-//    GLfloat vertices[] = {
-//        verticesTemp[0], verticesTemp[1], verticesTemp[2],
-//        verticesTemp[1], verticesTemp[2], verticesTemp[3],
-//        verticesTemp[2], verticesTemp[3], verticesTemp[0],
-//        verticesTemp[3], verticesTemp[0], verticesTemp[1]
-//    };
-    //mark the indices of the last vertices in an object. It makes sense I promise
+    //mark the indeces of the last vertices in an object. It makes sense I promise
+    GLuint objectStarts[] = {0, 5};
+    GLuint howManyObjects = 2;
+    GLuint howManyVertices = 7;  // was 3 until we added right shoulder
     
     GLuint VBO, VAO;  // buffer(s)) and attribute pointers
     
@@ -386,10 +297,10 @@ int main()
     
     
     
-  //  double weirdTime = time(NULL);
+    //  double weirdTime = time(NULL);
     prevTimeD = glfwGetTime();
-
-        // Game loop…
+    
+    // Game loop…
     while (!glfwWindowShouldClose(window))
     {
         // Check if any events have been activated (key pressed, mouse moved etc.) and call corresponding response functions
@@ -401,28 +312,29 @@ int main()
         // Clear the colorbuffer
         glClearColor(0.9f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
-        glad_glEnable(GL_BLEND);
-        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+        
         
         // we're going to fool with the vertices
         /* fooling one...
-        if (vertices[0] > 1.0) {
-            deltaV0 = -0.1;
-        } else if (vertices[0] < -1.0) {
-            deltaV0 = 0.1;
-        }
-        vertices[0] += deltaV0;
-        //std::cout << vertices[0] << ",";
+         if (vertices[0] > 1.0) {
+         deltaV0 = -0.1;
+         } else if (vertices[0] < -1.0) {
+         deltaV0 = 0.1;
+         }
+         vertices[0] += deltaV0;
+         //std::cout << vertices[0] << ",";
          */
         
-        //rotateVertices(vertices);
-        rotateTetrahedron(vertices);
+        rotateVertices(vertices);
         /*
-        vertices[0] += 0.01;
-        vertices[1] += 0.01;
-        vertices[3] += 0.01;
-        vertices[5] -= 0.01;
-        vertices[6] -= 0.01;*/
+         vertices[0] += 0.001;
+         vertices[3] += 0.001;
+         vertices[6] += 0.001;
+         vertices[9] += 0.001;
+         vertices[12] -= 0.001;
+         vertices[15] -= 0.001;
+         vertices[18] -= 0.001;
+         */
         // ---------
         glGenVertexArrays(1, &VAO);   // mjr tried glGenVertexArraysAPPLE(1, &VAO);
         glGenBuffers(1, &VBO);
@@ -431,40 +343,31 @@ int main()
         
         glBindBuffer(GL_ARRAY_BUFFER, VBO);
         glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW); // fill VBO with data
-        /* 
+        /*
          Uh-oh; what are these '3's? Apparently NOT the size of our vertices array (which is now 4) but instead
          specifying that our vertices use 3 coords (x,y,z) rather than 4 (x,y,z,w)
          see   https://www.opengl.org/sdk/docs/man/html/glVertexAttribPointer.xhtml
-           size: Specifies the number of components per generic vertex attribute (must be 1,2,3,4).
-           stride: Specifies the byte offset between consecutive generic vertex attributes.
-        */
+         size: Specifies the number of components per generic vertex attribute (must be 1,2,3,4).
+         stride: Specifies the byte offset between consecutive generic vertex attributes.
+         */
+        glVertexAttribPointer(/*index*/0, /*sizePerVertex*/3, /*type*/GL_FLOAT, /*normalized*/GL_FALSE, /*stride*/3 * sizeof(GLfloat), (GLvoid*)0);
+        glEnableVertexAttribArray(0);
         
-        
-        
-         /* Note that this is allowed, the call to glVertexAttribPointer
-                                           registered VBO as the currently bound vertex buffer object so 
+        glBindBuffer(GL_ARRAY_BUFFER, 0); /* Note that this is allowed, the call to glVertexAttribPointer
+                                           registered VBO as the currently bound vertex buffer object so
                                            afterwards we can safely unbind */
         
-        //glBindVertexArray(0); // mjr earlier tried glBindVertexArrayAPPLE(0);
+        glBindVertexArray(0); // mjr earlier tried glBindVertexArrayAPPLE(0);
         // Unbind VAO (it's always a good thing to unbind any buffer/array to prevent strange bugs)
         // ---------
-        glBindVertexArray(VAO);   // mjr earlier tried glBindVertexArrayAPPLE(VAO);
+        
         
         // Draw our first triangle     // ??? how does this differ from glDrawArrays(GL_TRIANGLES,0,3) below??
         glUseProgram(shaderProgram);
         
-        glEnableVertexAttribArray(0);
-        glBindBuffer(GL_ARRAY_BUFFER, VAO);
-        glVertexAttribPointer(/*index*/0, /*sizePerVertex*/3, /*type*/GL_FLOAT, /*normalized*/GL_FALSE, /*stride*/3 * sizeof(GLfloat), (GLvoid*)0);
-        //glDrawArrays(GL_t)
-        for(GLuint i = 0; i < howManyVertices; i += 3){
-            //if(i + 1 == howManyObjects){
-                glDrawArrays(GL_TRIANGLES, i, 3);
-            //}
-            //glDrawArrays(GL_TRIANGLES, 0, 3);
-        }
-       // worked: glDrawArrays(GL_TRIANGLES, 0, /*howManyVertices*/3);    //  ??? is this the actual drawing?
-        /*glDrawArrays(GL_TRIANGLE_STRIP, 0, howManyVertices);
+        glBindVertexArray(VAO);   // mjr earlier tried glBindVertexArrayAPPLE(VAO);
+        // worked: glDrawArrays(GL_TRIANGLES, 0, /*howManyVertices*/3);    //  ??? is this the actual drawing?
+        glDrawArrays(GL_TRIANGLE_STRIP, 0, howManyVertices);
         for(GLuint i = 0; i < howManyObjects; i++){
             glBindVertexArray(VAO);
             if(i + 1 == howManyObjects){
@@ -476,12 +379,12 @@ int main()
             
         }    //  ??? is this the actual drawing?
         glBindVertexArray(0);   // mjr earlier tried glBindVertexArrayAPPLE(0);
-        */
+        
         // Swap the screen buffers
         glfwSwapBuffers(window);
         
         
-
+        
     }
     // Properly de-allocate all resources once they've outlived their purpose
     glDeleteVertexArrays(1, &VAO);    // glDeleteVertexArraysAPPLE(1, &VAO);
@@ -492,7 +395,7 @@ int main()
 }
 
 
-/* 
+/*
  OUR KEYS:
  esc    quit
  'r'    reverse spin direction
@@ -500,16 +403,16 @@ int main()
  '='    lengthen a leg
  
  This callback is called whenever a key is pressed/released via GLFW
-   See http://www.glfw.org/docs/latest/group__input.html
+ See http://www.glfw.org/docs/latest/group__input.html
  
  Arguments:
  'action' can also use GLFW_RELEASE and GLFW_REPEAT
  'modifiers' can also use GLFW_MOD_ALT or  GLFW_MOD_CONTROL  or  GLFW_MOD_SUPER
  'scancode' is platform specific
-*/
+ */
 void key_callback( GLFWwindow* window, int key, int scancode, int action, int modifiers )
 {
-     if ((key == GLFW_KEY_ESCAPE) && (action == GLFW_PRESS)) {
+    if ((key == GLFW_KEY_ESCAPE) && (action == GLFW_PRESS)) {
         //std::cout << "esc!" << std::endl;
         glfwSetWindowShouldClose(window, GL_TRUE);
     }
@@ -533,7 +436,7 @@ void key_callback( GLFWwindow* window, int key, int scancode, int action, int mo
         length /= 0.8;
         //std::cout << "=" << std::endl;
     }
-   // std::cout << key  << std::endl;
+    // std::cout << key  << std::endl;
 }
 
 
