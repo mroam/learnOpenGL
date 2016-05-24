@@ -18,4 +18,21 @@ void main()
     //color = vec4(0.0f, 0.5f, 0.2f, 1.0f); // this works! vec4(1.0f, 0.5f, 0.2f, 1.0f); is orangish
     // color = vertexColor;    // fancier version for shaders lesson 2
     // outColor = vec4(1.0, 1.0, 1.0, 1.0);
+    //atan(vertexLoc.y, vertexLoc.x) * 180 / PI;
+    float C = (1 - abs(2 * L - 1)) * S;
+    float X = C * (1 - abs(mod(H/60, 2) - 1))
+    float m = L - C/2;
+    if(H <= 0 && H < 60){
+        
+    }else if(h <= 60 && H < 120){
+        
+    }else if(h <= 120 && H < 180){
+        
+    }else if(h <= 180 && H < 240){
+        
+    }else if(h <= 240 && H < 300){
+        
+    }else if(h <= 300 && H < 360){
+        
+    }
 }
