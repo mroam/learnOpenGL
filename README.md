@@ -1,6 +1,6 @@
 # learnOpenGL
 ========
-Harry and Mike are trying to learn openGL* by installing it, reading tutorials, running code, and revising code. Here is what we’ve found so far including links to installers, tutorials, versions, references, etc...
+Harry and Mike are trying to learn openGL* by installing it, reading tutorials, running code, and revising code. Here is what we’ve found so far including links to installers, tutorials, versions, references, [video of our work](https://www.youtube.com/watch?v=9sdcB2AldT0), etc...
 
 *(“OpenGL” does 3D graphics: it is a cross-platform multi-language code library API for controlling computer graphics chips to draw pictures of 3d objects.) 
 
@@ -68,7 +68,9 @@ Tutorials
 
 To Do
 --------
-* Refactor the big main in our "learnopengl-for-cmake".
+* Continue playing with [HSB(HSL/V)](https://en.wikipedia.org/wiki/HSL_and_HSV) conversion to RGB and [add functions](https://www.opengl.org/wiki/Core_Language_\(GLSL\)#Functions) to our fragment shader.
+
+* Refactor the big main in our "[learnopengl-for-cmake](https://github.com/mroam/learnOpenGL/tree/master/learnopengl-for-cmake)".
 
 * Have multiple vectors of vertices. (Will this affect VAO or VBO or what?)
 
@@ -100,7 +102,7 @@ Questions
 
 Done
 ----------
-* (√) Gave different colors to the multiple triangles in our working(!) sample "learnopengl-for-cmake".
+* (√) Gave different colors to the multiple triangles in our working(!) sample "learnopengl-for-cmake". [See video](https://www.youtube.com/watch?v=9sdcB2AldT0)
 
 * (√) Figured out how to tell xcode to put the files into the build destination:
 ( -Make sure we're in standard editor and leftmost column ("navigator") is visible.

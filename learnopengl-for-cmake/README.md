@@ -9,3 +9,4 @@ own [“learnOpenGL”](“https://github.com/mroam/learnOpenGL/”) repository.
 
    We’ve customized the code to make the triangle rotate. [See Movie, Wahoo!](https://www.youtube.com/watch?v=lZn5F2y-Yiw)
 
+Months later: big progress including multiple triangles and shades of colors. [See Movie 2](https://www.youtube.com/watch?v=9sdcB2AldT0)
