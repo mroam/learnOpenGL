@@ -255,10 +255,43 @@ GLfloat* setUpVertices(  ) {
 }
 
 
+int min(int a, int b){
+    if(a < b){
+        return a;
+    }else{
+        return b;
+    }
+}
+int max(int a, int b){
+    if(a < b){
+        return b;
+    }else{
+        return a;
+    }
 
+}
+
+void testColors(){
+    std::string colors[1530] = {};
+    int prevInt = 254;
+    for(int i = 0; i < 1530; i++){
+        int r = max(min(510 - min(abs(i - 1530), i), 255), 0);
+        int g = max(min(510 - abs(i - 510), 255),0);
+        int b = max(min(510 - abs(i - 1020), 255), 0);
+        for(int j = 0; j < i; j++){
+            if(colors[j] == std::to_string(r) + " " + std::to_string(g) + " " + std::to_string(b)){
+                std::cout<< i << " and " << j << " are the same!" << std::endl;
+            }
+        }
+        if(abs(r + g + b - prevInt) != 1) std::cout << r << " " << g << " " << b << " " << r + g + b << " " << prevInt << std::endl;
+        prevInt = r + g + b;
+        colors[i] = std::to_string(r) + " " + std::to_string(g) + " " + std::to_string(b);
+    }
+}
 // The MAIN function, from here we start the application and run the game loop
 int main()
 {
+    testColors();
     //std::cout << vertexShaderSource << std::endl;
     // Init GLFW
     glfwInit();

@@ -21,40 +21,48 @@ void main()
     // color = vertexColor;    // fancier version for shaders lesson 2
     // outColor = vec4(1.0, 1.0, 1.0, 1.0);
     
-    float H /* hue */ = atan(vertexLoc.y, vertexLoc.x) * 180.0 / M_PI;
-    
-//    float S /* saturation */ = vertexLoc.y;
-//    float L /* lightness */ = vertexLoc.z;
-    float S /* saturation */ = distanceFromOrigin * 50.0;
-    float L /* lightness */ = 100;
+//    float H /* hue */ = atan(vertexLoc.y, vertexLoc.x) * 180.0 / M_PI;
+//    
+////    float S /* saturation */ = vertexLoc.y;
+////    float L /* lightness */ = vertexLoc.z;
+//    float S /* saturation */ = distanceFromOrigin * 50.0;
+//    float L /* lightness */ = 100;
 
     
     /* working from http://www.rapidtables.com/convert/color/hsv-to-rgb.htm
      to convert HSB (HSL? HSV?) to RGB ... */
-    float C = (1.0 - abs(2.0 * L - 1.0)) * S;
-    float X = C * (1.0 - abs(mod(H/60.0, 2) - 1.0));
-    float m = L - C/2.0;
-    vec3 RGBPrime;
-    if(H <= 0 && H < 60){
-        RGBPrime = vec3(C, X, 0);
-    }else if(H <= 60 && H < 120){
-        RGBPrime = vec3(X, C, 0);
-    }else if(H <= 120 && H < 180){
-        RGBPrime = vec3(0, C, X);
-    }else if(H <= 180 && H < 240){
-        RGBPrime = vec3(0, X, C);
-    }else if(H <= 240 && H < 300){
-        RGBPrime = vec3(X, 0, C);
-    }else if(H <= 300 && H < 360){
-        RGBPrime = vec3(C, 0, X);
-    }
-    color = vec4(RGBPrime.x + m, RGBPrime.y + m, RGBPrime.z + m, 1.0f);
-//    float angle = atan(vertexLoc.y, vertexLoc.x) * 180.0 / M_PI;
-//    float scaledAngle = angle * 4.25;
+//    float C = (1.0 - abs(2.0 * L - 1.0)) * S;
+//    float X = C * (1.0 - abs(mod(H/60.0, 2) - 1.0));
+//    float m = L - C/2.0;
+//    vec3 RGBPrime;
+//    if(H <= 0 && H < 60){
+//        RGBPrime = vec3(C, X, 0);
+//    }else if(H <= 60 && H < 120){
+//        RGBPrime = vec3(X, C, 0);
+//    }else if(H <= 120 && H < 180){
+//        RGBPrime = vec3(0, C, X);
+//    }else if(H <= 180 && H < 240){
+//        RGBPrime = vec3(0, X, C);
+//    }else if(H <= 240 && H < 300){
+//        RGBPrime = vec3(X, 0, C);
+//    }else if(H <= 300 && H < 360){
+//        RGBPrime = vec3(C, 0, X);
+//    }
+//    color = vec4(RGBPrime.x + m, RGBPrime.y + m, RGBPrime.z + m, 1.0f);
+    float angle = atan(vertexLoc.y, vertexLoc.x) * 180.0 / M_PI;
+    if(angle < 0){angle = angle + 360.0;}
+    float scaledAngle = angle * 4.25;
+//    float scaledAngle = (vertexLoc.x + 1.0)
 //    float r = max(max(min(510 - scaledAngle, 255), 0), max(510 - min(scaledAngle - 1020, 255), 0));
-//    float g = max(min(510 - abs(scaledAngle - 510), 255),0);
-//    float b = max(min(510 - abs(scaledAngle - 1020), 255), 0);
-//    color = vec4(r, g, b, 1.0);
+    float r = max(min(510 - min(abs(scaledAngle - 1530), scaledAngle), 255), 0);
+    float g = max(min(510 - abs(scaledAngle - 510), 255),0);
+    float b = max(min(510 - abs(scaledAngle - 1020), 255), 0);
+    //color = vec4(r/256.0, g/256.0, b/256.0, 1.0);
+    
+    //now let's deal with darkness :D
+    //float darkness = ((vertexLoc.z + 1.0)/2.0);
+    float darkness = 1.0 - distanceFromOrigin / sqrt(3);
+    color = vec4(r/256.0 * darkness, g/256.0 * darkness, b/256.0 * darkness, 1.0);
     
 //    float r = max(0, min(255, abs(768 - scaledAngle) - 256));
 //    float g = max(0, min(255, 512 - abs(1024 - scaledAngle)));
