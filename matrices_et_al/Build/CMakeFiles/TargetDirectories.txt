@@ -1,0 +1,5 @@
+/Users/student/Documents/learnOpenGL/matrices_et_al/Build/CMakeFiles/OurDumbFolder.dir
+/Users/student/Documents/learnOpenGL/matrices_et_al/Build/OurDumbFolder/Vendor/glfw/CMakeFiles/uninstall.dir
+/Users/student/Documents/learnOpenGL/matrices_et_al/Build/CMakeFiles/ALL_BUILD.dir
+/Users/student/Documents/learnOpenGL/matrices_et_al/Build/CMakeFiles/ZERO_CHECK.dir
+/Users/student/Documents/learnOpenGL/matrices_et_al/Build/OurDumbFolder/Vendor/glfw/src/CMakeFiles/glfw.dir
