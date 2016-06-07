@@ -64,6 +64,11 @@
 		2229CE21DFEB4C7194CC3D4B /* context.c in Sources */ = {isa = PBXBuildFile; fileRef = 1F691FB993B546D48233CF5D /* context.c */; settings = {COMPILER_FLAGS = ""; }; };
 		24D240D89AE343E6B69F39CF /* window.c in Sources */ = {isa = PBXBuildFile; fileRef = 40E1DCEFADC54E58BCD3AD6A /* window.c */; settings = {COMPILER_FLAGS = ""; }; };
 		342C529FEF044A1C8002F032 /* monitor.c in Sources */ = {isa = PBXBuildFile; fileRef = 7AE58B0031E44763B3D7B2B0 /* monitor.c */; settings = {COMPILER_FLAGS = ""; }; };
+		3FDFDBFF1D072FC800521C2D /* readme.md in Sources */ = {isa = PBXBuildFile; fileRef = 3FDFDBFD1D072FC800521C2D /* readme.md */; };
+		3FDFDC001D072FE700521C2D /* fragshader_mh1.frag in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3FDFDBFB1D072FC800521C2D /* fragshader_mh1.frag */; };
+		3FDFDC011D072FEB00521C2D /* fragshader_mh3.frag in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3FDFDBFC1D072FC800521C2D /* fragshader_mh3.frag */; };
+		3FDFDC021D072FEE00521C2D /* vertexshader_mh1.vert in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3FDFDBFE1D072FC800521C2D /* vertexshader_mh1.vert */; };
+		3FDFDC041D07313600521C2D /* fragshader_mh4.frag in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3FDFDC031D07311800521C2D /* fragshader_mh4.frag */; };
 		51F71948CCE44FE0B4E5414F /* cocoa_window.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD4E7CA09245FE82F32328 /* cocoa_window.m */; settings = {COMPILER_FLAGS = ""; }; };
 		69CC1F691CC84B5FB02D7FE2 /* input.c in Sources */ = {isa = PBXBuildFile; fileRef = A13FDEC33DC24C3D93C6604C /* input.c */; settings = {COMPILER_FLAGS = ""; }; };
 		864B1AF6CF52477FA0F08372 /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 96FE92A8F0D94AA7989903F5 /* glad.c */; settings = {COMPILER_FLAGS = ""; }; };
@@ -126,12 +131,33 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3FDFDBF91D072E2200521C2D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				3FDFDC001D072FE700521C2D /* fragshader_mh1.frag in CopyFiles */,
+				3FDFDC041D07313600521C2D /* fragshader_mh4.frag in CopyFiles */,
+				3FDFDC011D072FEB00521C2D /* fragshader_mh3.frag in CopyFiles */,
+				3FDFDC021D072FEE00521C2D /* vertexshader_mh1.vert in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0CAD4E7CA09245FE82F32328 /* cocoa_window.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_window.m; path = OurDumbFolder/Vendor/glfw/src/cocoa_window.m; sourceTree = SOURCE_ROOT; };
 		180DE66DFC5D4B0AB307F49C /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = OurDumbFolder/Vendor/glfw/src/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
 		19AD36C2C27E4376B0BB7848 /* init.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = init.c; path = OurDumbFolder/Vendor/glfw/src/init.c; sourceTree = SOURCE_ROOT; };
 		1F691FB993B546D48233CF5D /* context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = context.c; path = OurDumbFolder/Vendor/glfw/src/context.c; sourceTree = SOURCE_ROOT; };
 		376C8D475065493899996C74 /* glfw_config.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw_config.h; path = Build/OurDumbFolder/Vendor/glfw/src/glfw_config.h; sourceTree = SOURCE_ROOT; };
+		3FDFDBFB1D072FC800521C2D /* fragshader_mh1.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = fragshader_mh1.frag; path = OurDumbFolder/Sources/fragshader_mh1.frag; sourceTree = "<group>"; };
+		3FDFDBFC1D072FC800521C2D /* fragshader_mh3.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = fragshader_mh3.frag; path = OurDumbFolder/Sources/fragshader_mh3.frag; sourceTree = "<group>"; };
+		3FDFDBFD1D072FC800521C2D /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = readme.md; path = OurDumbFolder/Sources/readme.md; sourceTree = "<group>"; };
+		3FDFDBFE1D072FC800521C2D /* vertexshader_mh1.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = vertexshader_mh1.vert; path = OurDumbFolder/Sources/vertexshader_mh1.vert; sourceTree = "<group>"; };
+		3FDFDC031D07311800521C2D /* fragshader_mh4.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = fragshader_mh4.frag; path = OurDumbFolder/Sources/fragshader_mh4.frag; sourceTree = "<group>"; };
 		40E1DCEFADC54E58BCD3AD6A /* window.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = window.c; path = OurDumbFolder/Vendor/glfw/src/window.c; sourceTree = SOURCE_ROOT; };
 		606A1C426A0346E7A9F25AD2 /* iokit_joystick.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = iokit_joystick.h; path = OurDumbFolder/Vendor/glfw/src/iokit_joystick.h; sourceTree = SOURCE_ROOT; };
 		68A70029FBAC43A682405B8F /* internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = internal.h; path = OurDumbFolder/Vendor/glfw/src/internal.h; sourceTree = SOURCE_ROOT; };
@@ -221,6 +247,11 @@
 		4ECB2C7F02B64D09A83D01B9 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				3FDFDBFB1D072FC800521C2D /* fragshader_mh1.frag */,
+				3FDFDBFC1D072FC800521C2D /* fragshader_mh3.frag */,
+				3FDFDC031D07311800521C2D /* fragshader_mh4.frag */,
+				3FDFDBFD1D072FC800521C2D /* readme.md */,
+				3FDFDBFE1D072FC800521C2D /* vertexshader_mh1.vert */,
 				A88CEF3D7F964012A920AD66 /* main.cpp */,
 			);
 			name = Sources;
@@ -356,6 +387,7 @@
 			buildConfigurationList = B74A9F048DFD49E4A6BA3238 /* Build configuration list for PBXNativeTarget "OurDumbFolder" */;
 			buildPhases = (
 				7BE1B0E59A894FB5B5E8C34B /* Sources */,
+				3FDFDBF91D072E2200521C2D /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -451,6 +483,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D816A61A56B94A4086ED87DF /* main.cpp in Sources */,
+				3FDFDBFF1D072FC800521C2D /* readme.md in Sources */,
 				864B1AF6CF52477FA0F08372 /* glad.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

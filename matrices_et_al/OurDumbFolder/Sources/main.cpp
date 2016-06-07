@@ -124,7 +124,7 @@ but now we've figured out how to tell xcode to put the files into the build dest
 */
 
 const GLchar* vertexShaderSource = getAShader("./vertexshader_mh1.vert");  // "./" isn't necessary, right?
-const GLchar* fragmentShaderSource = getAShader("./fragshader_mh4.frag");
+const GLchar* fragmentShaderSource = getAShader("./fragshader_mh3.frag");
 //const GLchar* fragmentShaderSource2 = getAShader("fragshader_mh2.frag");
 // should this experiment use strcopy?? const GLchar * fragmentShaderSource = getAShader("fragshader_mh3.frag").c_str( );
 

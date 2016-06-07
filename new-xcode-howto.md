@@ -19,8 +19,23 @@
 * Don't be alarmed that there will be additional "OurDumbFolder" folders created in the Build folder. This is supposed to happen.
 
 # Voila, that should do it, you'll have an Xcode project that should work, hiding as XYZ/OurDumbFolder/Build/OurDumbFolder.xcodeproj  
-* Might have to do one thing: in the upper left part of the Xcode project window (to the right of the Build and Stop buttons), change the target from "ALL_BUILD>My Mac" to "OurDumbFolder>My Mac".
+* But the shaders aren't incorporated yet. Can drag them onto /Sources/OurDumbFolder/Sources/ in Xcode's left (navigator) column (make sure you're in folder view). I'm using "[x]Copy items if needed" and I'm trying "Add-to-targets:[x]ALL_BUILD, [x]OurDumbFolder, and [x]ZERO_CHECK"
+* Also, in the upper left part of the Xcode project window (to the right of the Build and Stop buttons), must change the target from "ALL_BUILD>My Mac" to "OurDumbFolder>My Mac".
 
-DARN: I'm getting error messages that vertex shader and fragment shader are "corrupt"--I think there is another step that has to be done inside Xcode, to install the shaders into the project.
+I had trouble getting shaders to work: the fix seemed to involve re-copying them into OurDumbFolder/Sources in finder, and onto /Sources/OurDumbFolder/Sources/ in Xcode's left (navigator) column (make sure you're in folder view), AND into the copy files build phase (dragging from xcode's navigator left panel).
 
 # NOTE: this project might not like moving to differently named folder!?!?
+
+Here are further steps to try within Xcode:
+Figured out how to tell xcode to put the files (such as shaders) into the build destination:
+( -Make sure we're in standard editor and leftmost column ("navigator") is visible.
+-In navigator, click outermost upper project name ("OurDumbFolder").
+-Just above the name, choose folder icon ("Project navigator") for view.
+-In central main view area, upper left has icon: use it to show a sub sidebar "PROJECT and TARGETS List"
+ xcdoc://?url=developer.apple.com/library/etc/redirect/xcode/devtools/1157/recipes/xcode_help-project_editor/Articles/CreatingaCopyFilesBuildPhase.html
+-Now can follow the help file re "Copying Files While Building a Product"…
+ -Choose a target in that tiny left sidebar of main central window (we're currently on 'OurDumbFolder' target)
+ -Choose the "Build Phases" tab along the top
+ -If there is not a "Copy Files" build phase (rule?) then add one with the "+" toward the top left "new copy Files phase",
+ -can drag files onto the list of who gets copied
+ -Specify Destination "Products Directory")
