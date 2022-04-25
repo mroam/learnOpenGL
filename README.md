@@ -17,9 +17,9 @@ Potential Projects
 
 References 
 --------
-* Learning [to install opengl and related tools](http://github.com/mikeroam/learnOpenGL/blob/master/install-opengl.md).
+* Learning [to install opengl and related tools](http://github.com/mroam/learnOpenGL/blob/master/install-opengl.md).
 
-* See our [dictionary](http://github.com/mikeroam/learnOpenGL/blob/master/dictionary.md) re “What is..” glad, glew, glut, webgl, glm, glfw, etc...
+* See our [dictionary](http://github.com/mroam/learnOpenGL/blob/master/dictionary.md) re “What is..” glad, glew, glut, webgl, glm, glfw, etc...
 
 * http://www.opengl.org
 
@@ -70,7 +70,7 @@ To Do
 --------
 * Continue playing with [HSB(HSL/V)](https://en.wikipedia.org/wiki/HSL_and_HSV) conversion to RGB and [add functions](https://www.opengl.org/wiki/Core_Language_\(GLSL\)#Functions) to our fragment shader.
 
-* Refactor the big main in our "[learnopengl-for-cmake](https://github.com/mikeroam/learnOpenGL/tree/master/learnopengl-for-cmake)".
+* Refactor the big main in our "[learnopengl-for-cmake](https://github.com/mroam/learnOpenGL/tree/master/learnopengl-for-cmake)".
 
 * Have multiple vectors of vertices. (Will this affect VAO or VBO or what?)
 
@@ -116,19 +116,19 @@ Done
 
 * (√) Read in shader(s) from external files (as long as those files are in the (xcode) project directory Build/learn/Debug and it works with unicode 8, unix LF)
 
-* (√) Draw multiple triangles in our working(!) triangle. (From learnopengl.com, uses CMake to build Xcode project --[Here's How)](https://github.com/mikeroam/learnOpenGL/blob/master/new-xcode-howto.md)-- with glad and glfw.)
+* (√) Draw multiple triangles in our working(!) triangle. (From learnopengl.com, uses CMake to build Xcode project --[Here's How)](https://github.com/mroam/learnOpenGL/blob/master/new-xcode-howto.md)-- with glad and glfw.)
 
 * (√) Got keyboard working to change rotation direction and close window. Got rotation happening with control over degrees/second.
 
 * (√) Made our xcode glitter project's main.cpp ALMOST match the glfw demo from http://learnopengl.com
 
-* (√) Copied “[Glitter](http://github.com/Polytonic/Glitter)” tutorial and used cmake to make Glitter have an xcode project which compiled and ran (after a few changes, see its readme). --[Here's How)](https://github.com/mikeroam/learnOpenGL/blob/master/new-xcode-howto.md)--
+* (√) Copied “[Glitter](http://github.com/Polytonic/Glitter)” tutorial and used cmake to make Glitter have an xcode project which compiled and ran (after a few changes, see its readme). --[Here's How)](https://github.com/mroam/learnOpenGL/blob/master/new-xcode-howto.md)--
 
-* (√) Work-around for running tutorials on make: we found that cmake can make glad + glfw projects for us in Xcode, --[Here's How)](https://github.com/mikeroam/learnOpenGL/blob/master/new-xcode-howto.md)-- so we can use [glfw](http://www.glfw.org/ in tutorial from  http://learnopengl.com).
+* (√) Work-around for running tutorials on make: we found that cmake can make glad + glfw projects for us in Xcode, --[Here's How)](https://github.com/mroam/learnOpenGL/blob/master/new-xcode-howto.md)-- so we can use [glfw](http://www.glfw.org/ in tutorial from  http://learnopengl.com).
 
 * (√) Figured out a fix for our folders being large because having invisible files. [Here's a link to something!](http://superuser.com/questions/382120/mac-os-x-not-reporting-directory-sizes-correctly) Work-around: copy across just the cmake and vendor folders (see readme in learnopengl-for-cmake project), get rid of the hidden .git and .gitignore files, and remake with cmake. Voila-small project!
 
-* (√) Installed “[cmake](http://www.cmake.org/download/)” on our main machine so that the “[Glitter](http://github.com/Polytonic/Glitter)” tutorial can build xcode projects for us. --[Here's How)](https://github.com/mikeroam/learnOpenGL/blob/master/new-xcode-howto.md)--
+* (√) Installed “[cmake](http://www.cmake.org/download/)” on our main machine so that the “[Glitter](http://github.com/Polytonic/Glitter)” tutorial can build xcode projects for us. --[Here's How)](https://github.com/mroam/learnOpenGL/blob/master/new-xcode-howto.md)--
  
 * (√) Installed xquartz 2.7.8 on our main machine. ([xquartz latest releases](http://xquartz.macosforge.org/trac/wiki/Releases) as of nov 2015, “works with el capitan (osX 10.11)” supposedly.)
 
